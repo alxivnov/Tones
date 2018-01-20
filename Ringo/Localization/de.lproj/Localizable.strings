@@ -1,0 +1,100 @@
+﻿/*
+ Localizable.strings
+ Ringo
+
+ Created by Alexander Ivanov on 06.07.15.
+ Copyright (c) 2015 Alexander Ivanov. All rights reserved.
+ */
+
+"Enjoying this app?" = "Gefällt Dir? \"Ringtonic\"?";
+"Would you mind giving me some feedback?" = "Sag mir, was ich verbessern kann.";
+"How about rating on the App Store, then?" = "Schreib bitte eine Rückmeldung bei App Store";
+"Not really" = "Nein";
+"Yes!" = "Ja";
+"No, thanks" = "Nein, danke";
+"Ok, sure" = "Ok";
+"NO" = "Nein";
+"YES" = "Ja";
+
+"help-1" = "Mach den Klingelton.";
+"help-2" = "Füge den Klingelton zu iTunes hin.";
+"help-3" = "Den Klingelton mit iPhone synchronisieren.";
+"help-4" = "Den Klingelton bei iPhone einstimmen.";
+"win-1" = "Den Klingekton in die Mappe kopieren.";
+"win-2" = "Füge den Klingelton zu iTunes hin.";
+"win-3" = "Den Klingelton mit iPhone synchronisieren.";
+
+"Log In" = "Eingang";
+"Log Out" = "Ausgang";
+"Log In to VK" = "Einloggen VK";
+"Log Out from VK" = "Ausloggen VK";
+"Log In to get access to music from VK." = "Logg ein um die VK Musik zu sehen.";
+"Open VK community" = "VKGruppe öffnen";
+
+"MALE used your tone." = "%@ benutzte deinen Klingelton.";
+"FEMALE used your tone." = "%@ benutzte deinen Klingelton.";
+"%@ used your tone." = "%@ benutzte deinen Klingelton.";
+"Open VK profile" = "VkProfil öffnen";
+
+"Next" = "Weiter";
+"Cancel" = "Aufheben";
+"Delete" = "Löschen";
+"Export" = "Teilen";
+"Follow" = "Abonnieren";
+"Feature" = "Weiter";
+
+"Allow" = "Erlauben";
+"Allow Notifications" = "Benachrichtigungen erlauben";
+"To receive alerts about new tones allow \"Ringtonic\" to send you notifications in the Settings." = "Um die neue Klingeltone nicht zu verpassen, die Benachrichtigungen bei den Einstellungen erlauben";
+"Allow Media Library Access" = "Zugang zu Mediathek erlauben";
+"To create tones from your music allow \"Ringtonic\" to access Media Library in the Settings." = "Zugang zu Mediathek erlauben um den Klingelton zu machen";
+
+"Rate app in the App Store" = "Schätze die App bei App Store";
+"Read full guide" = "Die ganue Anweisung lesen";
+
+"Open in iTunes Store" = "Öffnen bei iTunes Store";
+"You need to purchase and download the song via iTunes to use it as a ringtone." = "Du sollst das Lied vorher kaufen und herunterladen.";
+
+"Follow our page in VK" = "VKSeite abonnieren";
+"We are posting ringtones and news about Ringtonic there." = "Dort gibt es alle Nachrichten über Ringtonic";
+
+"Write an Email" = "Email Schreiben";
+"What \"Ringtonic\" lacks?" = "Was fählt bei Ringtonic?";
+"Please, describe what addition would make your experience better.\nHow would you use it?" = "Sag welche Funktion möchtest du gerne bei Ringtonic haben.\n Wie magst du sie benutzen?";
+
+"Posted" = "Gesendet";
+"My Profile" = "Mein Profil";
+"My Communities" = "My Communities";
+"%@ friends" = "%@ Freunde";
+"%@ followers" = "%@ Abonennten";
+
+"Press to convert your favourite song to ringtone." = "Drück um den Klingelton zu machen.";
+
+"Processing..." = "Bearbeitung...";
+
+"Waiting..." = "Warte...";
+
+"Hi,\n%@!" = "Hallo,\n%@!";
+
+"Mono" = "Mono";
+"Stereo" = "Stereo";
+"Purchased" = "Gekauft";
+
+"New" = "Neu";
+"New tone is available" = "Der neue Klingelton ist zugänglich";
+"New tone %2$@ by %1$@ is available." = "Der neue Klingelton ist zugänglich %1$@ - %2$@.";
+"Somebody used your tone %1$@ - %2$@." = "Jemand benutzte Deinen Klingelton %1$@ - %2$@.";
+"%@ used your tone." = "%@ benutzte Deinen Klingelton.";
+"Somebody used your tone." = "Jemand benutzte Deinen Klingelton.";
+
+"How to install tone to iPhone?" = "Wie kann ich den Klingelton installieren?";
+
+"Find us on Facebook" = "Finde uns bei Facebook";
+
+"Tones: %lu" = "Laute: %lu";
+
+"YOU CREATED %lu TONES" = "Du hast %lu Klingeltonen gemacht";
+"THEY WERE USED %lu TIMES" = "Sie waren  %lu Mal benutzt";
+"%lu times" = "%lu Mal";
+
+"keywords" = "sound,ringtone,tone,Laut,Klingelton";

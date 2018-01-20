@@ -1,0 +1,25 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "372b8521-4407-7a44-b862-2bc3017fb0d4",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "372b8521-4407-7a44-b862-2bc3017fb0d4" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "372b8521-4407-7a44-b862-2bc3017fb0d4" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "FBFF2AB2-E559-4BEF-953E-2305E2847B3F",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "372b8521-4407-7a44-b862-2bc3017fb0d4" : "Pine"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Ringo",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 203,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Ringo\/Ringo.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/secure-svn.1gb.ru\/pine",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "372b8521-4407-7a44-b862-2bc3017fb0d4"
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+
+/* Class = "UINavigationItem"; title = "LAUTE"; ObjectID = "znw-MX-ptm"; */
+"znw-MX-ptm.title" = "LAUTE";
+
+/* Class = "UINavigationItem"; title = "POPULÄR"; ObjectID = "9zm-sY-v4Q"; */
+"9zm-sY-v4Q.title" = "POPULÄR";
+
+"K2O-LR-ZYc.segmentTitles[0]" = "Neue";
+"K2O-LR-ZYc.segmentTitles[1]" = "Populär";
+
+/* Class = "UINavigationItem"; title = "Sammlung"; ObjectID = "qwy-uz-ANN"; */
+"qwy-uz-ANN.title" = "Sammlung";
+
+/* Class = "UIBarButtonItem"; title = "Eingang"; ObjectID = "nwA-sH-DId"; */
+"nwA-sH-DId.title" = "Eingang";
+
+/* Class = "UINavigationItem"; title = "Pinnwand"; ObjectID = "Hh5-jx-ojG"; */
+"Hh5-jx-ojG.title" = "PINNWAND";
+
+/* Class = "UITabBarItem"; title = "Pinnwand"; ObjectID = "nQJ-d7-oXJ"; */
+"nQJ-d7-oXJ.title" = "Pinnwand";
+
+/* Class = "UIBarButtonItem"; title = "Eingang"; ObjectID = "xck-pG-Xct"; */
+"xck-pG-Xct.title" = "Eingang";
+
+/* Class = "UINavigationItem"; title = "Profil"; ObjectID = "eHC-Qs-gJW"; */
+"eHC-Qs-gJW.title" = "PROFIL";
+
+/* Class = "UITabBarItem"; title = "Profil"; ObjectID = "TPM-bu-2md"; */
+"TPM-bu-2md.title" = "Profil";
+
+/* Class = "UINavigationItem"; title = "HILFE"; ObjectID = "C9s-2U-oka"; */
+"C9s-2U-oka.title" = "HILFE";
+
+/* Class = "UINavigationItem"; title = "Enstellungen"; ObjectID = "84f-Gr-uXG"; */
+"84f-Gr-uXG.title" = "EINSTELLUNGEN";
+
+/* Class = "UITableViewSection"; headerTitle = "Unternehmen"; ObjectID = "29N-U2-x1w"; */
+"29N-U2-x1w.headerTitle" = "UNTERNEHMEN";
+
+/* Class = "UILabel"; text = "Vkontakte"; ObjectID = "Qqh-Hz-jRN"; */
+"Qqh-Hz-jRN.text" = "VKontakte";
+
+"zOZ-2W-sT4.headerTitle" = "STEREO";
+"zOZ-2W-sT4.footerTitle" = "Mach so viele Klingeltonen wie Du willst und ohne Werbung!";
+"zPf-ry-dAZ.text" = "STEREOklingelton";
+"ACh-jl-WfO.text" = "Innere Einkaufen erneuern";
+
+/* Class = "UITableViewSection"; headerTitle = "FEEDBACK"; ObjectID = "RYf-Aa-HdR"; */
+"RYf-Aa-HdR.headerTitle" = "RÜCKMELDUNG";
+
+/* Class = "UILabel"; text = "Contact the Developer"; ObjectID = "RUF-hk-Iif"; */
+"RUF-hk-Iif.text" = "Entwickler anschreiben";
+
+/* Class = "UITableViewSection"; headerTitle = "Teilen"; ObjectID = "Yzu-or-HKp"; */
+"Yzu-or-HKp.headerTitle" = "TEILEN";
+
+/* Class = "UILabel"; text = "Freune mitteilen"; ObjectID = "6cA-H9-R3Y"; */
+"6cA-H9-R3Y.text" = "Freunde mitteilen";
+
+/* Class = "UITableViewSection"; headerTitle = "Einschätzen"; ObjectID = "10Z-Dw-efU"; */
+"10Z-Dw-efU.headerTitle" = "EINSCHÄTZEN";
+
+/* Class = "UILabel"; text = "Rückmeldung schreiben"; ObjectID = "Wg5-uc-HcN"; */
+"Wg5-uc-HcN.text" = "Rückmeldung schreiben";
+
+/* Class = "UITableViewSection"; headerTitle = "Andere Apps"; ObjectID = "cy6-7j-lIc"; */
+"cy6-7j-lIc.headerTitle" = "Andere Apps";
+
+/* Class = "UILabel"; text = "Aufgabeliste mir Erinnerung "; ObjectID = "sng-do-cdf"; */
+"sng-do-cdf.text" = "Aufgabeliste mir Erinnerung";
+
+/* Class = "UILabel"; text = "Sclaf- und Luftdruckzeitung"; ObjectID = "yhc-8V-nOs"; */
+"yhc-8V-nOs.text" = "Sclaf- und Luftdruckzeitung";
+
+"h0N-Xh-IaL.text" = "Ringtonic hilft Dir den Klingelton von Lieblingslieder zu machen.";
+"f3r-zi-nUu.text" = "Drück die Notetaste und wähl das Lied um zu beginnen.";
+"fmi-xx-ojL.normalTitle" = "Einloggen";
+"5Ya-yo-tLe.text" = "Logg ein um die lieder von VK zu importieren.";
+"dYu-aA-Aqw.normalTitle" = "Einloggen";
+"3lO-c1-p0r.text" = "Logg ein um das Lied aus Vkkatalog zu suchen.";
+"gie-f6-LZi.normalTitle" = "Einloggen";
+"kNS-dS-XG3.text" = "Logg ein um die lieder von VK zu importieren.";
+
+"yCw-VR-Ag1.title" = "TEILEN";
+"PlB-TA-YdS.headerTitle" = "PUBLIKATION";
+"YrJ-Sz-rcd.text" = "На";
+"bhj-at-sPe.text" = "Mein Profil";
+"IcJ-NK-Trl.headerTitle" = "EINTRAG";
+
+"Tve-Fv-dzF.placeholder" = "Benutzername - Stell Dich vor!";
+"Vh0-lc-wiU.text" = "Klingeltonen gemacht";
+"RsH-Pe-YkR.text" = "von anderen benutzt";
+
+"jjg-7I-qG1.headerTitle" = "Schnittstelle";
+"552-hd-T8g.text" = "Die logarithmische Wellenform";
+
+"j6K-3s-jQ0.headerTitle" = "Benachrichtigung";
+"G38-yN-zQb.text" = "Deinen Klingelton ist benutzt.";
+"oO2-9G-bub.text" = "Der neue Klingelton ist hinzugefügt.";
+"myX-75-I4J.text" = "Neuigkeiten Ringtonic";
+
+"kBE-nb-8EE.text" = "Freunde einladen";
+"wFu-PB-9nm.text" = "Über Messenger Einladen";
+
+"OJr-8e-7Gk.text" = "Finde uns bei Facebook";

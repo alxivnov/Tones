@@ -1,0 +1,103 @@
+
+/* Class = "UINavigationItem"; title = "ЗВУКИ"; ObjectID = "znw-MX-ptm"; */
+"znw-MX-ptm.title" = "ЗВУКИ";
+
+/* Class = "UINavigationItem"; title = "ПОПУЛЯРНІ"; ObjectID = "9zm-sY-v4Q"; */
+"9zm-sY-v4Q.title" = "ПОПУЛЯРНІ";
+
+"K2O-LR-ZYc.segmentTitles[0]" = "Нові";
+"K2O-LR-ZYc.segmentTitles[1]" = "Популярні";
+
+/* Class = "UINavigationItem"; title = "ЗБІРКА"; ObjectID = "qwy-uz-ANN"; */
+"qwy-uz-ANN.title" = "ЗБІРКА";
+
+/* Class = "UIBarButtonItem"; title = "Вхід"; ObjectID = "nwA-sH-DId"; */
+"nwA-sH-DId.title" = "Вхід";
+
+/* Class = "UINavigationItem"; title = "СТІНА"; ObjectID = "Hh5-jx-ojG"; */
+"Hh5-jx-ojG.title" = "СТІНА";
+
+/* Class = "UITabBarItem"; title = "Стіна"; ObjectID = "nQJ-d7-oXJ"; */
+"nQJ-d7-oXJ.title" = "Стіна";
+
+/* Class = "UIBarButtonItem"; title = "Вход"; ObjectID = "xck-pG-Xct"; */
+"xck-pG-Xct.title" = "Вход";
+
+/* Class = "UINavigationItem"; title = "ПРОФІЛЬ"; ObjectID = "eHC-Qs-gJW"; */
+"eHC-Qs-gJW.title" = "ПРОФІЛЬ";
+
+/* Class = "UITabBarItem"; title = "Профіль"; ObjectID = "TPM-bu-2md"; */
+"TPM-bu-2md.title" = "Профіль";
+
+/* Class = "UINavigationItem"; title = "ДОПОМОГА"; ObjectID = "C9s-2U-oka"; */
+"C9s-2U-oka.title" = "ДОПОМОГА";
+
+/* Class = "UINavigationItem"; title = "НАЛАШТУВАННЯ"; ObjectID = "84f-Gr-uXG"; */
+"84f-Gr-uXG.title" = "НАЛАШТУВАННЯ";
+
+/* Class = "UITableViewSection"; headerTitle = "ПРО ПРОГРАМУ"; ObjectID = "29N-U2-x1w"; */
+"29N-U2-x1w.headerTitle" = "ПРО ПРОГРАМУ";
+
+/* Class = "UILabel"; text = "ВКонтакті"; ObjectID = "Qqh-Hz-jRN"; */
+"Qqh-Hz-jRN.text" = "ВКонтакті";
+
+"zOZ-2W-sT4.headerTitle" = "СТЕРЕО";
+"zOZ-2W-sT4.footerTitle" = "Створюйте необмежену кулькість гучних рінгтонів зі стерео звуком и отключите рекламу.";
+"zPf-ry-dAZ.text" = "Стерео рінгтони";
+"ACh-jl-WfO.text" = "Відновити внутрішні покупки";
+
+/* Class = "UITableViewSection"; headerTitle = "FEEDBACK"; ObjectID = "RYf-Aa-HdR"; */
+"RYf-Aa-HdR.headerTitle" = "ЗВОРОТНІЙ ЗВЯЗОК";
+
+/* Class = "UILabel"; text = "Contact the Developer"; ObjectID = "RUF-hk-Iif"; */
+"RUF-hk-Iif.text" = "Написати розробнику";
+
+/* Class = "UITableViewSection"; headerTitle = "ПОДІЛИТИСЯ"; ObjectID = "Yzu-or-HKp"; */
+"Yzu-or-HKp.headerTitle" = "ПОДІЛИТИСЯ";
+
+/* Class = "UILabel"; text = "Розповісти друзям"; ObjectID = "6cA-H9-R3Y"; */
+"6cA-H9-R3Y.text" = "Розповісти друзям";
+
+/* Class = "UITableViewSection"; headerTitle = "ОЦІНИТИ"; ObjectID = "10Z-Dw-efU"; */
+"10Z-Dw-efU.headerTitle" = "ОЦІНИТИ";
+
+/* Class = "UILabel"; text = "Написати відгук"; ObjectID = "Wg5-uc-HcN"; */
+"Wg5-uc-HcN.text" = "Написати відгук";
+
+/* Class = "UITableViewSection"; headerTitle = "ІНШІ ДОДАТКИ"; ObjectID = "cy6-7j-lIc"; */
+"cy6-7j-lIc.headerTitle" = "ІНШІ ДОДАТКИ";
+
+/* Class = "UILabel"; text = "Список Завдань з Нагадуваннями"; ObjectID = "sng-do-cdf"; */
+"sng-do-cdf.text" = "Список Завдань з Нагадуваннями";
+
+/* Class = "UILabel"; text = "Журнал Сну і Атмосферного Тиску"; ObjectID = "yhc-8V-nOs"; */
+"yhc-8V-nOs.text" = "Журнал Сну і Атмосферного тиску";
+
+"h0N-Xh-IaL.text" = "Ringtonic допоможе Вам створювати рінгтони з улюблених пісень.";
+"f3r-zi-nUu.text" = "Натисніть кнопку з нотой и виберіть пісню, щоб розпочати.";
+"fmi-xx-ojL.normalTitle" = "Ввійти";
+"5Ya-yo-tLe.text" = "Ввійдіть, щоб імпортувати пісні зі свого профілю ВКонтакті.";
+"dYu-aA-Aqw.normalTitle" = "Ввійти";
+"3lO-c1-p0r.text" = "Ввійдіть для пошуку пісні зі свого каталогу Вконтакті.";
+"gie-f6-LZi.normalTitle" = "Ввійти";
+"kNS-dS-XG3.text" = "Ввійдіть, щоб імпортувати пісні зі ВКонтакті.";
+
+"yCw-VR-Ag1.title" = "ПОДІЛИТИСЯ";
+"PlB-TA-YdS.headerTitle" = "ПУБЛИКАЦІЯ";
+"YrJ-Sz-rcd.text" = "На";
+"bhj-at-sPe.text" = "Моя Сторінка";
+"IcJ-NK-Trl.headerTitle" = "ЗАПИС";
+
+"Tve-Fv-dzF.placeholder" = "Им'я користувача - Представтесь!";
+"Vh0-lc-wiU.text" = "створено рінгтонів";
+"RsH-Pe-YkR.text" = "використано іншими";
+
+"jjg-7I-qG1.headerTitle" = "Інтерфейс";
+"552-hd-T8g.text" = "Логарифмічна форма хвилі";
+
+"j6K-3s-jQ0.headerTitle" = "СПОВІЩЕННЯ";
+"G38-yN-zQb.text" = "Ваш рінгтон використаний";
+"oO2-9G-bub.text" = "Новий рінгтон добавлено";
+"myX-75-I4J.text" = "Новини Ringtonic";
+
+"OJr-8e-7Gk.text" = "Найди нас на Facebook";

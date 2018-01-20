@@ -1,0 +1,100 @@
+/*
+ Localizable.strings
+ Ringo
+
+ Created by Alexander Ivanov on 06.07.15.
+ Copyright (c) 2015 Alexander Ivanov. All rights reserved.
+ */
+
+"Enjoying this app?" = "Вам подобається \"Ringtonic\"?";
+"Would you mind giving me some feedback?" = "Розкажіть про те, що можна покращити.";
+"How about rating on the App Store, then?" = "Тоді напишіть відгук в App Store, будь ласка!";
+"Not really" = "Ні";
+"Yes!" = "Так";
+"No, thanks" = "Ні, дякую";
+"Ok, sure" = "Добре";
+"NO" = "Ні";
+"YES" = "Так";
+
+"help-1" = "Создай рингтон из песни.";
+"help-2" = "Добав рінгтон в iTunes.";
+"help-3" = "Синхронізуй рінгтони з iPhone.";
+"help-4" = "Налаштуй рінгтон на iPhone.";
+"win-1" = "Скопіюй рінгтон в папку.";
+"win-2" = "Добав рінгтон в iTunes.";
+"win-3" = "Синхронізуй рінгтони з iPhone.";
+
+"Log In" = "Вхід";
+"Log Out" = "Вихід";
+"Log In to VK" = "Ввійти в ВКонтакті";
+"Log Out from VK" = "Вийти з ВКонтакті";
+"Log In to get access to music from VK." = "Ввійдіть для того, щоб отримати доступ до аудіозаписів в ВК.";
+"Open VK community" = "Відкрити групу ВКонтакті";
+
+"MALE used your tone." = "%@ использовал Ваш рингтон.";
+"FEMALE used your tone." = "%@ использовала Ваш рингтон.";
+"%@ used your tone." = "%@ использовал(а) Ваш рингтон.";
+"Open VK profile" = "Відкрити профиль ВКонтакті";
+
+"Next" = "Далее";
+"Cancel" = "Відмінити";
+"Delete" = "Видалити";
+"Export" = "Поділитися";
+"Follow" = "Підписатися";
+"Feature" = "Просувати";
+
+"Allow" = "Дозволити";
+"Allow Notifications" = "Дозволити сповіщення";
+"To receive alerts about new tones allow \"Ringtonic\" to send you notifications in the Settings." = "Щоб не пропустити появу нових рінгтонів, дозвольте Ringtonic присилати Вам сповіщення у налаштуваннях";
+"Allow Media Library Access" = "Дозволити доступ до Медіатеки";
+"To create tones from your music allow \"Ringtonic\" to access Media Library in the Settings." = "Щоб створювати рінгтони з Вашої музики, дозвольте Ringtonic доступ до Вашої Медіатеки.";
+
+"Rate app in the App Store" = "Оценіть Додаток в App Store";
+"Read full guide" = "Прочитать полную инструкцию";
+
+"Open in iTunes Store" = "Відкрити в iTunes Store";
+"You need to purchase and download the song via iTunes to use it as a ringtone." = "Вам необхідно купити і завантажити пісню через iTunes для того, щоб використовувати її як рінгтон.";
+
+"Follow our page in VK" = "Підписуйтеся на нашу сторінку ВКонтакті";
+"We are posting ringtones and news about Ringtonic there." = "Там ми публикуємо рінгтони і новини про Ringtonic";
+
+"Write an Email" = "Написати листа";
+"What \"Ringtonic\" lacks?" = "Чого не вистачає в Ringtonic?";
+"Please, describe what addition would make your experience better.\nHow would you use it?" = "Будь ласка, розкажіть яку функцію Ви б хотіли побачити в Ringtonic.\n Як ви хочете її використовувати?";
+
+"Posted" = "Відправлено";
+"My Profile" = "Моя Сторінка";
+"My Communities" = "Мої Групи";
+"%@ friends" = "%@ друзів";
+"%@ followers" = "%@ підписників";
+
+"Press to convert your favourite song to ringtone." = "Натисніть, щоб перетворити улюблену пісню в рінгтон.";
+
+"Processing..." = "Опрацювання...";
+
+"Waiting..." = "Зачекайте...";
+
+"Hi,\n%@!" = "Привіт,\n%@!";
+
+"Mono" = "Моно";
+"Stereo" = "Стерео";
+"Purchased" = "Куплено";
+
+"New" = "Новий";
+"New tone is available" = "Доступний новий рінгтон";
+"New tone %2$@ by %1$@ is available." = "Доступний новий рінгтон %1$@ - %2$@.";
+"Somebody used your tone %1$@ - %2$@." = "Хтось використав Ваш рінгтон %1$@ - %2$@.";
+"%@ used your tone." = "%@ використав Ваш рінгтон.";
+"Somebody used your tone." = "Хтось використав Ваш рінгтон.";
+
+"How to install tone to iPhone?" = "Как установить рингтон на iPhone?";
+
+"Find us on Facebook" = "Найди нас на Facebook";
+
+"Tones: %lu" = "Звуки: %lu";
+
+"YOU CREATED %lu TONES" = "ВИ СТВОРИЛИ %lu РІНГТОНІВ";
+"THEY WERE USED %lu TIMES" = "Вони були використані %lu РАЗІВ";
+"%lu times" = "%lu раз";
+
+"keywords" = "sound,ringtone,tone,звук,рінгтон";

@@ -1,0 +1,32 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "372b8521-4407-7a44-b862-2bc3017fb0d4",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "372b8521-4407-7a44-b862-2bc3017fb0d4" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "9636DDF4D19DB5E8D23B3E5825BEA4B42966A54C" : 9223372036854775807,
+    "372b8521-4407-7a44-b862-2bc3017fb0d4" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "F7080087-635A-4AFB-9173-A749FA46AFF1",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "9636DDF4D19DB5E8D23B3E5825BEA4B42966A54C" : "Objective%20Sea\/",
+    "372b8521-4407-7a44-b862-2bc3017fb0d4" : "Pine\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Ringtonic",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Ringtonic\/Ringtonic.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/secure-svn.1gb.ru\/pine",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "372b8521-4407-7a44-b862-2bc3017fb0d4"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/0xALEX\/Objective-Sea.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9636DDF4D19DB5E8D23B3E5825BEA4B42966A54C"
+    }
+  ]
+}

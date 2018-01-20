@@ -1,0 +1,32 @@
+/* 
+  Localizable.strings
+  Ringo
+
+  Created by Alexander Ivanov on 06.07.15.
+  Copyright (c) 2015 Alexander Ivanov. All rights reserved.
+*/
+
+"Enjoying this app?" = "Enjoying Ringtonic?";
+"Would you mind giving me some feedback?" = "Would you mind giving me some feedback?";
+"How about rating on the App Store, then?" = "How about rating on the App Store, then?";
+"Not really" = "Not really";
+"Yes!" = "Yes!";
+"No, thanks" = "No, thanks";
+"Ok, sure" = "Ok, sure";
+"NO" = "No";
+"YES" = "Yes";
+
+"help-1" = "Create tone from a song.";
+"help-2" = "Add tone to iTunes.";
+"help-3" = "Synchronize tones with iPhone.";
+"help-4" = "Set tone on iPhone.";
+"win-1" = "Save tone to folder.";
+"win-2" = "Add tone to iTunes.";
+"win-3" = "Synchronize tones with iPhone.";
+
+"Waiting..." = "Wait for it!";
+
+"keywords" = "sound,alert,ringtone,ring,tone";
+
+"MALE used your tone." = "%@ used your tone.";
+"FEMALE used your tone." = "%@ used your tone.";
