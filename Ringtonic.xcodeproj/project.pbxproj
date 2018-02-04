@@ -24,7 +24,7 @@
 		CD5E0C541ED7918100CE8C72 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA0BFD8D1B3D479A00F67FDF /* CloudKit.framework */; };
 		CD643DCE1EDC79DC0027C995 /* TwitterKit+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = CD643DCD1EDC79DC0027C995 /* TwitterKit+Convenience.m */; };
 		CD67775E1EE068AB00AC85DD /* VKItem.m in Sources */ = {isa = PBXBuildFile; fileRef = CD67775D1EE068AB00AC85DD /* VKItem.m */; };
-		CD75B4F01F191F6900BAB7DC /* UIImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = CD75B4EF1F191F6900BAB7DC /* UIImageEffects.m */; };
+		CD6FC2DE20274C83001000F1 /* UIImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = CD75B4EF1F191F6900BAB7DC /* UIImageEffects.m */; };
 		CD75B4F41F191F8500BAB7DC /* AppleIncRootCertificate.cer in Resources */ = {isa = PBXBuildFile; fileRef = CD75B4F11F191F8500BAB7DC /* AppleIncRootCertificate.cer */; };
 		CD75B4F51F191F8500BAB7DC /* RMAppReceipt.m in Sources */ = {isa = PBXBuildFile; fileRef = CD75B4F31F191F8500BAB7DC /* RMAppReceipt.m */; };
 		CD75B4F81F191FD700BAB7DC /* GSTouchesShowingWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = CD75B4F71F191FD700BAB7DC /* GSTouchesShowingWindow.m */; };
@@ -243,7 +243,6 @@
 		FAC8B6851B42895700083099 /* OnlineController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC8B6841B42895700083099 /* OnlineController.m */; };
 		FAC9106C1CA83DB600767A04 /* UIViewController+Answers.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC9106B1CA83DB600767A04 /* UIViewController+Answers.m */; };
 		FACD1EE31B9B12D700D363E9 /* AudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = FACD1EE21B9B12D700D363E9 /* AudioPlayer.m */; };
-		FACD763E1C6F8BFF006060AD /* UIImage+Effects.m in Sources */ = {isa = PBXBuildFile; fileRef = FACD763D1C6F8BFF006060AD /* UIImage+Effects.m */; };
 		FAD5F82A1CDA120A00BB8FDC /* VKGroupController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD5F8291CDA120A00BB8FDC /* VKGroupController.m */; };
 		FAD660161CF37CA20097C6E6 /* UIRateController+Answers.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD660151CF37CA20097C6E6 /* UIRateController+Answers.m */; };
 		FAD844591B2B64E600C48694 /* UIFont+Modification.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD844581B2B64E600C48694 /* UIFont+Modification.m */; };
@@ -643,8 +642,6 @@
 		FAC9106B1CA83DB600767A04 /* UIViewController+Answers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Answers.m"; sourceTree = "<group>"; };
 		FACD1EE11B9B12D700D363E9 /* AudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioPlayer.h; path = Ringo/AudioPlayer.h; sourceTree = SOURCE_ROOT; };
 		FACD1EE21B9B12D700D363E9 /* AudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AudioPlayer.m; path = Ringo/AudioPlayer.m; sourceTree = SOURCE_ROOT; };
-		FACD763C1C6F8BFF006060AD /* UIImage+Effects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Effects.h"; path = "UI/UIImage+Effects.h"; sourceTree = "<group>"; };
-		FACD763D1C6F8BFF006060AD /* UIImage+Effects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Effects.m"; path = "UI/UIImage+Effects.m"; sourceTree = "<group>"; };
 		FAD5F8281CDA120A00BB8FDC /* VKGroupController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VKGroupController.h; path = Ringo/VKGroupController.h; sourceTree = SOURCE_ROOT; };
 		FAD5F8291CDA120A00BB8FDC /* VKGroupController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VKGroupController.m; path = Ringo/VKGroupController.m; sourceTree = SOURCE_ROOT; };
 		FAD660141CF37CA20097C6E6 /* UIRateController+Answers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIRateController+Answers.h"; sourceTree = "<group>"; };
@@ -1324,8 +1321,6 @@
 				FA3A74881B9DB8BE00E579FC /* UIDetailTableViewCell.m */,
 				FAD844571B2B64E600C48694 /* UIFont+Modification.h */,
 				FAD844581B2B64E600C48694 /* UIFont+Modification.m */,
-				FACD763C1C6F8BFF006060AD /* UIImage+Effects.h */,
-				FACD763D1C6F8BFF006060AD /* UIImage+Effects.m */,
 				FAE529DB1B94851F00CB2FC5 /* UIImage+View.h */,
 				FAE529DC1B94851F00CB2FC5 /* UIImage+View.m */,
 				FAD9BACF1D78A94C006706C6 /* UIScrollView+Scroll.h */,
@@ -1628,6 +1623,7 @@
 				FA1F66BA1D09BE3A009F8F15 /* Push.m in Sources */,
 				CDF5FA551DB3C45100208F7E /* Dispatch+Convenience.m in Sources */,
 				CD1CC0131EC31A0200256A74 /* AVPlayer+Convenience.m in Sources */,
+				CD6FC2DE20274C83001000F1 /* UIImageEffects.m in Sources */,
 				FA6A805F1CCD3B0D008023A8 /* ProfileController.m in Sources */,
 				FA4BA6271DDA1927008161D4 /* UIView+Convenience.m in Sources */,
 				CDE3A8E11DE09BC500AEB8BB /* UISlider+Convenience.m in Sources */,
@@ -1661,7 +1657,6 @@
 				FADA86EB1E0009B400DAE932 /* UINavigationController+Convenience.m in Sources */,
 				FAE160621B4C0B7600C1B91E /* AudioController.m in Sources */,
 				FAA7C7791B5D1FF1003CAD33 /* AudioSegment.m in Sources */,
-				CD75B4F01F191F6900BAB7DC /* UIImageEffects.m in Sources */,
 				FAE529DD1B94851F00CB2FC5 /* UIImage+View.m in Sources */,
 				FAD660161CF37CA20097C6E6 /* UIRateController+Answers.m in Sources */,
 				FA7D52C91BEA5E1700F29A8C /* AudioController+Export.m in Sources */,
@@ -1700,7 +1695,6 @@
 				FAB5C66E1BC67DF4007093F1 /* ServerController.m in Sources */,
 				CDE3A8BA1DE0835E00AEB8BB /* CGWaveform.m in Sources */,
 				FA26AD671D528D130088B7FE /* User.m in Sources */,
-				FACD763E1C6F8BFF006060AD /* UIImage+Effects.m in Sources */,
 				CDF544121DE4AABC00F41149 /* UITableView+Convenience.m in Sources */,
 				FA18A5051CEC6F6100132372 /* CKController.m in Sources */,
 				FA3A74891B9DB8BE00E579FC /* UIDetailTableViewCell.m in Sources */,

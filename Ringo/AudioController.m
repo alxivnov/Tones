@@ -11,7 +11,7 @@
 #import "Global.h"
 
 #import "UIAccessoryView.h"
-#import "UIImage+Effects.h"
+#import "UIImage+Convenience.h"
 
 #import "Dispatch+Convenience.h"
 #import "NSFormatter+Convenience.h"

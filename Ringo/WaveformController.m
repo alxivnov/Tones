@@ -9,7 +9,7 @@
 #import "WaveformController.h"
 #import "Localized.h"
 
-#import "UIImage+Effects.h"
+#import "UIImage+Convenience.h"
 #import "UIWaveformView.h"
 
 #import "UIActivityIndicatorView+Convenience.h"

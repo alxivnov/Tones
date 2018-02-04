@@ -11,7 +11,7 @@
 #import "Localized.h"
 
 #import "UIFont+Modification.h"
-#import "UIImage+Effects.h"
+#import "UIImage+Convenience.h"
 #import "VKHelper.h"
 
 #import "NSAttributedString+Convenience.h"

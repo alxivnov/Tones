@@ -14,7 +14,7 @@
 #import "Localized.h"
 #import "UIViewController+VKLog.h"
 
-#import "UIImage+Effects.h"
+#import "UIImage+Convenience.h"
 #import "VKHelper.h"
 
 #import "Dispatch+Convenience.h"

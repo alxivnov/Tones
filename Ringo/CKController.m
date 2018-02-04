@@ -16,7 +16,7 @@
 
 #import "VKHelper.h"
 #import "UIAccessoryView.h"
-#import "UIImage+Effects.h"
+#import "UIImage+Convenience.h"
 #import "UIViewController+Stereo.h"
 
 #import "Dispatch+Convenience.h"
