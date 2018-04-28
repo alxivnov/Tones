@@ -33,7 +33,7 @@ __synthesize(UIPanTransition *, transition, [UIPanTransition gestureTransition:N
 
 
 
-	self.tabBar.tintColor = [UIColor whiteColor];
+//	self.tabBar.tintColor = [UIColor whiteColor];
 	idx(self.tabBar.items, 0).selectedImage = [UIImage templateImage:IMG_USER_FULL];
 	idx(self.tabBar.items, 1).selectedImage = [UIImage templateImage:IMG_SEARCH_FULL];
 /*

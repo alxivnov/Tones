@@ -79,8 +79,8 @@ __synthesize(MPMediaPickerController *, mediaPicker, ({ MPMediaPicker *x = [[MPM
 	NSInteger numberOfRowsInSection = [super tableView:tableView numberOfRowsInSection:section];
 
 	self.tableView.emptyState = numberOfRowsInSection <= 0 ? self.importView : Nil;
-	self.navigationController.navigationBar.translucent = numberOfRowsInSection;
-	self.navigationController.toolbar.translucent = numberOfRowsInSection;
+//	self.navigationController.navigationBar.translucent = numberOfRowsInSection;
+//	self.navigationController.toolbar.translucent = numberOfRowsInSection;
 
 	return numberOfRowsInSection;
 }

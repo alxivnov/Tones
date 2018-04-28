@@ -18,7 +18,7 @@
 		_label.font = [UIFont systemFontOfSize:24.0 weight:UIFontWeightUltraLight];
 		_label.numberOfLines = 2;
 		_label.textAlignment = NSTextAlignmentCenter;
-		_label.textColor = [UIColor darkGrayColor];
+		_label.textColor = /*[UIColor darkGrayColor]*/[UIColor whiteColor];
 
 		[self addSubview:_label];
 	}

@@ -55,7 +55,7 @@
 
 	self.navigationItem.rightBarButtonItem.title = title;
 
-	self.view.backgroundColor = [title isEqualToString:STR_WIN] ? [UIColor color:HEX_IOS_WHITE] : [UIColor whiteColor];
+	self.view.backgroundColor = [title isEqualToString:STR_WIN] ? /*[UIColor color:HEX_IOS_WHITE]*/[UIColor color:0x1E1E1E] : [UIColor color:0x0F0F0F]/*[UIColor whiteColor]*/;
 
 	self.currentPage = 0;
 }

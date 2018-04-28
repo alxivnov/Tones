@@ -113,8 +113,10 @@
 - (void)load:(NSTimeInterval)duration {
 	if (self.position > 0.0)
 		self.position = self.position;
-	else
-		[self scroll:UIDirectionLeft insets:YES];
+//	else
+//		[self scroll:UIDirectionLeft insets:YES];
+//		self.position = 0.0;
+#warning FIX SCROLLING!!!
 
 	if (duration > 0.0)
 		self.duration = duration;
