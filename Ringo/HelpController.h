@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import "UIPagingController.h"
+#import "UIPageViewController+Convenience.h"
 
 #define STR_MAC NSLocalizedString(@"Mac + iCloud", Nil)
 #define STR_WIN NSLocalizedString(@"Win - iCloud", Nil)

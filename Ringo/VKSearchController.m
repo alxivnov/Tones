@@ -74,7 +74,7 @@
 //		return;
 
 	if (_searchRequest)
-		_sel(_searchRequest, cancel);
+		sel(_searchRequest, cancel);
 
 	_searchRequest = searchRequest;
 

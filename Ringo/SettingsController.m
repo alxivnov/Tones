@@ -27,6 +27,7 @@
 #import "UINavigationController+Convenience.h"
 #import "UITableView+Convenience.h"
 #import "FBSDKShareKit+Convenience.h"
+#import "UIView+Convenience.h"
 
 #import "VKHelper.h"
 
@@ -189,26 +190,22 @@
 		[self presentSafariWithURL:[NSURL URLWithString:VK_GROUP_URL] entersReaderIfAvailable:NO animated:YES completion:^{
 			[Answers logCustomEventWithName:@"Group" customAttributes:@{ @"opened" : @"VK" }];
 		}];
-	else if (indexPath.section == 1)
-		[self presentInviteContent:[FBSDKAppInviteContent createWithAppLinkURL:[NSURL URLWithString:URL_FB_APP_LINK] previewImageURL:[NSURL URLWithString:URL_FB_PREVIEW_IMAGE] destination:indexPath.row ? FBSDKAppInviteDestinationMessenger : FBSDKAppInviteDestinationFacebook] completion:^(BOOL success, NSError *error) {
-			[Answers logInviteWithMethod:indexPath.row ? @"Messenger" : @"Facebook" customAttributes:@{ @"success" : success ? @"YES" : @"NO" }];
-		}];
-	else if ([indexPath isEqualToSection:2 row:0])
+	else if ([indexPath isEqualToSection:1 row:0])
 		[self presentPurchase:^(BOOL success) {
 			if (success)
 				[self.tableView cellForRowAtIndexPath:NSIndexPathMake(2, 0)].detailTextLabel.text = [Localized purchased];
 
 			[GLOBAL setPurchaseSuccess:success];
 		}];
-	else if ([indexPath isEqualToSection:2 row:1])
+	else if ([indexPath isEqualToSection:1 row:1])
 		[[SKPaymentQueue defaultQueue] restoreCompletedTransactions];
-	else if ([indexPath isEqualToSection:3 row:0])
+	else if ([indexPath isEqualToSection:2 row:0])
 		[self presentMailComposeWithRecipients:arr_(STR_EMAIL) subject:[NSBundle bundleDisplayNameAndShortVersion] body:Nil attachments:dic_(@"screenshot.jpg", [[self.navigationController.lowerViewController.view snapshotImageAfterScreenUpdates:YES] jpegRepresentation]) completionHandler:Nil];
-	else if ([indexPath isEqualToSection:4 row:0])
+	else if ([indexPath isEqualToSection:3 row:0])
 		[self presentWebActivityWithActivityItems:@[ [NSBundle bundleDisplayName], [NSURL URLForMobileAppWithIdentifier:APP_ID_RINGO affiliateInfo:GLOBAL.affiliateInfo] ] excludedTypes:Nil completionHandler:^(UIActivityType  _Nullable activityType, BOOL completed, NSArray * _Nullable returnedItems, NSError * _Nullable activityError) {
 			[Answers logInviteWithMethod:activityType customAttributes:@{ @"version" : [NSBundle bundleVersion], @"success" : completed ? @"YES" : @"NO", @"error" : activityError.localizedDescription ?: STR_EMPTY }];
 		} sourceView:[tableView cellForRowAtIndexPath:indexPath]];
-	else if ([indexPath isEqualToSection:5 row:0])
+	else if ([indexPath isEqualToSection:4 row:0])
 		[UIApplication openURL:[NSURL URLForMobileAppWithIdentifier:APP_ID_RINGO affiliateInfo:GLOBAL.affiliateInfo] options:Nil completionHandler:^(BOOL success) {
 			if (success) {
 				GLOBAL.openReviewCount++;
@@ -218,9 +215,9 @@
 				[UIRateController logRateWithMethod:@"SettingsController" success:NO];
 			}
 		}];
-	else if ([indexPath isEqualToSection:6 row:0])
+	else if ([indexPath isEqualToSection:5 row:0])
 		[self presentProductWithIdentifier:APP_ID_DONE parameters:GLOBAL.affiliateInfo];
-	else if ([indexPath isEqualToSection:6 row:1])
+	else if ([indexPath isEqualToSection:5 row:1])
 		[self presentProductWithIdentifier:APP_ID_LUNA parameters:GLOBAL.affiliateInfo];
 
 	[tableView deselectRowAtIndexPath:indexPath animated:YES];

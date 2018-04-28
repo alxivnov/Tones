@@ -32,7 +32,7 @@
 }
 
 - (BOOL)search:(void (^)(NSArray<AFMediaItem *> *))handler {
-	return [AFMediaItem search:[self searchDescription] handler:handler];
+	return [AFMediaItem searchForSong:[self searchDescription] handler:handler];
 }
 
 - (BOOL)lookup:(void (^)(AFMediaItem *))handler {

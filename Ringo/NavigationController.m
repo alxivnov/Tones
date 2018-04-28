@@ -70,7 +70,7 @@ __synthesize(UIPanTransition *, transition, [UIPanTransition gestureTransition:N
 		__block id <UIViewControllerTransitioningDelegate> transition = self.containingViewController.transitioningDelegate = [UIPanTransition gestureTransition:sender];
 
 		UIViewController *vc = self.lastViewController;
-		NSString *identifier = sel(vc, unwindSegueIdentifier);
+		NSString *identifier = ret(vc, unwindSegueIdentifier);
 		if (identifier)
 			[vc performSegueWithIdentifier:identifier sender:transition];
 		else

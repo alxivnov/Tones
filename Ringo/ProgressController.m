@@ -168,7 +168,7 @@
 }
 
 - (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray<UIViewController *> *)previousViewControllers transitionCompleted:(BOOL)completed {
-	if (completed && self.currentPage == self.pageViewControllers.count - 1 && [self.navigationItem.rightBarButtonItem.title isEqualToString:[Localized next]])
+	if (completed && self.currentPage == self.numberOfPages - 1 && [self.navigationItem.rightBarButtonItem.title isEqualToString:[Localized next]])
 		self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(rightBarButtonAction:)];
 }
 

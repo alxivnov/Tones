@@ -9,11 +9,11 @@
 #import <UIKit/UIKit.h>
 
 #import "CGWaveform.h"
-#import "UIScrollView+Scroll.h"
 
 #import "CoreGraphics+Convenience.h"
 #import "AVAsset+Convenience.h"
 #import "NSObject+Convenience.h"
+#import "UIScrollView+Convenience.h"
 
 @import AVFoundation;
 

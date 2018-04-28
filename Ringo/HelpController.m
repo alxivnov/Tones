@@ -19,7 +19,35 @@
 #import "UIColor+Convenience.h"
 #import "UIView+Convenience.h"
 
+@interface HelpController ()
+@property (strong, nonatomic, readonly) NSArray<NSString *> *imageNames;
+@end
+
 @implementation HelpController
+
+- (NSArray<NSString *> *)imageNames {
+	return [self.navigationItem.rightBarButtonItem.title isEqualToString:STR_WIN] ? @[ @"help-1", @"help-2", @"help-3", @"help-4" ] : @[ @"help-1", @"win-1", @"win-2", @"win-3", @"help-4" ];
+}
+
+- (UIViewController *)viewControllerForIndex:(NSUInteger)index {
+	NSString *obj = idx(self.imageNames, index);
+	if (!obj)
+		return Nil;
+
+	HelpView *view = [[HelpView alloc] initWithFrame:self.view.bounds];
+	view.image.image = [UIImage originalImage:obj];
+	view.label.text = loc(obj);
+	view.tag = index;
+	return [view embedInViewController];
+}
+
+- (NSUInteger)indexForViewController:(UIViewController *)viewController {
+	return viewController.view.tag;
+}
+
+- (NSUInteger)numberOfPages {
+	return self.imageNames.count;
+}
 
 - (void)setup:(NSString *)title {
 	if (!title.length)
@@ -29,12 +57,7 @@
 
 	self.view.backgroundColor = [title isEqualToString:STR_WIN] ? [UIColor color:HEX_IOS_WHITE] : [UIColor whiteColor];
 
-	self.pageViewControllers = [[title isEqualToString:STR_WIN] ? @[ @"help-1", @"help-2", @"help-3", @"help-4" ] : @[ @"help-1", @"win-1", @"win-2", @"win-3", @"help-4" ] map:^id(id obj) {
-		HelpView *view = [[HelpView alloc] initWithFrame:self.view.bounds];
-		view.image.image = [UIImage originalImage:obj];
-		view.label.text = NSLocalize(obj);
-		return [view embedInViewController];
-	}];
+	self.currentPage = 0;
 }
 
 - (void)viewDidLoad {
@@ -52,8 +75,6 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-	
-	self.pageViewControllers = Nil;
 }
 
 - (IBAction)rightBarButtonItemAction:(UIBarButtonItem *)sender {

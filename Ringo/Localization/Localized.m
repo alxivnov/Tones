@@ -12,105 +12,105 @@
 
 @implementation Localized
 
-NSLocalizeMethod(ok, @"OK")
-NSLocalizeMethod(next, @"Next")
-NSLocalizeMethod(cancel, @"Cancel")
-NSLocalizeMethod(delete, @"Delete")
-NSLocalizeMethod(export, @"Export")
-NSLocalizeMethod(feature, @"Feature")
+NSLocalizedMethod(ok, @"OK")
+NSLocalizedMethod(next, @"Next")
+NSLocalizedMethod(cancel, @"Cancel")
+NSLocalizedMethod(delete, @"Delete")
+NSLocalizedMethod(export, @"Export")
+NSLocalizedMethod(feature, @"Feature")
 
-NSLocalizeMethod(logIn, @"Log In")
-NSLocalizeMethod(logOut, @"Log Out")
+NSLocalizedMethod(logIn, @"Log In")
+NSLocalizedMethod(logOut, @"Log Out")
 
-NSLocalizeMethod(logInToVK, @"Log In to VK")
-NSLocalizeMethod(logOutFromVK, @"Log Out from VK")
-NSLocalizeMethod(logInToGetAccess, @"Log In to get access to music from VK.")
-NSLocalizeMethod(openCommunity, @"Open VK community")
+NSLocalizedMethod(logInToVK, @"Log In to VK")
+NSLocalizedMethod(logOutFromVK, @"Log Out from VK")
+NSLocalizedMethod(logInToGetAccess, @"Log In to get access to music from VK.")
+NSLocalizedMethod(openCommunity, @"Open VK community")
 
-NSLocalizeMethod(follow, @"Follow")
-NSLocalizeMethod(followTitle, @"Follow our page in VK")
-NSLocalizeMethod(followMessage, @"We are posting ringtones and news about Ringtonic there.")
+NSLocalizedMethod(follow, @"Follow")
+NSLocalizedMethod(followTitle, @"Follow our page in VK")
+NSLocalizedMethod(followMessage, @"We are posting ringtones and news about Ringtonic there.")
 
 + (NSString *)userUsedYourTone:(NSString *)user sex:(NSUInteger)sex {
-	NSString *format = NSLocalizedString(sex == 1 ? @"FEMALE used your tone." : sex == 2 ? @"MALE used your tone." : @"%@ used your tone.", Nil);
+	NSString *format = loc(sex == 1 ? @"FEMALE used your tone." : sex == 2 ? @"MALE used your tone." : @"%@ used your tone.");
 	return [NSString stringWithFormat:format, user];
 }
-NSLocalizeMethod(openProfile, @"Open VK profile")
+NSLocalizedMethod(openProfile, @"Open VK profile")
 
-NSLocalizeMethod(feedback, @"Write an Email")
-NSLocalizeMethod(feedbackTitle, @"What \"Ringtonic\" lacks?")
-NSLocalizeMethod(feedbackMessage, @"Please, describe what addition would make your experience better.\nHow would you use it?")
+NSLocalizedMethod(feedback, @"Write an Email")
+NSLocalizedMethod(feedbackTitle, @"What \"Ringtonic\" lacks?")
+NSLocalizedMethod(feedbackMessage, @"Please, describe what addition would make your experience better.\nHow would you use it?")
 
-NSLocalizeMethod(allow, @"Allow")
-NSLocalizeMethod(allowNotifications, @"Allow Notifications")
-NSLocalizeMethod(allowSendNotifications, @"To receive alerts about new tones allow \"Ringtonic\" to send you notifications in the Settings.")
-NSLocalizeMethod(allowMediaLibrary, @"Allow Media Library Access")
-NSLocalizeMethod(allowPlayMediaLibrary, @"To create tones from your music allow \"Ringtonic\" to access Media Library in the Settings.")
+NSLocalizedMethod(allow, @"Allow")
+NSLocalizedMethod(allowNotifications, @"Allow Notifications")
+NSLocalizedMethod(allowSendNotifications, @"To receive alerts about new tones allow \"Ringtonic\" to send you notifications in the Settings.")
+NSLocalizedMethod(allowMediaLibrary, @"Allow Media Library Access")
+NSLocalizedMethod(allowPlayMediaLibrary, @"To create tones from your music allow \"Ringtonic\" to access Media Library in the Settings.")
 
-NSLocalizeMethod(rateApp, @"Rate app in the App Store")
-NSLocalizeMethod(fullGuide, @"Read full guide")
+NSLocalizedMethod(rateApp, @"Rate app in the App Store")
+NSLocalizedMethod(fullGuide, @"Read full guide")
 
-NSLocalizeMethod(openInITunesStore, @"Open in iTunes Store")
-NSLocalizeMethod(purchaseAndDownload, @"You need to purchase and download the song via iTunes to use it as a ringtone.")
+NSLocalizedMethod(openInITunesStore, @"Open in iTunes Store")
+NSLocalizedMethod(purchaseAndDownload, @"You need to purchase and download the song via iTunes to use it as a ringtone.")
 
-NSLocalizeMethod(posted, @"Posted")
-NSLocalizeMethod(myProfile, @"My Profile")
-NSLocalizeMethod(myCommunities, @"My Communities")
+NSLocalizedMethod(posted, @"Posted")
+NSLocalizedMethod(myProfile, @"My Profile")
+NSLocalizedMethod(myCommunities, @"My Communities")
 
 + (NSString *)friends:(NSUInteger)count {
-	return count ? [NSString stringWithFormat:NSLocalize(@"%@ friends"), @(count)] : Nil;
+	return count ? [NSString stringWithFormat:loc(@"%@ friends"), @(count)] : Nil;
 }
 
 + (NSString *)followers:(NSUInteger)count {
-	return count ? [NSString stringWithFormat:NSLocalize(@"%@ followers"), @(count)] : Nil;
+	return count ? [NSString stringWithFormat:loc(@"%@ followers"), @(count)] : Nil;
 }
 
-NSLocalizeMethod(emptyState, @"Press to convert your favourite song to ringtone.")
+NSLocalizedMethod(emptyState, @"Press to convert your favourite song to ringtone.")
 
-NSLocalizeMethod(processing, @"Processing...")
+NSLocalizedMethod(processing, @"Processing...")
 
-NSLocalizeMethod(waiting, @"Waiting...")
+NSLocalizedMethod(waiting, @"Waiting...")
 
 + (NSString *)hi:(NSString *)username {
-	return [NSString stringWithFormat:NSLocalizedString(@"Hi,\n%@!", Nil), username];
+	return [NSString stringWithFormat:loc(@"Hi,\n%@!"), username];
 }
 
-NSLocalizeMethod(mono, @"Mono")
-NSLocalizeMethod(stereo, @"Stereo")
-NSLocalizeMethod(purchased, @"Purchased")
+NSLocalizedMethod(mono, @"Mono")
+NSLocalizedMethod(stereo, @"Stereo")
+NSLocalizedMethod(purchased, @"Purchased")
 
-NSLocalizeMethod(newTone, @"New")
+NSLocalizedMethod(newTone, @"New")
 
-NSLocalizeMethod(newToneIsAvailable, @"New tone is available")
-NSLocalizeMethod(newToneIsAvailableWithArgs, @"New tone %2$@ by %1$@ is available.")
-NSLocalizeMethod(somebodyUsedYourToneWithArgs, @"Somebody used your tone %1$@ - %2$@.")
+NSLocalizedMethod(newToneIsAvailable, @"New tone is available")
+NSLocalizedMethod(newToneIsAvailableWithArgs, @"New tone %2$@ by %1$@ is available.")
+NSLocalizedMethod(somebodyUsedYourToneWithArgs, @"Somebody used your tone %1$@ - %2$@.")
 
 + (NSString *)somebodyUsedYourTone:(NSString *)user {
-	return user.length ? [NSString stringWithFormat:NSLocalize(@"%@ used your tone.") , user] : NSLocalize(@"Somebody used your tone.");
+	return user.length ? [NSString stringWithFormat:loc(@"%@ used your tone.") , user] : loc(@"Somebody used your tone.");
 }
 
-NSLocalizeMethod(howToInstallToneToPhone, @"How to install tone to iPhone?")
+NSLocalizedMethod(howToInstallToneToPhone, @"How to install tone to iPhone?")
 
-NSLocalizeMethod(findUsOnFacebook, @"Find us on Facebook")
+NSLocalizedMethod(findUsOnFacebook, @"Find us on Facebook")
 
 + (NSString *)tones:(NSUInteger)count {
-	return [NSString localizedStringWithFormat:NSLocalize(@"Tones: %lu"), count];
+	return [NSString localizedStringWithFormat:loc(@"Tones: %lu"), count];
 }
 
 + (NSString *)tonesCreated:(NSUInteger)count {
-	return [NSString localizedStringWithFormat:NSLocalize(@"YOU CREATED %lu TONES"), count];
+	return [NSString localizedStringWithFormat:loc(@"YOU CREATED %lu TONES"), count];
 }
 
 + (NSString *)timesUsed:(NSUInteger)count {
-	return [NSString localizedStringWithFormat:NSLocalize(@"THEY WERE USED %lu TIMES"), count];
+	return [NSString localizedStringWithFormat:loc(@"THEY WERE USED %lu TIMES"), count];
 }
 
 + (NSString *)times:(NSUInteger)count {
-	return [NSString localizedStringWithFormat:NSLocalize(@"%lu times"), count];
+	return [NSString localizedStringWithFormat:loc(@"%lu times"), count];
 }
 
 + (NSArray<NSString *> *)keywords {
-	return [NSLocalize(@"keywords") componentsSeparatedByString:STR_COMMA];
+	return [loc(@"keywords") componentsSeparatedByString:STR_COMMA];
 }
 
 @end

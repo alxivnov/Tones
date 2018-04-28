@@ -17,12 +17,13 @@
 #import "VKFeaturedController.h"
 
 #import "NSRateController.h"
-#import "NSURL+HTML.h"
+#import "NSURL+Convenience.h"
 #import "UIBarButtonItem+Convenience.h"
 #import "VKHelper.h"
 
 #import "CKDatabase+Convenience.h"
 #import "NSArray+Convenience.h"
+#import "NSAttributedString+Convenience.h"
 #import "NSObject+Convenience.h"
 #import "UIActivityIndicatorView+Convenience.h"
 #import "UIApplication+Convenience.h"
@@ -307,7 +308,7 @@ __synthesize(MPMediaPickerController *, mediaPicker, ({ MPMediaPicker *x = [[MPM
 }
 
 - (BOOL)openURL:(NSURL *)url {
-	NSDictionary *query = [[url importHTML] queryDictionary];
+	NSDictionary *query = [[NSURL URLWithString:[NSAttributedString attributedStringWithHTMLString:url.absoluteString encoding:NSUnicodeStringEncoding].string] queryDictionary];
 
 	return [self openAudioItem:[AudioItem createWithDictionary:query]];
 }
@@ -357,7 +358,7 @@ __synthesize(MPMediaPickerController *, mediaPicker, ({ MPMediaPicker *x = [[MPM
 }
 
 - (IBAction)select:(UIStoryboardSegue *)segue {
-	[self performSelector:@selector(vkCreateTone:) withObject:sel(segue.sourceViewController, selectedItem) afterDelay:0.1];
+	[self performSelector:@selector(vkCreateTone:) withObject:ret(segue.sourceViewController, selectedItem) afterDelay:0.1];
 }
 
 - (IBAction)unwind:(UIStoryboardSegue *)segue {
@@ -365,7 +366,7 @@ __synthesize(MPMediaPickerController *, mediaPicker, ({ MPMediaPicker *x = [[MPM
 }
 
 - (IBAction)import:(UIStoryboardSegue *)segue {
-	AudioItem *item = sel(segue.sourceViewController, selectedItem);
+	AudioItem *item = ret(segue.sourceViewController, selectedItem);
 	if (!item)
 		return;
 
