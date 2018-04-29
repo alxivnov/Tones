@@ -11,7 +11,7 @@
 
 #import "User.h"
 
-#import "VKHelper.h"
+//#import "VKHelper.h"
 
 #import "Dispatch+Convenience.h"
 #import "NSObject+Convenience.h"
@@ -34,14 +34,14 @@
 	[GCD main:^{
 		self.titleField.text = user.title;
 	}];
-
+/*
 	if (user.vkUserID)
 		[VKHelper getUsers:arr_(@(user.vkUserID)) fields:Nil handler:^(NSArray<VKUser *> *users) {
 			[GCD main:^{
 				self.titleField.placeholder = [users.firstObject fullName];
 			}];
 		}];
-}
+*/}
 
 - (NSUInteger)countOfTones {
 	return [self.countOfTonesLabel.text integerValue];
@@ -72,16 +72,16 @@
 	[[CKContainer defaultContainer] fetchUserRecordID:^(CKRecordID *recordID) {
 		[User query:[NSPredicate predicateWithCreatorUserRecordID:recordID] completion:^(NSArray<User *> *results) {
 			self.user = results.count ? results.firstObject : [User new];
-
+/*
 			if ([[[VKHelper instance] wakeUpSession].userId integerValue]) {
 				User *user = self.user;//results.count ? results.firstObject : [User new];
 				user.vkUserID = [[[VKHelper instance] wakeUpSession].userId integerValue];
 				[user update:Nil];
 			}
-
+*/
 		}];
 	}];
-
+/*
 	NSString *vkUserID = [[VKHelper instance] wakeUpSession].userId;
 	if (vkUserID)
 		[VKHelper getUsers:arr_(vkUserID) fields:Nil handler:^(NSArray<VKUser *> *users) {
@@ -89,6 +89,7 @@
 				self.titleField.placeholder = [users.firstObject fullName];
 			}];
 		}];
+*/
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

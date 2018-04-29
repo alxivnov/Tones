@@ -10,7 +10,7 @@
 #import "Tone.h"
 #import "User.h"
 
-#import <VKSdk/VKSdk.h>
+//#import <VKSdk/VKSdk.h>
 
 @interface CKController : AudioController <UITableViewDelegate>
 
@@ -20,6 +20,6 @@
 
 - (void)loadTones:(void (^)(void))handler;
 
-- (void)loadItems:(void (^)(NSArray<Tone *> *tones, NSArray<User *> *users, NSArray<VKUser *> *vkUsers, NSTimeInterval activitiesExpirationInterval))handler;
+- (void)loadItems:(void (^)(NSArray<Tone *> *tones, NSArray<User *> *users/*, NSArray<VKUser *> *vkUsers*/, NSTimeInterval activitiesExpirationInterval))handler;
 
 @end

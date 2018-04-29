@@ -3,7 +3,8 @@
 "znw-MX-ptm.title" = "ЗВУКИ";
 
 /* Class = "UINavigationItem"; title = "ПОПУЛЯРНЫЕ"; ObjectID = "9zm-sY-v4Q"; */
-"9zm-sY-v4Q.title" = "ПОПУЛЯРНЫЕ";
+"9zm-sY-v4Q.title" = "Популярные";
+"Ttv-e6-RrH.title" = "Новые";
 
 "K2O-LR-ZYc.segmentTitles[0]" = "Новые";
 "K2O-LR-ZYc.segmentTitles[1]" = "Популярные";
@@ -24,7 +25,7 @@
 "xck-pG-Xct.title" = "Вход";
 
 /* Class = "UINavigationItem"; title = "ПРОФИЛЬ"; ObjectID = "eHC-Qs-gJW"; */
-"eHC-Qs-gJW.title" = "ПРОФИЛЬ";
+"eHC-Qs-gJW.title" = "Профиль";
 
 /* Class = "UITabBarItem"; title = "Профиль"; ObjectID = "TPM-bu-2md"; */
 "TPM-bu-2md.title" = "Профиль";

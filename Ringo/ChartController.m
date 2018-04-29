@@ -10,7 +10,7 @@
 #import "Global.h"
 #import "Localized.h"
 
-#import "VKHelper.h"
+//#import "VKHelper.h"
 
 #import "NSArray+Convenience.h"
 #import "NSCalendar+Convenience.h"
@@ -48,7 +48,7 @@
 	[[NSUserDefaults standardUserDefaults] setInteger:sender.selectedSegmentIndex forKey:KEY_SELECTED_SEGMENT_INDEX];
 }
 
-- (void)loadUsers:(NSArray<Tone *> *)results handler:(void (^)(NSArray<User *> *, NSArray<VKUser *> *))handler {
+- (void)loadUsers:(NSArray<Tone *> *)results handler:(void (^)(NSArray<User *> */*, NSArray<VKUser *> **/))handler {
 	NSArray<CKRecordID *> *recordIDs = [[results map:^id(__kindof CKObjectBase *obj) {
 		return obj.record.creatorUserRecordID;
 	}] dictionaryWithKey:^id<NSCopying>(CKRecordID *obj) {
@@ -56,30 +56,30 @@
 	}].allValues;
 
 	[User query:[NSPredicate predicateWithCreatorUserRecordIDs:recordIDs] completion:^(NSArray<__kindof CKObjectBase *> *users) {
-		NSArray<NSNumber *> *vkIDs = [users map:^id(User *obj) {
+/*		NSArray<NSNumber *> *vkIDs = [users map:^id(User *obj) {
 			return obj.vkUserID > 0 ? @(obj.vkUserID) : Nil;
 		}];
-
-		[VKHelper getUsers:vkIDs fields:Nil handler:^(NSArray<VKUser *> *vkUsers) {
-			if (handler)
-				handler(users, vkUsers);
-		}];
+*/
+//		[VKHelper getUsers:vkIDs fields:Nil handler:^(NSArray<VKUser *> *vkUsers) {
+//			if (handler)
+				handler(users/*, vkUsers*/);
+//		}];
 	}];
 }
 
-- (void)loadItems:(void (^)(NSArray<Tone *> *, NSArray<User *> *, NSArray<VKUser *> *, NSTimeInterval))handler {
+- (void)loadItems:(void (^)(NSArray<Tone *> *, NSArray<User *> */*, NSArray<VKUser *> **/, NSTimeInterval))handler {
 	if (self.segment.selectedSegmentIndex)
 		[self loadFeatured:GLOBAL.tonesCount handler:^(NSArray<__kindof Tone *> *results) {
-			[self loadUsers:results handler:^(NSArray<User *> *users, NSArray<VKUser *> *vkUsers) {
+			[self loadUsers:results handler:^(NSArray<User *> *users/*, NSArray<VKUser *> *vkUsers*/) {
 				if (handler)
-					handler(results, users, vkUsers, TIME_WEEK);
+					handler(results, users/*, vkUsers*/, TIME_WEEK);
 			}];
 		}];
 	else
 		[self loadRecent:GLOBAL.tonesCount handler:^(NSArray<__kindof Tone *> *results) {
-			[self loadUsers:results handler:^(NSArray<User *> *users, NSArray<VKUser *> *vkUsers) {
+			[self loadUsers:results handler:^(NSArray<User *> *users/*, NSArray<VKUser *> *vkUsers*/) {
 				if (handler)
-					handler(results, users, vkUsers, TIME_DAY);
+					handler(results, users/*, vkUsers*/, TIME_DAY);
 			}];
 		}];
 }

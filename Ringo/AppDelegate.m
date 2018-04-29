@@ -11,7 +11,7 @@
 
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <TwitterKit/TwitterKit.h>
-#import <VKSdk/VKSdk.h>
+//#import <VKSdk/VKSdk.h>
 
 #import "AppDelegate.h"
 #import "Global.h"
@@ -19,7 +19,7 @@
 #import "NotificationService.h"
 
 #import "UIViewController+Answers.h"
-#import "VKHelper.h"
+//#import "VKHelper.h"
 
 #import "NSFileManager+iCloud.h"
 #import "NSObject+Convenience.h"
@@ -29,7 +29,7 @@
 #import "Dispatch+Convenience.h"
 #import "UserNotifications+Convenience.h"
 
-#import "VKAPI.h"
+//#import "VKAPI.h"
 
 //#import "CSSearchableIndex+Convenience.h"
 //#import "GSTouchesShowingWindow.h"
@@ -62,9 +62,9 @@
 	if ([[Twitter sharedInstance] application:app openURL:url options:options])
 		return YES;
 
-	if ([VKSdk processOpenURL:url fromApplication:sourceApplication])
+/*	if ([VKSdk processOpenURL:url fromApplication:sourceApplication])
 		return YES;
-
+*/
 	return [[[app.rootViewController presentRootViewController] forwardSelector:@selector(openURL:) withObject:url nextTarget:UIViewControllerNextTarget(YES)] boolValue];
 }
 
@@ -93,15 +93,15 @@
 
 	[[Twitter sharedInstance] startWithConsumerKey:@"auVb4jBeyTcvYOdJieWWe9l5x" consumerSecret:@"NhWbMXQEX1SJjR2vnBAcpTMfv03p9kqzWkxxr7GPLDGhoyT9r2"];
 
-	[VKHelper initializeWithAppId:GLOBAL.vkEnabled ? GLOBAL.vkAppId : VK_APP_ID apiVersion:GLOBAL.vkVersion permissions:VK_PERMISSIONS];
+//	[VKHelper initializeWithAppId:GLOBAL.vkEnabled ? GLOBAL.vkAppId : VK_APP_ID apiVersion:GLOBAL.vkVersion permissions:VK_PERMISSIONS];
 
 //	[[Crashlytics sharedInstance] setUserIdentifier:[[VKHelper instance] wakeUpSession].userId];
-
+/*
 	if (GLOBAL.vkEnabled) {
 		[VKAPI api].version = GLOBAL.vkVersion;
 		[VKAPI api].userAgent = GLOBAL.vkUserAgent;
 	}
-
+*/
 	[[NSFileManager defaultManager] URLForUbiquityContainerIdentifier:Nil handler:Nil];
 	
 	[application registerForRemoteNotifications];

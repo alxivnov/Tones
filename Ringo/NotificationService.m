@@ -14,7 +14,7 @@
 #import "Tone.h"
 #import "User.h"
 
-#import "VKHelper.h"
+//#import "VKHelper.h"
 
 #import "Affiliates+Convenience.h"
 #import "UserNotifications+Convenience.h"
@@ -83,13 +83,13 @@
 
 			[User query:[NSPredicate predicateWithCreatorUserRecordID:tone.record.lastModifiedUserRecordID] completion:^(NSArray<User *> *users) {
 				self.bestAttemptContent.title = [Localized somebodyUsedYourTone:users.firstObject.title];
-
+/*
 				[VKHelper getUsers:@[ @(users.firstObject.vkUserID) ] fields:@[ VK_PARAM_SEX ] handler:^(NSArray<VKUser *> *vkUsers) {
 					if (vkUsers.count)
 						self.bestAttemptContent.title = [Localized userUsedYourTone:[vkUsers.firstObject fullName] sex:vkUsers.firstObject.sex.unsignedIntegerValue];
-
+*/
 					if (tone.description.length)
-						[AFMediaItem search:tone.description handler:^(NSArray<AFMediaItem *> *results) {
+						[AFMediaItem searchForSong:tone.description handler:^(NSArray<AFMediaItem *> *results) {
 							[results.firstObject.artworkUrl100 cache:^(NSURL *url) {
 								self.bestAttemptContent.attachments = arr_([UNNotificationAttachment attachmentWithURL:url]);
 
@@ -98,7 +98,7 @@
 						}];
 					else
 						completionHandler();
-				}];
+//				}];
 			}];
 		}];
 	} else if ([notification.subscriptionID isEqualToString:STR_SUBSCRIPTION_ID_PUSH]) {

@@ -13,7 +13,7 @@
 #import "Localized.h"
 
 #import "UIViewController+Answers.h"
-#import "UIViewController+VK.h"
+//#import "UIViewController+VK.h"
 
 #import "Dispatch+Convenience.h"
 #import "TwitterKit+Convenience.h"
@@ -29,13 +29,13 @@
 #define IMG_CLOUD_UPLOAD @"cloud-upload"
 #define IMG_FB_30 @"FB-30"
 #define IMG_TW_30 @"TW-30"
-#define IMG_VK_30 @"VK-30"
+//#define IMG_VK_30 @"VK-30"
 
 #define URL_JPG @"http://ringtonic.net/ringo.jpg"
 
 #define KEY_FACEBOOK @"Facebook"
 #define KEY_TWITTER @"Twitter"
-#define KEY_VK @"VK"
+//#define KEY_VK @"VK"
 #define KEY_TONE @"Tone"
 #define KEY_SUCCESS @"success"
 #define KEY_METHOD @"method"
@@ -43,7 +43,7 @@
 @implementation ExportController
 
 - (NSArray *)accessoryImages:(AudioItem *)item {
-	return [UIImage originalImages:[NSArray arrayWithObject:IMG_FB_30 withObject:GLOBAL.vkEnabled ? IMG_VK_30 : IMG_TW_30]];
+	return [UIImage originalImages:[NSArray arrayWithObject:IMG_FB_30 withObject:/*GLOBAL.vkEnabled ? IMG_VK_30 :*/ IMG_TW_30]];
 }
 
 #warning Reload accessory image!!!
@@ -67,7 +67,7 @@
 		}];
 //	else if (index == 3) {
 	else if (index == 2) {
-		if (GLOBAL.vkEnabled) {
+/*		if (GLOBAL.vkEnabled) {
 			if ([VKSdk wakeUpSession:VK_PERMISSIONS])
 				[self performSegueWithIdentifier:GUI_VK_SHARE sender:item];
 			else
@@ -75,22 +75,22 @@
 					[Answers logShareWithMethod:KEY_VK contentName:[item description] contentType:KEY_TONE contentId:[item identifier] customAttributes:@{ KEY_SUCCESS : result == VKShareDialogControllerResultDone ? @"YES" : @"NO", KEY_METHOD : @"presentShareDialogWithURL:" }];
 				}];
 		} else {
-			TWComposer *composer = [[TWComposer alloc] init];
+*/			TWComposer *composer = [[TWComposer alloc] init];
 			[composer setText:[item shareDescription]];
 			[composer setImage:item.image];
 			[composer setURL:item.shareURL];
 			[composer showFromViewController:self completion:^(TWTRComposerResult result) {
 				[Answers logShareWithMethod:KEY_TWITTER contentName:[item description] contentType:KEY_TONE contentId:[item identifier] customAttributes:@{ KEY_SUCCESS : result == TWTRComposerResultDone ? @"YES" : @"NO", KEY_METHOD : @"showFromViewController:" }];
 			}];
-		}
+//		}
 	}
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-	if ([segue.identifier isEqualToString:GUI_VK_SHARE])
+/*	if ([segue.identifier isEqualToString:GUI_VK_SHARE])
 		[segue.destinationViewController forwardSelector:@selector(setSelectedItem:) withObject:sender nextTarget:UIViewControllerNextTarget(YES)];
 	else
-		[super prepareForSegue:segue sender:sender];
+*/		[super prepareForSegue:segue sender:sender];
 }
 
 - (NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -121,11 +121,11 @@
 - (NSString *)loggingName {
 	return @"Main";
 }
-
+/*
 - (NSDictionary<NSString *,id> *)loggingCustomAttributes {
 	return @{ @"VK enabled" : GLOBAL.vkEnabled ? @"YES" : @"NO", @"VK logged in" : [VKSdk isLoggedIn] ? @"YES" : @"NO"  };
 };
-
+*/
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
 	

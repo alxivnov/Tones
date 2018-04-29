@@ -9,7 +9,7 @@
 #import "RatingController.h"
 #import "Global.h"
 #import "Localized.h"
-#import "UIViewController+VKLog.h"
+//#import "UIViewController+VKLog.h"
 
 #import "UIRateController+Answers.h"
 
@@ -22,7 +22,7 @@
 #import "UIColor+Convenience.h"
 #import "UITableView+Convenience.h"
 #import "UIViewController+Convenience.h"
-#import "VKHelper.h"
+//#import "VKHelper.h"
 
 #import <Crashlytics/Answers.h>
 
@@ -90,12 +90,12 @@ __synthesize(NSTimeInterval, sec, [[NSDate date] timeIntervalSinceDate:[[NSFileM
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 	if ([self topSection:indexPath.section]) {
-		BOOL logIn = GLOBAL.vkEnabled && [[VKHelper instance] wakeUpSession] == Nil;
+//		BOOL logIn = GLOBAL.vkEnabled && [[VKHelper instance] wakeUpSession] == Nil;
 
-		UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:logIn ? @"vk" : @"fb" forIndexPath:indexPath];
+		UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:/*logIn ? @"vk" : */@"fb" forIndexPath:indexPath];
 
-		if (logIn)
-			cell.textLabel.text = [Localized logInToVK];
+//		if (logIn)
+//			cell.textLabel.text = [Localized logInToVK];
 
 		if ([UIRateController instance].view) {
 			[cell.contentView addSubview:[UIRateController instance].view];
@@ -120,12 +120,12 @@ __synthesize(NSTimeInterval, sec, [[NSDate date] timeIntervalSinceDate:[[NSFileM
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	if ([self topSection:indexPath.section]) {
-		BOOL logIn = GLOBAL.vkEnabled && [[VKHelper instance] wakeUpSession] == Nil;
+/*		BOOL logIn = GLOBAL.vkEnabled && [[VKHelper instance] wakeUpSession] == Nil;
 
 		if (logIn)
 			[[VKHelper instance] authorize];
 		else
-			[self fbAction:Nil];
+*/			[self fbAction:Nil];
 
 		return;
 	}
@@ -164,7 +164,7 @@ __synthesize(NSTimeInterval, sec, [[NSDate date] timeIntervalSinceDate:[[NSFileM
 
 	return [super tableView:tableView heightForRowAtIndexPath:indexPath];
 }
-
+/*
 - (void)vkSdkReceivedNewToken:(VKAccessToken *)newToken {
 	if ([self topSection:0])
 		[self.tableView reloadRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
@@ -175,5 +175,5 @@ __synthesize(NSTimeInterval, sec, [[NSDate date] timeIntervalSinceDate:[[NSFileM
 - (void)vkSdkUserDeniedAccess:(VKError *)authorizationError {
 	[self.lastViewController vkLogUserDeniedAccess:authorizationError];
 }
-
+*/
 @end

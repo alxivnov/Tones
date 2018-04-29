@@ -8,7 +8,7 @@
 
 #import "Global.h"
 
-#import "VKHelper.h"
+//#import "VKHelper.h"
 
 #import "NSArray+Convenience.h"
 #import "NSBundle+Convenience.h"
@@ -16,8 +16,9 @@
 #import "NSObject+Convenience.h"
 #import "NSURL+Convenience.h"
 #import "SKInAppPurchase.h"
+#import "UIApplication+Convenience.h"
 #import "UIColor+Convenience.h"
-#import "VKAPI.h"
+//#import "VKAPI.h"
 
 //	4986954		Snapster for iPhone
 
@@ -29,10 +30,10 @@
 //	3087106
 //	3140623
 
-#define KEY_VK_APP_ID @"vkAppId"
-#define KEY_VK_VERSION @"vkVersion"
-#define KEY_VK_USER_AGENT @"vkUserAgent"
-#define KEY_VK_ENABLED @"vkEnabled"
+//#define KEY_VK_APP_ID @"vkAppId"
+//#define KEY_VK_VERSION @"vkVersion"
+//#define KEY_VK_USER_AGENT @"vkUserAgent"
+//#define KEY_VK_ENABLED @"vkEnabled"
 #define KEY_FB_MODES @"fbModes"
 #define KEY_TONES_COUNT @"tonesCount"
 #define KEY_TONES_LIMIT @"tonesLimit"
@@ -47,7 +48,7 @@
 @implementation Global
 
 __synthesize(NSUserDefaults *, defaults, [NSUserDefaults standardUserDefaults])
-
+/*
 - (NSString *)vkAppId {
 	return [self.defaults objectForKey:KEY_VK_APP_ID] ?: VK_APP_ID;
 }
@@ -85,7 +86,7 @@ __synthesize(NSUserDefaults *, defaults, [NSUserDefaults standardUserDefaults])
 - (void)setVkEnabled:(BOOL)vkEnabled {
 	[self.defaults setBool:vkEnabled forKey:KEY_VK_ENABLED];
 }
-
+*/
 - (NSArray<NSNumber *> *)fbModes {
 	return [self.defaults objectForKey:KEY_FB_MODES];
 }
@@ -120,9 +121,9 @@ __synthesize(NSUserDefaults *, defaults, [NSUserDefaults standardUserDefaults])
 		NSData *data = [NSData dataWithContentsOfURL:url];
 		NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data];
 
-		self.vkAppId = json[@"a"];
-		self.vkVersion = json[@"n"];
-		self.vkUserAgent = json[@"u"];
+//		self.vkAppId = json[@"a"];
+//		self.vkVersion = json[@"n"];
+//		self.vkUserAgent = json[@"u"];
 //		self.tonesCount = [json[@"c"] integerValue];
 		self.tonesLimit = [json[@"e"] integerValue];
 		self.fbModes = json[@"m"];
@@ -131,12 +132,12 @@ __synthesize(NSUserDefaults *, defaults, [NSUserDefaults standardUserDefaults])
 //		self.vkEnabled = IS_DEBUGGING || [VKSdk wakeUpSession:VK_PERMISSIONS] || ([NSBundle isPreferredLocalization:LNG_RU] && json[@"v"] && [json[@"v"] compare:[NSBundle bundleVersion] options:NSNumericSearch] != NSOrderedAscending);
 //		if (handler)
 //			handler(vkEnabled != self.vkEnabled);
-
+/*
 		if (self.vkEnabled) {
 			[VKAPI api].version = GLOBAL.vkVersion;
 			[VKAPI api].userAgent = GLOBAL.vkUserAgent;
 		}
-	}];
+*/	}];
 }
 
 - (void)update {
@@ -152,8 +153,8 @@ __synthesize(NSUserDefaults *, defaults, [NSUserDefaults standardUserDefaults])
 }
 
 - (void)updateFrom:(NSString *)oldVersion to:(NSString *)newVersion {
-	if (!oldVersion)
-		[VKSdk forceLogout];
+//	if (!oldVersion)
+//		[VKSdk forceLogout];
 	
 	[[NSFileManager URLForDirectory:NSCachesDirectory] clearDirectory];
 }

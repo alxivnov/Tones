@@ -9,7 +9,7 @@
 #import "SettingsController.h"
 #import "Global.h"
 #import "Localized.h"
-#import "UIViewController+VKLog.h"
+//#import "UIViewController+VKLog.h"
 
 #import "UIRateController+Answers.h"
 #import "UIViewController+Answers.h"
@@ -26,10 +26,11 @@
 #import "UIActivityViewController+Convenience.h"
 #import "UINavigationController+Convenience.h"
 #import "UITableView+Convenience.h"
+#import "UITableViewCell+Convenience.h"
 #import "FBSDKShareKit+Convenience.h"
 #import "UIView+Convenience.h"
 
-#import "VKHelper.h"
+//#import "VKHelper.h"
 
 #import "Ad.h"
 #import "Push.h"
@@ -41,6 +42,9 @@
 #define URL_FB_APP_LINK @"http://apptag.me/tones/"//@"https://fb.me/1834277420229702"
 #define URL_FB_PREVIEW_IMAGE @"http://ringtonic.net/ringtonic.jpg"
 
+#define IDX_APPS 5
+#define DEV_ID 734258593
+
 @interface SettingsController ()
 @property (assign, nonatomic) NSUInteger vkEnabled;
 
@@ -49,6 +53,8 @@
 @property (weak, nonatomic) IBOutlet UISwitch *toneSwitch;
 @property (weak, nonatomic) IBOutlet UISwitch *pushSwitch;
 @property (weak, nonatomic) IBOutlet UISwitch *adSwitch;
+
+@property (strong, nonatomic) NSArray<AFMediaItem *> *apps;
 @end
 
 @implementation SettingsController
@@ -63,6 +69,28 @@
 	// self.navigationItem.rightBarButtonItem = self.editButtonItem;
 
 	[[self class] query];
+
+	NSURL *url = [[NSFileManager URLForDirectory:NSCachesDirectory] URLByAppendingPathComponent:[NSString stringWithFormat:@"%ul.plist", DEV_ID]];
+	self.apps = [[NSArray arrayWithContentsOfURL:url] map:^id(id obj) {
+		return [[AFMediaItem alloc] initWithDictionary:obj];
+	}];
+
+	[AFMediaItem lookup:@{ KEY_ID : @(DEV_ID), KEY_MEDIA : kMediaSoftware, KEY_ENTITY : kEntitySoftware } handler:^(NSArray<AFMediaItem *> *results) {
+		self.apps = [results query:^BOOL(AFMediaItem *obj) {
+			return [obj.wrapperType isEqualToString:kMediaSoftware] && obj.trackId.unsignedIntegerValue != APP_ID_RINGO;
+		}];
+		[[self.apps map:^id(AFMediaItem *obj) {
+			return obj.dictionary;
+		}] writeToURL:url];
+
+		if (self.apps.count)
+			[GCD main:^{
+				if (self.tableView.numberOfSections > IDX_APPS)
+					[self.tableView reloadSections:[NSIndexSet indexSetWithIndex:IDX_APPS] withRowAnimation:UITableViewRowAnimationAutomatic];
+				else
+					[self.tableView insertSections:[NSIndexSet indexSetWithIndex:IDX_APPS] withRowAnimation:UITableViewRowAnimationAutomatic];
+			}];
+	}];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -82,7 +110,7 @@
 	UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:NSIndexPathMake(0, 0)];
 	cell.detailTextLabel.text = [NSBundle bundleShortVersionString];
 
-	[self setup:Nil];
+//	[self setup:Nil];
 
 
 
@@ -98,16 +126,10 @@
 
 
 
-	[[self.tableView cellForRowAtIndexPath:NSIndexPathMake(2, 0)].imageView animate:CGAffineTransformMakeRotation(DEG_360 / 4) duration:1.25 damping:0.1 velocity:ANIMATION_VELOCITY options:ANIMATION_OPTIONS completion:Nil];
+	[[self.tableView cellForRowAtIndexPath:NSIndexPathMake(1, 0)].imageView animate:CGAffineTransformMakeRotation(DEG_360 / 4) duration:1.25 damping:0.1 velocity:ANIMATION_VELOCITY options:ANIMATION_OPTIONS completion:Nil];
 
 
 
-	self.waveformSwitch.on = [[NSUserDefaults standardUserDefaults] boolForKey:STR_LOGARITHMIC_WAVEFORM];
-
-
-	self.toneSwitch.on = [[[NSUserDefaults standardUserDefaults] objectForKey:STR_SUBSCRIPTION_ID_TONE] boolValue];
-	self.pushSwitch.on = [[[NSUserDefaults standardUserDefaults] objectForKey:STR_SUBSCRIPTION_ID_PUSH] boolValue];
-	self.adSwitch.on = [[[NSUserDefaults standardUserDefaults] objectForKey:STR_SUBSCRIPTION_ID_AD] boolValue];
 	[[[CKContainer defaultContainer] publicCloudDatabase] fetchSubscriptionsWithIDs:@[ STR_SUBSCRIPTION_ID_TONE, STR_SUBSCRIPTION_ID_PUSH, STR_SUBSCRIPTION_ID_AD ] completionHandler:^(NSDictionary<NSString *,CKSubscription *> *subscriptionsBySubscriptionID, NSError *operationError) {
 		[GCD main:^{
 			self.toneSwitch.on = subscriptionsBySubscriptionID[STR_SUBSCRIPTION_ID_TONE] != Nil;
@@ -126,7 +148,7 @@
 }
 
 - (void)setupInAppPurchase {
-	UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:NSIndexPathMake(2, 0)];
+	UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:NSIndexPathMake(1, 0)];
 
 	SKInAppPurchase *purchase = [SKInAppPurchase purchaseWithProductIdentifier:GLOBAL.purchaseID];
 
@@ -160,32 +182,82 @@
 	[self endLogging];
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
-	return !section && GLOBAL.vkEnabled && ![VKSdk isLoggedIn] ? [Localized logInToGetAccess] : [super tableView:tableView titleForFooterInSection:section];
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+	return IS_DEBUGGING ? 8 : 7;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-	return [super tableView:tableView numberOfRowsInSection:section] - (!section && !GLOBAL.vkEnabled ? 2 : 0);
+	return section == 1 ? 2 : section == IDX_APPS ? self.apps.count : section == 7 ? 3 : 1;
+//	return [super tableView:tableView numberOfRowsInSection:section] - (!section && !GLOBAL.vkEnabled ? 2 : 0);
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+	return section == 0 ? loc(@"About") : section == 1 ? loc(@"Stereo") : section == 2 ? loc(@"Feedback") : section == 3 ? loc(@"Share") : section == 4 ? loc(@"Rate") : section == IDX_APPS ? loc(@"Apps") : section == 6 ? loc(@"GUI") : section == 7 ? loc(@"Notifications") : Nil;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
+	//	return !section && GLOBAL.vkEnabled && ![VKSdk isLoggedIn] ? [Localized logInToGetAccess] : [super tableView:tableView titleForFooterInSection:section];
+	return Nil;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:indexPath.section == 5 ? [NSString stringWithFormat:@"%ld", indexPath.section] : [NSString stringWithFormat:@"%ld%ld", indexPath.section, indexPath.row] forIndexPath:indexPath];
+
+	if (indexPath.section == IDX_APPS) {
+		AFMediaItem *app = self.apps[indexPath.row];
+
+		NSArray *titles = [app.trackName componentsSeparatedByString:@" - "];
+		cell.textLabel.text = titles.count > 1 ? titles.firstObject : app.trackName;
+		cell.detailTextLabel.text = titles.count > 1 ? titles.lastObject : [app.dictionary[@"genres"] firstObject];
+		if (URL_CACHE(app.artworkUrl100).isExistingFile)
+			cell.imageView.image = [[UIImage image:URL_CACHE(app.artworkUrl100)] imageWithSize:CGSizeMake(30.0, 30.0) mode:UIImageScaleAspectFit];
+		else
+			[app.artworkUrl100 cache:^(NSURL *url) {
+				[GCD main:^{
+					cell.imageView.image = [[UIImage image:url] imageWithSize:CGSizeMake(30.0, 30.0) mode:UIImageScaleAspectFit];
+				}];
+			}];
+	} else if (indexPath.section == 6 && indexPath.row == 0) {
+		self.waveformSwitch = cell.accessorySwitch;
+		[self.waveformSwitch addTarget:self action:@selector(waveformSwitchValueChanged:) forControlEvents:UIControlEventValueChanged];
+		self.waveformSwitch.on = [[NSUserDefaults standardUserDefaults] boolForKey:STR_LOGARITHMIC_WAVEFORM];
+	} else if (indexPath.section == 7 && indexPath.row == 0) {
+		self.toneSwitch = cell.accessorySwitch;
+		[self.toneSwitch addTarget:self action:@selector(toneSwitchValueChanged:) forControlEvents:UIControlEventValueChanged];
+		self.toneSwitch.on = [[[NSUserDefaults standardUserDefaults] objectForKey:STR_SUBSCRIPTION_ID_TONE] boolValue];
+	} else if (indexPath.section == 7 && indexPath.row == 1) {
+		self.pushSwitch = cell.accessorySwitch;
+		[self.pushSwitch addTarget:self action:@selector(pushSwitchValueChanged:) forControlEvents:UIControlEventValueChanged];
+		self.pushSwitch.on = [[[NSUserDefaults standardUserDefaults] objectForKey:STR_SUBSCRIPTION_ID_PUSH] boolValue];
+	} else if (indexPath.section == 7 && indexPath.row == 2) {
+		self.adSwitch = cell.accessorySwitch;
+		[self.adSwitch addTarget:self action:@selector(adSwitchValueChanged:) forControlEvents:UIControlEventValueChanged];
+		self.adSwitch.on = [[[NSUserDefaults standardUserDefaults] objectForKey:STR_SUBSCRIPTION_ID_AD] boolValue];
+	}
+
+	[cell.imageView.layer roundCorners:indexPath.section == IDX_APPS ? 6.0 : 0.0];
+
+	return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	if ([indexPath isEqualToSection:0 row:0]) {
 		UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
 		cell.detailTextLabel.text = [cell.detailTextLabel.text isEqualToString:[NSBundle bundleShortVersionString]] ? [NSBundle bundleVersion] : [NSBundle bundleShortVersionString];
-
+/*
 		self.vkEnabled++;
 		if (self.vkEnabled % 20 == 0)
 			if (![[VKHelper instance] wakeUpSession])
 				[[VKHelper instance] authorize];
-	} else if ([indexPath isEqualToSection:0 row:1]) {
+*/	} else if ([indexPath isEqualToSection:0 row:1]) {
 		if (IS_DEBUGGING)
 			[self performSegueWithIdentifier:@"login"];
-		else if ([[VKHelper instance] wakeUpSession])
+/*		else if ([[VKHelper instance] wakeUpSession])
 			[VKSdk forceLogout];
 		else
 			[[VKHelper instance] authorize];
-
-		[self setup:Nil];
+*/
+//		[self setup:Nil];
 	} else if ([indexPath isEqualToSection:0 row:2])
 		[self presentSafariWithURL:[NSURL URLWithString:VK_GROUP_URL] entersReaderIfAvailable:NO animated:YES completion:^{
 			[Answers logCustomEventWithName:@"Group" customAttributes:@{ @"opened" : @"VK" }];
@@ -193,7 +265,7 @@
 	else if ([indexPath isEqualToSection:1 row:0])
 		[self presentPurchase:^(BOOL success) {
 			if (success)
-				[self.tableView cellForRowAtIndexPath:NSIndexPathMake(2, 0)].detailTextLabel.text = [Localized purchased];
+				[self.tableView cellForRowAtIndexPath:NSIndexPathMake(1, 0)].detailTextLabel.text = [Localized purchased];
 
 			[GLOBAL setPurchaseSuccess:success];
 		}];
@@ -215,10 +287,8 @@
 				[UIRateController logRateWithMethod:@"SettingsController" success:NO];
 			}
 		}];
-	else if ([indexPath isEqualToSection:5 row:0])
-		[self presentProductWithIdentifier:APP_ID_DONE parameters:GLOBAL.affiliateInfo];
-	else if ([indexPath isEqualToSection:5 row:1])
-		[self presentProductWithIdentifier:APP_ID_LUNA parameters:GLOBAL.affiliateInfo];
+	else if (indexPath.section == IDX_APPS)
+		[self presentProductWithIdentifier:[self.apps[indexPath.row].trackId integerValue] parameters:Nil];
 
 	[tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
@@ -232,7 +302,7 @@
     // Pass the selected object to the new view controller.
 }
 */
-
+/*
 - (void)setup:(VKAccessToken *)newToken {
 	if (!newToken)
 		newToken = [[VKHelper instance] wakeUpSession];
@@ -271,11 +341,7 @@
 - (void)vkSdkUserDeniedAccess:(VKError *)authorizationError {
 	[self vkLogUserDeniedAccess:authorizationError];
 }
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-	return [super numberOfSectionsInTableView:tableView] - (IS_DEBUGGING ? 0 : 1);
-}
-
+*/
 - (IBAction)waveformSwitchValueChanged:(UISwitch *)sender {
 	[[NSUserDefaults standardUserDefaults] setBool:sender.on forKey:STR_LOGARITHMIC_WAVEFORM];
 }
@@ -340,12 +406,12 @@
 			}];
 		}];
 		[User query:[NSPredicate predicateWithCreatorUserRecordID:recordID] sortDescriptors:Nil resultsLimit:1 completion:^(NSArray<__kindof CKObjectBase *> *results) {
-			if ([[[VKHelper instance] wakeUpSession].userId integerValue]) {
+/*			if ([[[VKHelper instance] wakeUpSession].userId integerValue]) {
 				User *user = results.count ? results.firstObject : [User new];
 				user.vkUserID = [[[VKHelper instance] wakeUpSession].userId integerValue];
 				[user update:Nil];
 			}
-
+*/
 //			NSLog(@"users by creator: %@", results);
 		}];
 	}];

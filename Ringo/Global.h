@@ -22,9 +22,9 @@
 #define GUI_TRIM @"trim"
 #define GUI_IMPORT @"import"
 #define GUI_CHARTS @"charts"
-#define GUI_VK_CHARTS @"vk-charts"
-#define GUI_VK_IMPORT @"vk-import"
-#define GUI_VK_SHARE @"vk-share"
+//#define GUI_VK_CHARTS @"vk-charts"
+//#define GUI_VK_IMPORT @"vk-import"
+//#define GUI_VK_SHARE @"vk-share"
 
 #define IMG_PLAY @"play"
 #define IMG_STOP @"stop"
@@ -48,10 +48,10 @@
 #define IMG_USERS_FULL @"users-full-30"
 
 #define IMG_ADD @"add"
-#define IMG_ADD_VK @"add-vk"
+//#define IMG_ADD_VK @"add-vk"
 
-#define IMG_VK_30 @"VK-30"
-#define IMG_VK_44 @"VK-44"
+//#define IMG_VK_30 @"VK-30"
+//#define IMG_VK_44 @"VK-44"
 
 #define TMP_FILE @"sound"
 #define TMP_EXT @"m4a"
@@ -94,14 +94,14 @@
 
 @interface Global : NSObject
 
-@property (strong, nonatomic, readonly) NSString *vkAppId;
-@property (strong, nonatomic, readonly) NSString *vkVersion;
-@property (strong, nonatomic, readonly) NSString *vkUserAgent;
+//@property (strong, nonatomic, readonly) NSString *vkAppId;
+//@property (strong, nonatomic, readonly) NSString *vkVersion;
+//@property (strong, nonatomic, readonly) NSString *vkUserAgent;
 @property (strong, nonatomic, readonly) NSArray<NSNumber *> *fbModes;
 @property (assign, nonatomic, readonly) NSInteger tonesCount;
 @property (assign, nonatomic, readonly) NSInteger tonesLimit;
 
-@property (assign, nonatomic, readonly) BOOL vkEnabled;
+//@property (assign, nonatomic, readonly) BOOL vkEnabled;
 - (void)fetchVKEnabled:(void (^)(BOOL reload))handler;
 
 - (void)update;

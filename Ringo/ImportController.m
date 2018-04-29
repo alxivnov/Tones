@@ -14,18 +14,19 @@
 #import "Global.h"
 #import "Localized.h"
 #import "TabBarController.h"
-#import "VKFeaturedController.h"
+//#import "VKFeaturedController.h"
 
 #import "NSRateController.h"
 #import "NSURL+Convenience.h"
 #import "UIBarButtonItem+Convenience.h"
-#import "VKHelper.h"
+//#import "VKHelper.h"
 
 #import "CKDatabase+Convenience.h"
 #import "NSArray+Convenience.h"
 #import "NSAttributedString+Convenience.h"
 #import "NSObject+Convenience.h"
 #import "UIActivityIndicatorView+Convenience.h"
+#import "UIAlertController+Convenience.h"
 #import "UIApplication+Convenience.h"
 #import "UIColor+Convenience.h"
 #import "UITableView+Convenience.h"
@@ -111,18 +112,18 @@ __synthesize(MPMediaPickerController *, mediaPicker, ({ MPMediaPicker *x = [[MPM
 				[Answers logCustomEventWithName:@"Modify Subscriptions" customAttributes:dic__(@"+", [savedSubscriptionIDs componentsJoinedByString:STR_COMMA], @"-", [deletedSubscriptionIDs componentsJoinedByString:STR_COMMA])];
 			}];
 	}];
-
+/*
 	[VKFeaturedController getPosts:^(NSInteger newPosts) {
 		[GCD main:^{
 			self.badge = [UIApplication sharedApplication].applicationIconBadgeNumber || newPosts;
 		}];
 	}];
-}
+*/}
 
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
 
-	self.badge = [UIApplication sharedApplication].applicationIconBadgeNumber || [VKFeaturedController newPosts];
+	self.badge = [UIApplication sharedApplication].applicationIconBadgeNumber/* || [VKFeaturedController newPosts]*/;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -290,7 +291,7 @@ __synthesize(MPMediaPickerController *, mediaPicker, ({ MPMediaPicker *x = [[MPM
 }
 
 - (IBAction)chartBarButtonItemAction:(UIBarButtonItem *)sender {
-	[self performSegueWithIdentifier:GLOBAL.vkEnabled ? GUI_VK_CHARTS : GUI_CHARTS sender:sender];
+	[self performSegueWithIdentifier:/*GLOBAL.vkEnabled ? GUI_VK_CHARTS : */GUI_CHARTS sender:sender];
 }
 
 - (BOOL)openAudioItem:(AudioItem *)item {
@@ -335,7 +336,7 @@ __synthesize(MPMediaPickerController *, mediaPicker, ({ MPMediaPicker *x = [[MPM
 
 	if (query) {
 		if ([query.subscriptionID isEqualToString:STR_SUBSCRIPTION_ID_TONE])
-			[self performSegueWithIdentifier:GLOBAL.vkEnabled ? GUI_VK_CHARTS : GUI_CHARTS sender:query.recordID.recordName];
+			[self performSegueWithIdentifier:/*GLOBAL.vkEnabled ? GUI_VK_CHARTS : */GUI_CHARTS sender:query.recordID.recordName];
 		else if ([query.subscriptionID isEqualToString:STR_SUBSCRIPTION_ID_PUSH])
 			[Push loadByRecordID:query.recordID completion:^(Push *result) {
 				[GCD main:^{
@@ -418,7 +419,7 @@ __synthesize(MPMediaPickerController *, mediaPicker, ({ MPMediaPicker *x = [[MPM
 - (void)vkCreateTone:(AudioItem *)item silent:(BOOL)silent {
 	if (item.assetURL && !item.assetURL.isWebAddress) {
 		[self createTone:item silent:silent];
-	} else if ([[VKHelper instance] wakeUpSession] && GLOBAL.vkEnabled) {
+/*	} else if ([[VKHelper instance] wakeUpSession] && GLOBAL.vkEnabled) {
 		[self startActivityIndication:UIActivityIndicatorViewStyleWhiteLarge message:[Localized waiting]];
 		
 		[item lookupInVK:^(VKAudioItem *vkAudioItem) {
@@ -440,7 +441,7 @@ __synthesize(MPMediaPickerController *, mediaPicker, ({ MPMediaPicker *x = [[MPM
 					[self presentITunesStoreAlert:item];
 				}];
 		}];
-	} else {
+*/	} else {
 		[self presentITunesStoreAlert:item];
 	}
 }
@@ -450,9 +451,9 @@ __synthesize(MPMediaPickerController *, mediaPicker, ({ MPMediaPicker *x = [[MPM
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-	if ([segue.identifier isEqualToAnyString:@[ GUI_IMPORT, GUI_VK_IMPORT, GUI_TRIM ]])
+	if ([segue.identifier isEqualToAnyString:@[ GUI_IMPORT/*, GUI_VK_IMPORT*/, GUI_TRIM ]])
 		[segue.destinationViewController forwardSelector:@selector(setSelectedItem:) withObject:sender nextTarget:UIViewControllerNextTarget(YES)];
-	else if ([segue.identifier isEqualToAnyString:@[ GUI_CHARTS, GUI_VK_CHARTS ]] && [sender isKindOfClass:[NSString class]])
+	else if ([segue.identifier isEqualToAnyString:@[ GUI_CHARTS/*, GUI_VK_CHARTS*/ ]] && [sender isKindOfClass:[NSString class]])
 		[segue.destinationViewController forwardSelector:@selector(setRecordName:) withObject:sender nextTarget:UIViewControllerNextTarget(YES)];
 	else
 		[super prepareForSegue:segue sender:sender];

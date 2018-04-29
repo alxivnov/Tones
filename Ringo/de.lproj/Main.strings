@@ -3,7 +3,8 @@
 "znw-MX-ptm.title" = "LAUTE";
 
 /* Class = "UINavigationItem"; title = "POPULÄR"; ObjectID = "9zm-sY-v4Q"; */
-"9zm-sY-v4Q.title" = "POPULÄR";
+"9zm-sY-v4Q.title" = "Populär";
+"Ttv-e6-RrH.title" = "Neue";
 
 "K2O-LR-ZYc.segmentTitles[0]" = "Neue";
 "K2O-LR-ZYc.segmentTitles[1]" = "Populär";
@@ -24,7 +25,7 @@
 "xck-pG-Xct.title" = "Eingang";
 
 /* Class = "UINavigationItem"; title = "Profil"; ObjectID = "eHC-Qs-gJW"; */
-"eHC-Qs-gJW.title" = "PROFIL";
+"eHC-Qs-gJW.title" = "Profil";
 
 /* Class = "UITabBarItem"; title = "Profil"; ObjectID = "TPM-bu-2md"; */
 "TPM-bu-2md.title" = "Profil";

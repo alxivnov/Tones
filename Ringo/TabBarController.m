@@ -8,7 +8,7 @@
 
 #import "TabBarController.h"
 #import "Global.h"
-#import "VKFeaturedController.h"
+//#import "VKFeaturedController.h"
 
 #import "UIViewController+Answers.h"
 
@@ -46,7 +46,7 @@ __synthesize(UIPanTransition *, transition, [UIPanTransition gestureTransition:N
 
 
 	self.tabBar.items.lastObject.badgeValue = [UIApplication sharedApplication].applicationIconBadgeNumber ? [@([UIApplication sharedApplication].applicationIconBadgeNumber) description] : Nil;
-	idx(self.tabBar.items, 1).badgeValue = [VKFeaturedController newPosts] ? [@([VKFeaturedController newPosts]) description] : Nil;
+//	idx(self.tabBar.items, 1).badgeValue = [VKFeaturedController newPosts] ? [@([VKFeaturedController newPosts]) description] : Nil;
 
 
 

@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14109"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -652,7 +653,7 @@
             <objects>
                 <windowController id="B8D-0N-5wS" customClass="WindowController" sceneMemberID="viewController">
                     <window key="window" title="Ringtonic" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" unifiedTitleAndToolbar="YES"/>
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
@@ -699,6 +700,9 @@
                                 <toolbarItem reference="Vsa-d2-vuL"/>
                             </defaultToolbarItems>
                         </toolbar>
+                        <connections>
+                            <outlet property="delegate" destination="B8D-0N-5wS" id="sJi-5u-Xc4"/>
+                        </connections>
                     </window>
                     <connections>
                         <outlet property="playButton" destination="zUe-a8-IE3" id="LNf-TU-3VO"/>
@@ -725,6 +729,7 @@
                                     <subviews>
                                         <view fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U5Y-FE-dIW">
                                             <rect key="frame" x="0.0" y="356" width="480" height="270"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         </view>
                                     </subviews>
                                 </clipView>
@@ -734,19 +739,19 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="738-l9-nJd">
-                                    <rect key="frame" x="757" y="0.0" width="15" height="450"/>
+                                    <rect key="frame" x="756" y="0.0" width="16" height="450"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
                             <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="42V-5a-sx3">
-                                <rect key="frame" x="18" y="18" width="764" height="26"/>
+                                <rect key="frame" x="18" y="18" width="764" height="24"/>
                                 <sliderCell key="cell" state="on" alignment="left" maxValue="40" tickMarkPosition="above" numberOfTickMarks="41" sliderType="linear" id="bz4-HQ-Qm1"/>
                                 <connections>
                                     <action selector="sliderAction:" target="XfG-lQ-9wD" id="MO4-1Y-plJ"/>
                                 </connections>
                             </slider>
                             <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ba8-6P-NHy" customClass="NSPassthroughSlider">
-                                <rect key="frame" x="18" y="18" width="764" height="26"/>
+                                <rect key="frame" x="18" y="18" width="764" height="24"/>
                                 <sliderCell key="cell" state="on" alignment="left" maxValue="40" doubleValue="40" tickMarkPosition="above" numberOfTickMarks="41" sliderType="linear" id="cn0-4q-jT2"/>
                                 <connections>
                                     <action selector="sliderAction:" target="XfG-lQ-9wD" id="dLS-cS-T1F"/>

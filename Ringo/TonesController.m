@@ -12,7 +12,7 @@
 
 #import "UIFont+Modification.h"
 #import "UIImage+Convenience.h"
-#import "VKHelper.h"
+//#import "VKHelper.h"
 
 #import "NSAttributedString+Convenience.h"
 #import "NSFileManager+iCloud.h"
@@ -66,7 +66,7 @@ __synthesize(UIImageView *, image, ({ UIImageView *x = [[UIImageView alloc] init
 
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
-
+/*
 	if (self.label)
 		return;
 
@@ -103,6 +103,7 @@ __synthesize(UIImageView *, image, ({ UIImageView *x = [[UIImageView alloc] init
 			}];
 		}];
 	}];
+*/
 }
 
 #pragma mark - Table view data source

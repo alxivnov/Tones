@@ -12,7 +12,7 @@
 #import "Global.h"
 #import "Localized.h"
 
-#import "VKHelper.h"
+//#import "VKHelper.h"
 
 #import "Dispatch+Convenience.h"
 #import "SafariServices+Convenience.h"
@@ -23,10 +23,10 @@
 
 @implementation ProfileController
 
-- (void)loadItems:(void (^)(NSArray<Tone *> *, NSArray<User *> *, NSArray<VKUser *> *, NSTimeInterval))handler {
+- (void)loadItems:(void (^)(NSArray<Tone *> *, NSArray<User *> */*, NSArray<VKUser *> **/, NSTimeInterval))handler {
 	[Tone loadProfile:^(NSArray<__kindof Tone *> *results) {
 		if (handler)
-			handler(results, Nil, Nil, 0.0);
+			handler(results, Nil/*, Nil*/, 0.0);
 
 
 
@@ -48,7 +48,7 @@
 			[self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:index inSection:1] atScrollPosition:UITableViewScrollPositionNone animated:YES];
 		}];
 
-		[User query:[NSPredicate predicateWithCreatorUserRecordID:results[index].record.lastModifiedUserRecordID] completion:^(NSArray<User *> *users) {
+/*		[User query:[NSPredicate predicateWithCreatorUserRecordID:results[index].record.lastModifiedUserRecordID] completion:^(NSArray<User *> *users) {
 			if (users.firstObject.vkUserID > 0)
 				[VKHelper getUsers:@[ @(users.firstObject.vkUserID) ] fields:@[ VK_PARAM_SEX ] handler:^(NSArray<VKUser *> *vkUsers) {
 					if (vkUsers.count)
@@ -65,7 +65,7 @@
 						}];
 				}];
 		}];
-	}];
+*/	}];
 }
 
 - (void)viewWillAppear:(BOOL)animated {

@@ -9,13 +9,13 @@
 #import "AudioItem+Import.h"
 #import "Global.h"
 
-#import "VKHelper.h"
+//#import "VKHelper.h"
 
 #import "Affiliates+Convenience.h"
 #import "MediaPlayer+Convenience.h"
 #import "NSArray+Convenience.h"
 #import "NSObject+Convenience.h"
-#import "VKAPI.h"
+//#import "VKAPI.h"
 
 #define LETTER_CHARACTER_SET [NSCharacterSet letterCharacterSet]
 
@@ -86,7 +86,7 @@
 	
 	return YES;
 }
-
+/*
 - (void)lookupInVK:(void (^)(VKAudioItem *))handler {
 	if ([[VKHelper instance] wakeUpSession]) {
 		[[VKAPI api] searchAudio:[self searchDescription] handler:^(NSArray<VKAudioItem *> *items) {
@@ -129,7 +129,7 @@
 	} else if (handler)
 		handler(Nil);
 }
-
+*/
 - (void)cacheArtwork:(void(^)(UIImage *))handler {
 	if (self.artwork)
 		return;
@@ -179,7 +179,7 @@
 	} wait:1.0];
 */
 }
-
+/*
 + (instancetype)createWithWallItem:(VKWallItem *)item {
 	if (!item)
 		return Nil;
@@ -196,7 +196,7 @@
 	instance.artwork = [UIImage imageWithContentsOfURL:[item.photoURLs.firstObject cache]];
 	return instance;
 }
-
+*/
 + (instancetype)createWithTone:(Tone *)tone {
 	if (!tone)
 		return Nil;

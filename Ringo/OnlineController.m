@@ -12,7 +12,7 @@
 #import "Tone.h"
 
 #import "UIViewController+Answers.h"
-#import "VKHelper.h"
+//#import "VKHelper.h"
 
 #import "Dispatch+Convenience.h"
 #import "NSArray+Convenience.h"
@@ -81,7 +81,7 @@
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-	return [[[VKHelper instance] wakeUpSession].userId isEqualToString:VK_USER_ID];
+	return NO;//[[[VKHelper instance] wakeUpSession].userId isEqualToString:VK_USER_ID];
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {

@@ -15,7 +15,7 @@
 
 #import "NSCharacterSet+Convenience.h"
 #import "NSRateController.h"
-#import "VKHelper.h"
+//#import "VKHelper.h"
 
 #import "Affiliates+Convenience.h"
 #import "MediaPlayer+Convenience.h"
@@ -34,7 +34,7 @@
 @interface AudioItem ()
 @property (strong, nonatomic) AVURLAsset *URLAsset;
 @property (strong, nonatomic) MPMediaItem *mediaItem;
-@property (strong, nonatomic) VKAudioItem *audioItem;
+//@property (strong, nonatomic) VKAudioItem *audioItem;
 
 @property (strong, nonatomic) NSURL *assetURL;
 @property (strong, nonatomic) NSString *artist;
@@ -103,7 +103,7 @@
 + (instancetype)createWithMediaItem:(MPMediaItem *)mediaItem {
 	return [self createWithMediaItem:mediaItem completion:Nil];
 }
-
+/*
 + (instancetype)createWithAudioItem:(VKAudioItem *)audioItem {
 	if (!audioItem)
 		return Nil;
@@ -112,7 +112,7 @@
 	instance.audioItem = audioItem;
 	return instance;
 }
-
+*/
 + (instancetype)createWithDictionary:(NSDictionary *)dictionary {
 	if (!dictionary)
 		return Nil;
@@ -123,11 +123,11 @@
 }
 
 - (NSURL *)assetURL {
-	return self.URLAsset ? self.URLAsset.URL : self.mediaItem.assetURL && [AVURLAsset assetWithURL:self.mediaItem.assetURL].canRead ? self.mediaItem.assetURL : self.audioItem.assetURL ? (self.audioItem.assetURL.cacheURL ? self.audioItem.assetURL.cacheURL : self.audioItem.assetURL) : _assetURL;
+	return self.URLAsset ? self.URLAsset.URL : self.mediaItem.assetURL && [AVURLAsset assetWithURL:self.mediaItem.assetURL].canRead ? self.mediaItem.assetURL : /*self.audioItem.assetURL ? (self.audioItem.assetURL.cacheURL ? self.audioItem.assetURL.cacheURL : self.audioItem.assetURL) :*/ _assetURL;
 }
 
 - (NSTimeInterval)duration {
-	return self.URLAsset ? self.URLAsset.seconds : self.mediaItem.playbackDuration ? self.mediaItem.playbackDuration : self.audioItem ? self.audioItem.duration : _duration;
+	return self.URLAsset ? self.URLAsset.seconds : self.mediaItem.playbackDuration ? self.mediaItem.playbackDuration : /*self.audioItem ? self.audioItem.duration :*/ _duration;
 }
 
 - (NSString *)process:(NSString *)string pattern:(NSString *)pattern {
@@ -145,7 +145,7 @@
 }
 
 - (NSString *)artist:(NSString *)pattern {
-	NSString *string = _artist.length ? _artist : self.mediaItem.artist.length ? self.mediaItem.artist : self.URLAsset.artist.length ? self.URLAsset.artist : self.audioItem.artist.length ? self.audioItem.artist : STR_EMPTY;
+	NSString *string = _artist.length ? _artist : self.mediaItem.artist.length ? self.mediaItem.artist : self.URLAsset.artist.length ? self.URLAsset.artist : /*self.audioItem.artist.length ? self.audioItem.artist :*/ STR_EMPTY;
 
 	return [self process:string pattern:pattern];
 }
@@ -155,7 +155,7 @@
 }
 
 - (NSString *)title:(NSString *)pattern {
-	NSString *string = _title.length ? _title : self.mediaItem.title.length ? self.mediaItem.title : self.URLAsset.title.length ? self.URLAsset.title : self.audioItem.title.length ? self.audioItem.title : STR_EMPTY;
+	NSString *string = _title.length ? _title : self.mediaItem.title.length ? self.mediaItem.title : self.URLAsset.title.length ? self.URLAsset.title : /*self.audioItem.title.length ? self.audioItem.title :*/ STR_EMPTY;
 
 	return [self process:string pattern:pattern];
 }
@@ -263,7 +263,7 @@
 	[self updateTone:tones completion:^(Tone *t, BOOL n) {
 		NSLog(@"export: %@, import: %@", t ? @(t.exportCount) : Nil, t ? @(t.importCount) : Nil);
 //		if (t)
-			[Answers logRating:@((t.exportCount + 1) * (t.importCount + 1)) contentName:[t description] contentType:self.audioItem.assetURL ? @"audio" : self.mediaItem.assetURL ? @"media" : self.URLAsset ? @"asset" : Nil contentId:[t recordName] customAttributes:@{ @"export" : @(t.exportCount), @"import" : @(t.importCount), @"action" : @([NSRateController instance].action) }];
+			[Answers logRating:@((t.exportCount + 1) * (t.importCount + 1)) contentName:[t description] contentType:/*self.audioItem.assetURL ? @"audio" :*/ self.mediaItem.assetURL ? @"media" : self.URLAsset ? @"asset" : Nil contentId:[t recordName] customAttributes:@{ @"export" : @(t.exportCount), @"import" : @(t.importCount), @"action" : @([NSRateController instance].action) }];
 //		else
 //			[Answers logContentViewWithName:[self description] contentType:self.audioItem.assetURL ? @"audio" : self.mediaItem.assetURL ? @"media" : self.URLAsset ? @"asset" : Nil contentId:Nil customAttributes:Nil];
 
@@ -361,9 +361,9 @@
 		item.URLAsset = _URLAsset;
 	if (!item.mediaItem)
 		item.mediaItem = _mediaItem;
-	if (!item.audioItem)
+/*	if (!item.audioItem)
 		item.audioItem = _audioItem;
-
+*/
 	if (!item.assetURL)
 		item.assetURL = _assetURL;
 	if (!item.artist)

@@ -12,12 +12,12 @@
 #import "Global.h"
 #import "Localized.h"
 
-#import "VKHelper.h"
+//#import "VKHelper.h"
 
 #import "UIBarButtonItem+Convenience.h"
 #import "UIRateController+Answers.h"
 #import "UIViewController+Answers.h"
-#import "UIViewController+VK.h"
+//#import "UIViewController+VK.h"
 
 #import "MessageUI+Convenience.h"
 #import "SafariServices+Convenience.h"
@@ -26,6 +26,7 @@
 #import "NSFileManager+iCloud.h"
 #import "NSObject+Convenience.h"
 #import "UIActivityIndicatorView+Convenience.h"
+#import "UIAlertController+Convenience.h"
 #import "UIColor+Convenience.h"
 #import "UINavigationController+Convenience.h"
 
@@ -87,7 +88,7 @@
 				return;
 
 			NSUInteger action = [[NSRateController instance] incrementAction] % 10;
-			if (action == 3)
+/*			if (action == 3)
 //				if (GLOBAL.vkEnabled)
 				[self presentAlertForGroupWithID:VK_GROUP_ID title:[Localized followTitle] message:[Localized followMessage] cancelButtonTitle:[Localized cancel] joinButtonTitle:[Localized follow] configuration:^(UIAlertController *instance) {
 					[instance.actions.firstObject setActionImage:[UIImage templateImage:IMG_USERS_LINE]];
@@ -97,7 +98,7 @@
 				} completion:^(BOOL success) {
 					[Answers logCustomEventWithName:@"Group" customAttributes:@{ @"joined" : success ? @"YES" : @"NO" }];
 				}];
-			else if (action == 5)
+			else*/ if (action == 5)
 				[self presentAlertWithTitle:[Localized feedbackTitle] message:[Localized feedbackMessage] cancelActionTitle:[Localized cancel] destructiveActionTitle:Nil otherActionTitles:@[ [Localized feedback] ] configuration:^(UIAlertController *instance) {
 					[instance.actions.firstObject setActionImage:[UIImage templateImage:IMG_ENVELOPE_LINE_30]];
 					[instance.actions.firstObject setActionColor:[UIColor color:HEX_NCS_GREEN]];
@@ -111,7 +112,7 @@
 			[self.selectedItem updateTone:^(BOOL tone) {
 				if (!tone)
 					return;
-				
+/*
 				[self.selectedItem lookupInVK:^(VKAudioItem *audio) {
 					if (!audio)
 						return;
@@ -125,7 +126,7 @@
 						}];
 					}];
 				}];
-			}];
+*/			}];
 		}];
 	}];
 

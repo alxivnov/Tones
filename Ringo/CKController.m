@@ -14,7 +14,7 @@
 #import "Localized.h"
 #import "Push.h"
 
-#import "VKHelper.h"
+//#import "VKHelper.h"
 #import "UIAccessoryView.h"
 #import "UIImage+Convenience.h"
 #import "UIViewController+Stereo.h"
@@ -26,12 +26,13 @@
 #import "NSFormatter+Convenience.h"
 #import "NSObject+Convenience.h"
 #import "UIActivityIndicatorView+Convenience.h"
+#import "UIAlertController+Convenience.h"
 #import "UIColor+Convenience.h"
 
 @interface CKController ()
 @property (strong, nonatomic) NSArray<Tone *> *tones;
 @property (strong, nonatomic) NSArray<User *> *users;
-@property (strong, nonatomic) NSArray<VKUser *> *vkUsers;
+//@property (strong, nonatomic) NSArray<VKUser *> *vkUsers;
 @end
 
 @implementation CKController
@@ -52,10 +53,10 @@
 }
 
 - (void)loadTones:(void (^)(void))handler {
-	[self loadItems:^(NSArray<Tone *> *tones, NSArray<User *> *users, NSArray<VKUser *> *vkUsers, NSTimeInterval activitiesExpirationInterval) {
+	[self loadItems:^(NSArray<Tone *> *tones, NSArray<User *> *users/*, NSArray<VKUser *> *vkUsers*/, NSTimeInterval activitiesExpirationInterval) {
 		self.tones = tones;
 		self.users = users;
-		self.vkUsers = vkUsers;
+//		self.vkUsers = vkUsers;
 
 		NSArray *items = [tones map:^id(Tone *tone) {
 			return [AudioItem createWithTone:tone];
@@ -74,9 +75,9 @@
 	}];
 }
 
-- (void)loadItems:(void (^)(NSArray<Tone *> *tones, NSArray<User *> *users, NSArray<VKUser *> *vkUsers, NSTimeInterval activitiesExpirationInterval))handler {
+- (void)loadItems:(void (^)(NSArray<Tone *> *tones, NSArray<User *> *users/*, NSArray<VKUser *> *vkUsers*/, NSTimeInterval activitiesExpirationInterval))handler {
 	if (handler)
-		handler(Nil, Nil, Nil, 0.0);
+		handler(Nil, Nil/*, Nil*/, 0.0);
 }
 
 - (void)viewDidLoad {
@@ -105,7 +106,7 @@
 - (NSString *)title:(AudioItem *)item {
 	return item.description;
 }
-
+/*
 - (VKUser *)getVKUser:(AudioItem *)item {
 	Tone *tone = self.tones[[self.items first:^BOOL(id obj) {
 		return obj == item;
@@ -122,7 +123,7 @@
 
 	return vkUser;
 }
-
+*/
 - (NSAttributedString *)attributedSubtitle:(AudioItem *)item font:(UIFont *)font {
 	Tone *tone = self.tones[[self.items first:^BOOL(id obj) {
 		return obj == item;
@@ -130,20 +131,20 @@
 	User *user = [self.users firstObject:^BOOL(User *obj) {
 		return [obj.record.creatorUserRecordID.recordName isEqualToString:tone.record.creatorUserRecordID.recordName];
 	}];
-	VKUser *vkUser = GLOBAL.vkEnabled ? [self.vkUsers firstObject:^BOOL(VKUser *obj) {
+/*	VKUser *vkUser = GLOBAL.vkEnabled ? [self.vkUsers firstObject:^BOOL(VKUser *obj) {
 		return obj.id.integerValue == user.vkUserID;
 	}] : Nil;
-
-	NSMutableAttributedString *subtitle = [NSMutableAttributedString attributedStringWithString:[[[VKHelper instance] wakeUpSession].userId isEqualToString:VK_USER_ID] ? [tone.record.creationDate descriptionForDateAndTime:NSDateFormatterShortStyle] : item.segment.description];
+*/
+	NSMutableAttributedString *subtitle = [NSMutableAttributedString attributedStringWithString:/*[[[VKHelper instance] wakeUpSession].userId isEqualToString:VK_USER_ID] ? [tone.record.creationDate descriptionForDateAndTime:NSDateFormatterShortStyle] :*/ item.segment.description];
 	[subtitle appendAttributedString:[[NSAttributedString alloc] initWithString:STR_SPACE]];
 	[subtitle appendAttributedString:[[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@" %@ ", [Localized times:tone.exportCount]] attributes:@{ NSBackgroundColorAttributeName : [UIColor lightGrayColor], NSForegroundColorAttributeName : [UIColor whiteColor] }]];
 	if (user.title.length) {
 		[subtitle appendAttributedString:[[NSAttributedString alloc] initWithString:STR_SPACE]];
 		[subtitle appendAttributedString:[[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@" %@ ", user.title] attributes:@{ NSBackgroundColorAttributeName : [GLOBAL globalTintColor], NSForegroundColorAttributeName : [UIColor whiteColor] }]];
-	} else if ([vkUser fullName].length) {
+/*	} else if ([vkUser fullName].length) {
 		[subtitle appendAttributedString:[[NSAttributedString alloc] initWithString:STR_SPACE]];
 		[subtitle appendAttributedString:[[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@" %@ ", [vkUser fullName]] attributes:@{ NSBackgroundColorAttributeName : [UIColor color:HEX_VK_BLUE], NSForegroundColorAttributeName : [UIColor whiteColor] }]];
-	}
+*/	}
 	[subtitle appendAttributedString:[[NSAttributedString alloc] initWithString:STR_DOT attributes:@{ NSForegroundColorAttributeName : [UIColor clearColor] }]];
 
 	return subtitle;
@@ -158,9 +159,9 @@
 }
 
 - (NSArray *)accessoryImages:(AudioItem *)item {
-	VKUser *vkUser = GLOBAL.vkEnabled ? [self getVKUser:item] : Nil;
+//	VKUser *vkUser = GLOBAL.vkEnabled ? [self getVKUser:item] : Nil;
 
-	return [NSArray arrayWithObject:[vkUser fullName] ? [UIImage originalImage:IMG_USER_LINE] : Nil withObject:[UIImage originalImage:IMG_ADD]];
+	return [NSArray arrayWithObject:/*[vkUser fullName] ? [UIImage originalImage:IMG_USER_LINE] : Nil withObject:*/[UIImage originalImage:IMG_ADD]];
 }
 
 - (void)accessoryImageWithIndex:(NSUInteger)index tappedForRowWithIndexPath:(NSIndexPath *)indexPath {
@@ -169,9 +170,9 @@
 	UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
 	UIAccessoryView *view = cls(UIAccessoryView, cell.accessoryView);
 	if (view.views.count == 3 && index == 1) {
-		VKUser *vkUser = [self getVKUser:item];
+//		VKUser *vkUser = [self getVKUser:item];
 
-		[self presentSafariWithURL:vkUser.url];
+//		[self presentSafariWithURL:vkUser.url];
 	} else {
 		if (item.assetURL)
 			[self cacheAudioItem:item completion:^(NSURL *url) {
@@ -179,7 +180,7 @@
 					[self performSegueWithIdentifier:GUI_SELECT sender:item];
 				}];
 			}];
-		else if (GLOBAL.vkEnabled)
+/*		else if (GLOBAL.vkEnabled)
 			[item lookupInVK:^(VKAudioItem *vkAudioItem) {
 				if (vkAudioItem)
 					[self cacheAudioItem:item completion:^(NSURL *url) {
@@ -194,7 +195,7 @@
 						[self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 					}];
 			}];
-		else {
+*/		else {
 			[self presentITunesStoreAlert:item];
 
 			[self.tableView deselectRowAtIndexPath:indexPath animated:YES];
@@ -216,9 +217,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	AudioItem *item = [self itemAtIndex:indexPath.row];
-	if (item.assetURL || item.mediaItem || (!GLOBAL.vkEnabled && [[MPMusicPlayerController class] instancesRespondToSelector:@selector(setQueueWithStoreIDs:)]))
+	if (item.assetURL || item.mediaItem /*|| (!GLOBAL.vkEnabled && [[MPMusicPlayerController class] instancesRespondToSelector:@selector(setQueueWithStoreIDs:)])*/)
 		[super tableView:tableView didSelectRowAtIndexPath:indexPath];
-	else if (GLOBAL.vkEnabled)
+/*	else if (GLOBAL.vkEnabled)
 		[item lookupInVK:^(VKAudioItem *vkAudioItem) {
 			if (vkAudioItem)
 				[GCD main:^{
@@ -231,7 +232,7 @@
 					[tableView deselectRowAtIndexPath:indexPath animated:YES];
 				}];
 		}];
-	else {
+*/	else {
 		[self presentITunesStoreAlert:item];
 
 		[tableView deselectRowAtIndexPath:indexPath animated:YES];
@@ -244,7 +245,7 @@
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-	return [[[VKHelper instance] wakeUpSession].userId isEqualToString:VK_USER_ID];
+	return NO;//[[[VKHelper instance] wakeUpSession].userId isEqualToString:VK_USER_ID];
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {

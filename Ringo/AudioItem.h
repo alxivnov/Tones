@@ -12,7 +12,7 @@
 #import "CGWaveform.h"
 
 #import "CoreGraphics+Convenience.h"
-#import "VKItem.h"
+//#import "VKItem.h"
 
 #define KEY_TITLE @"t"
 #define KEY_ALBUM @"m"
@@ -40,7 +40,7 @@
 
 + (instancetype)createWithURLAsset:(AVURLAsset *)asset;
 + (instancetype)createWithMediaItem:(MPMediaItem *)mediaItem;
-+ (instancetype)createWithAudioItem:(VKAudioItem *)audioItem;
+//+ (instancetype)createWithAudioItem:(VKAudioItem *)audioItem;
 + (instancetype)createWithDictionary:(NSDictionary *)dictionary;
 
 //+ (instancetype)createWithURLAsset:(AVURLAsset *)asset segment:(AudioSegment **)segmentPointer;

@@ -26,17 +26,14 @@
 		CD46030C1EA8FF53002B6075 /* Messenger_Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD46030A1EA8FF53002B6075 /* Messenger_Icon@2x.png */; };
 		CD5E0C541ED7918100CE8C72 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA0BFD8D1B3D479A00F67FDF /* CloudKit.framework */; };
 		CD643DCE1EDC79DC0027C995 /* TwitterKit+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = CD643DCD1EDC79DC0027C995 /* TwitterKit+Convenience.m */; };
-		CD67775E1EE068AB00AC85DD /* VKItem.m in Sources */ = {isa = PBXBuildFile; fileRef = CD67775D1EE068AB00AC85DD /* VKItem.m */; };
 		CD6FC2DE20274C83001000F1 /* UIImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = CD75B4EF1F191F6900BAB7DC /* UIImageEffects.m */; };
 		CD75B4F41F191F8500BAB7DC /* AppleIncRootCertificate.cer in Resources */ = {isa = PBXBuildFile; fileRef = CD75B4F11F191F8500BAB7DC /* AppleIncRootCertificate.cer */; };
 		CD75B4F51F191F8500BAB7DC /* RMAppReceipt.m in Sources */ = {isa = PBXBuildFile; fileRef = CD75B4F31F191F8500BAB7DC /* RMAppReceipt.m */; };
 		CD75B4F81F191FD700BAB7DC /* GSTouchesShowingWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = CD75B4F71F191FD700BAB7DC /* GSTouchesShowingWindow.m */; };
 		CD75B4FD1F191FFA00BAB7DC /* GSTouchImageBlue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD75B4FA1F191FFA00BAB7DC /* GSTouchImageBlue@2x.png */; };
 		CD75B4FE1F191FFA00BAB7DC /* GSTouchImageBlue@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD75B4FB1F191FFA00BAB7DC /* GSTouchImageBlue@3x.png */; };
-		CD788BD11EDB44640009F0BA /* VKAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = CD788BD01EDB44640009F0BA /* VKAPI.m */; };
 		CD7E9D9E1EF57D9000A0D778 /* Accelerate+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7E9D9D1EF57D9000A0D778 /* Accelerate+Convenience.m */; };
 		CD81EFFB1F1E605300F64C5A /* Answers+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = CD81EFFA1F1E605300F64C5A /* Answers+Convenience.m */; };
-		CD85865E1DF48D3C001D7DB2 /* UIViewController+VKLog.m in Sources */ = {isa = PBXBuildFile; fileRef = CD85865D1DF48D3C001D7DB2 /* UIViewController+VKLog.m */; };
 		CD90E1431FA4A09500D123CD /* GSTouchImageBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = CD90E1421FA4A09500D123CD /* GSTouchImageBlue.png */; };
 		CD9BC07E1E6C464A003BD7DE /* MobileCoreServices+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9BC07D1E6C464A003BD7DE /* MobileCoreServices+Convenience.m */; };
 		CDA248C81E9A68EA00075DE0 /* FBAudienceNetwork+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA248C51E9A68EA00075DE0 /* FBAudienceNetwork+Convenience.m */; };
@@ -50,7 +47,7 @@
 		CDA840311DDB87790042D2CC /* UIImage+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA840301DDB87790042D2CC /* UIImage+Convenience.m */; };
 		CDD1E4071EB693E200AE0C49 /* NSAttributedString+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD1E4061EB693E200AE0C49 /* NSAttributedString+Convenience.m */; };
 		CDDA70572094B63500BAA17C /* UIButton+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = CDDA70562094B63500BAA17C /* UIButton+Convenience.m */; };
-		CDE17BB41ECED3740068D89D /* VKLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE17BB31ECED3740068D89D /* VKLoginController.m */; };
+		CDDA705A2094EC2100BAA17C /* UITableViewCell+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = CDDA70592094EC2000BAA17C /* UITableViewCell+Convenience.m */; };
 		CDE33B5E20499D1B00F89AD8 /* Twitter-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CDE33B4020499D1700F89AD8 /* Twitter-60@2x.png */; };
 		CDE33B5F20499D1B00F89AD8 /* Google+-76.png in Resources */ = {isa = PBXBuildFile; fileRef = CDE33B4120499D1700F89AD8 /* Google+-76.png */; };
 		CDE33B6020499D1B00F89AD8 /* Facebook-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CDE33B4220499D1700F89AD8 /* Facebook-60@2x.png */; };
@@ -106,7 +103,6 @@
 		FA0BFD8E1B3D479A00F67FDF /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA0BFD8D1B3D479A00F67FDF /* CloudKit.framework */; };
 		FA0C209B1BB2F56E006A84F3 /* HelpView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0C209A1BB2F56E006A84F3 /* HelpView.m */; };
 		FA0C209E1BB2FC71006A84F3 /* TextView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0C209D1BB2FC71006A84F3 /* TextView.m */; };
-		FA0CF8931BD92D31006B3FE2 /* VKFeaturedController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0CF8921BD92D31006B3FE2 /* VKFeaturedController.m */; };
 		FA11EFE31C3F2D9C00033918 /* ringo-file.png in Resources */ = {isa = PBXBuildFile; fileRef = FA44C1141C3F288E00F7F09D /* ringo-file.png */; };
 		FA16DF451BE650430062FE90 /* ChartController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA16DF441BE650430062FE90 /* ChartController.m */; };
 		FA16EFFD1C7B2FC4006D1721 /* chat-full-30@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA16EFFB1C7B2FC4006D1721 /* chat-full-30@2x.png */; };
@@ -152,7 +148,6 @@
 		FA44C1151C3F288E00F7F09D /* ringo-file.png in Resources */ = {isa = PBXBuildFile; fileRef = FA44C1141C3F288E00F7F09D /* ringo-file.png */; };
 		FA4753CF1BA2CA2D00F692F2 /* stop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA4753CE1BA2CA2D00F692F2 /* stop@2x.png */; };
 		FA4ADD3A1CD8CD7F00187982 /* music-line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA4ADD381CD8CD7F00187982 /* music-line@2x.png */; };
-		FA4ADD3D1CD8D23500187982 /* VKShareController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA4ADD3C1CD8D23500187982 /* VKShareController.m */; };
 		FA4BA5DA1DD9C2A3008161D4 /* NSObject+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = FA4BA5D91DD9C2A3008161D4 /* NSObject+Convenience.m */; };
 		FA4BA5E21DD9E75B008161D4 /* MessageUI+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = FA4BA5E11DD9E75B008161D4 /* MessageUI+Convenience.m */; };
 		FA4BA5E81DD9F7FF008161D4 /* Affiliates+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = FA4BA5E71DD9F7FF008161D4 /* Affiliates+Convenience.m */; };
@@ -214,8 +209,6 @@
 		FA933B6E1BA6BAB500C913AA /* user-full-30@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA933B6A1BA6BAB500C913AA /* user-full-30@2x.png */; };
 		FA933B6F1BA6BAB500C913AA /* search-full-30@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA933B6B1BA6BAB500C913AA /* search-full-30@2x.png */; };
 		FA933B721BA6BB8100C913AA /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA933B711BA6BB8100C913AA /* TabBarController.m */; };
-		FA933B751BA6E9DB00C913AA /* VKWallController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA933B741BA6E9DB00C913AA /* VKWallController.m */; };
-		FA933B781BA6EB6D00C913AA /* VKSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA933B771BA6EB6D00C913AA /* VKSearchController.m */; };
 		FA96A6501B7A2C0100F2266F /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA96A64E1B7A2C0100F2266F /* Crashlytics.framework */; };
 		FA96A6511B7A2C0100F2266F /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA96A64F1B7A2C0100F2266F /* Fabric.framework */; };
 		FA9DC1491B10B72500B65686 /* TonesController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9DC1481B10B72500B65686 /* TonesController.m */; };
@@ -228,10 +221,7 @@
 		FAAA72921A8F9FC900D02C61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAAA72901A8F9FC900D02C61 /* Main.storyboard */; };
 		FAAA72941A8F9FC900D02C61 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAAA72931A8F9FC900D02C61 /* Images.xcassets */; };
 		FAAA72971A8F9FC900D02C61 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAAA72951A8F9FC900D02C61 /* LaunchScreen.xib */; };
-		FAB0E0A51B4AD23700E2F2BD /* VKSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAB0E0A41B4AD23700E2F2BD /* VKSdk.framework */; };
-		FAB0E0A71B4AD25A00E2F2BD /* VKSdkResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FAB0E0A61B4AD25A00E2F2BD /* VKSdkResources.bundle */; };
 		FAB5C66E1BC67DF4007093F1 /* ServerController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB5C66D1BC67DF4007093F1 /* ServerController.m */; };
-		FAB7EA181BD66BEA005BBA4A /* VKHelperInternal.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB7EA171BD66BEA005BBA4A /* VKHelperInternal.m */; };
 		FAB98C901B187E6B001FEAFA /* ff15@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAB98C8E1B187E6B001FEAFA /* ff15@2x.png */; };
 		FAB98C911B187E6B001FEAFA /* rw15@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAB98C8F1B187E6B001FEAFA /* rw15@2x.png */; };
 		FABA82A41C9F17B2002C7133 /* vk-gray-64@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FABA82A31C9F17B2002C7133 /* vk-gray-64@2x.png */; };
@@ -240,18 +230,14 @@
 		FABDA7671BC5611D00A00BAD /* thumb-highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FABDA7651BC5611D00A00BAD /* thumb-highlighted@2x.png */; };
 		FAC56C561B907CE30019CA28 /* cloud-upload@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC56C551B907CE30019CA28 /* cloud-upload@2x.png */; };
 		FAC56C581B9085540019CA28 /* FB-30@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC56C571B9085540019CA28 /* FB-30@2x.png */; };
-		FAC56C5F1B90897F0019CA28 /* UIViewController+VK.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC56C5E1B90897F0019CA28 /* UIViewController+VK.m */; };
 		FAC8B6851B42895700083099 /* OnlineController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC8B6841B42895700083099 /* OnlineController.m */; };
 		FAC9106C1CA83DB600767A04 /* UIViewController+Answers.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC9106B1CA83DB600767A04 /* UIViewController+Answers.m */; };
 		FACD1EE31B9B12D700D363E9 /* AudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = FACD1EE21B9B12D700D363E9 /* AudioPlayer.m */; };
-		FAD5F82A1CDA120A00BB8FDC /* VKGroupController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD5F8291CDA120A00BB8FDC /* VKGroupController.m */; };
 		FAD660161CF37CA20097C6E6 /* UIRateController+Answers.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD660151CF37CA20097C6E6 /* UIRateController+Answers.m */; };
 		FAD844591B2B64E600C48694 /* UIFont+Modification.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD844581B2B64E600C48694 /* UIFont+Modification.m */; };
 		FAD9BAD41D78AE77006706C6 /* ringo-30@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAD9BAD21D78AE77006706C6 /* ringo-30@2x.png */; };
 		FAD9BAD51D78AE77006706C6 /* ringo-128@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAD9BAD31D78AE77006706C6 /* ringo-128@2x.png */; };
 		FADA86EB1E0009B400DAE932 /* UINavigationController+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = FADA86EA1E0009B400DAE932 /* UINavigationController+Convenience.m */; };
-		FADE9B911B9239630002FFCB /* VKHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FADE9B901B9239630002FFCB /* VKHelper.m */; };
-		FAE1605C1B4BFE7E00C1B91E /* VKController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE1605B1B4BFE7E00C1B91E /* VKController.m */; };
 		FAE160621B4C0B7600C1B91E /* AudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE160611B4C0B7600C1B91E /* AudioController.m */; };
 		FAE385EE1BA02D3700170A9E /* ImportController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE385ED1BA02D3700170A9E /* ImportController.m */; };
 		FAE385F61BA0599700170A9E /* ExportController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE385F41BA055D500170A9E /* ExportController.m */; };
@@ -303,8 +289,6 @@
 		CD46030A1EA8FF53002B6075 /* Messenger_Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Messenger_Icon@2x.png"; sourceTree = "<group>"; };
 		CD643DCC1EDC79DC0027C995 /* TwitterKit+Convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TwitterKit+Convenience.h"; sourceTree = "<group>"; };
 		CD643DCD1EDC79DC0027C995 /* TwitterKit+Convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TwitterKit+Convenience.m"; sourceTree = "<group>"; };
-		CD67775C1EE068AB00AC85DD /* VKItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKItem.h; sourceTree = "<group>"; };
-		CD67775D1EE068AB00AC85DD /* VKItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKItem.m; sourceTree = "<group>"; };
 		CD75B4EE1F191F6900BAB7DC /* UIImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIImageEffects.h; path = ../Frameworks/Source/UIImageEffects/UIImageEffects/UIImageEffects.h; sourceTree = "<group>"; };
 		CD75B4EF1F191F6900BAB7DC /* UIImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIImageEffects.m; path = ../Frameworks/Source/UIImageEffects/UIImageEffects/UIImageEffects.m; sourceTree = "<group>"; };
 		CD75B4F11F191F8500BAB7DC /* AppleIncRootCertificate.cer */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleIncRootCertificate.cer; path = "../Frameworks/Source/RMStore-master/RMStore/Optional/AppleIncRootCertificate.cer"; sourceTree = "<group>"; };
@@ -314,14 +298,10 @@
 		CD75B4F71F191FD700BAB7DC /* GSTouchesShowingWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GSTouchesShowingWindow.m; path = "../Frameworks/Source/GSTouchesShowingWindow-master/GSTouchesShowingWindow/Classes/GSTouchesShowingWindow.m"; sourceTree = "<group>"; };
 		CD75B4FA1F191FFA00BAB7DC /* GSTouchImageBlue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "GSTouchImageBlue@2x.png"; path = "../Frameworks/Source/GSTouchesShowingWindow-master/GSTouchesShowingWindow/Assets/GSTouchImageBlue@2x.png"; sourceTree = "<group>"; };
 		CD75B4FB1F191FFA00BAB7DC /* GSTouchImageBlue@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "GSTouchImageBlue@3x.png"; path = "../Frameworks/Source/GSTouchesShowingWindow-master/GSTouchesShowingWindow/Assets/GSTouchImageBlue@3x.png"; sourceTree = "<group>"; };
-		CD788BCF1EDB44640009F0BA /* VKAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKAPI.h; sourceTree = "<group>"; };
-		CD788BD01EDB44640009F0BA /* VKAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKAPI.m; sourceTree = "<group>"; };
 		CD7E9D9C1EF57D9000A0D778 /* Accelerate+Convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Accelerate+Convenience.h"; sourceTree = "<group>"; };
 		CD7E9D9D1EF57D9000A0D778 /* Accelerate+Convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Accelerate+Convenience.m"; sourceTree = "<group>"; };
 		CD81EFF91F1E605300F64C5A /* Answers+Convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Answers+Convenience.h"; sourceTree = "<group>"; };
 		CD81EFFA1F1E605300F64C5A /* Answers+Convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Answers+Convenience.m"; sourceTree = "<group>"; };
-		CD85865C1DF48D3C001D7DB2 /* UIViewController+VKLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+VKLog.h"; path = "Ringo/UIViewController+VKLog.h"; sourceTree = SOURCE_ROOT; };
-		CD85865D1DF48D3C001D7DB2 /* UIViewController+VKLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+VKLog.m"; path = "Ringo/UIViewController+VKLog.m"; sourceTree = SOURCE_ROOT; };
 		CD8C984B1E58722600859FF8 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		CD8C984C1E58722700859FF8 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CD8C984D1E58722800859FF8 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -350,8 +330,8 @@
 		CDD1E4061EB693E200AE0C49 /* NSAttributedString+Convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+Convenience.m"; sourceTree = "<group>"; };
 		CDDA70552094B63400BAA17C /* UIButton+Convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Convenience.h"; sourceTree = "<group>"; };
 		CDDA70562094B63500BAA17C /* UIButton+Convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Convenience.m"; sourceTree = "<group>"; };
-		CDE17BB21ECED3740068D89D /* VKLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKLoginController.h; sourceTree = "<group>"; };
-		CDE17BB31ECED3740068D89D /* VKLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKLoginController.m; sourceTree = "<group>"; };
+		CDDA70582094EC2000BAA17C /* UITableViewCell+Convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+Convenience.h"; sourceTree = "<group>"; };
+		CDDA70592094EC2000BAA17C /* UITableViewCell+Convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+Convenience.m"; sourceTree = "<group>"; };
 		CDE33B4020499D1700F89AD8 /* Twitter-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Twitter-60@2x.png"; path = "../../Frameworks/Images/Twitter-60@2x.png"; sourceTree = "<group>"; };
 		CDE33B4120499D1700F89AD8 /* Google+-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Google+-76.png"; path = "../../Frameworks/Images/Google+-76.png"; sourceTree = "<group>"; };
 		CDE33B4220499D1700F89AD8 /* Facebook-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Facebook-60@2x.png"; path = "../../Frameworks/Images/Facebook-60@2x.png"; sourceTree = "<group>"; };
@@ -426,8 +406,6 @@
 		FA0C209A1BB2F56E006A84F3 /* HelpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HelpView.m; path = Ringo/HelpView.m; sourceTree = SOURCE_ROOT; };
 		FA0C209C1BB2FC71006A84F3 /* TextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextView.h; path = Ringo/TextView.h; sourceTree = SOURCE_ROOT; };
 		FA0C209D1BB2FC71006A84F3 /* TextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TextView.m; path = Ringo/TextView.m; sourceTree = SOURCE_ROOT; };
-		FA0CF8911BD92D31006B3FE2 /* VKFeaturedController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VKFeaturedController.h; path = Ringo/VKFeaturedController.h; sourceTree = SOURCE_ROOT; };
-		FA0CF8921BD92D31006B3FE2 /* VKFeaturedController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VKFeaturedController.m; path = Ringo/VKFeaturedController.m; sourceTree = SOURCE_ROOT; };
 		FA0F22491C0659F1001B871B /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		FA16DF431BE650430062FE90 /* ChartController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChartController.h; path = Ringo/ChartController.h; sourceTree = SOURCE_ROOT; };
 		FA16DF441BE650430062FE90 /* ChartController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChartController.m; path = Ringo/ChartController.m; sourceTree = SOURCE_ROOT; };
@@ -497,8 +475,6 @@
 		FA44C1141C3F288E00F7F09D /* ringo-file.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ringo-file.png"; sourceTree = "<group>"; };
 		FA4753CE1BA2CA2D00F692F2 /* stop@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stop@2x.png"; sourceTree = "<group>"; };
 		FA4ADD381CD8CD7F00187982 /* music-line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "music-line@2x.png"; sourceTree = "<group>"; };
-		FA4ADD3B1CD8D23500187982 /* VKShareController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VKShareController.h; path = Ringo/VKShareController.h; sourceTree = SOURCE_ROOT; };
-		FA4ADD3C1CD8D23500187982 /* VKShareController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VKShareController.m; path = Ringo/VKShareController.m; sourceTree = SOURCE_ROOT; };
 		FA4BA5D81DD9C2A3008161D4 /* NSObject+Convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Convenience.h"; sourceTree = "<group>"; };
 		FA4BA5D91DD9C2A3008161D4 /* NSObject+Convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Convenience.m"; sourceTree = "<group>"; };
 		FA4BA5E01DD9E75B008161D4 /* MessageUI+Convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MessageUI+Convenience.h"; sourceTree = "<group>"; };
@@ -585,10 +561,6 @@
 		FA933B6B1BA6BAB500C913AA /* search-full-30@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search-full-30@2x.png"; sourceTree = "<group>"; };
 		FA933B701BA6BB8100C913AA /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TabBarController.h; path = Ringo/TabBarController.h; sourceTree = SOURCE_ROOT; };
 		FA933B711BA6BB8100C913AA /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TabBarController.m; path = Ringo/TabBarController.m; sourceTree = SOURCE_ROOT; };
-		FA933B731BA6E9DB00C913AA /* VKWallController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VKWallController.h; path = Ringo/VKWallController.h; sourceTree = SOURCE_ROOT; };
-		FA933B741BA6E9DB00C913AA /* VKWallController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VKWallController.m; path = Ringo/VKWallController.m; sourceTree = SOURCE_ROOT; };
-		FA933B761BA6EB6D00C913AA /* VKSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VKSearchController.h; path = Ringo/VKSearchController.h; sourceTree = SOURCE_ROOT; };
-		FA933B771BA6EB6D00C913AA /* VKSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VKSearchController.m; path = Ringo/VKSearchController.m; sourceTree = SOURCE_ROOT; };
 		FA94D01E1DD4C83200F055F7 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Main.strings; sourceTree = "<group>"; };
 		FA94D01F1DD4C83300F055F7 /* uk */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = uk; path = "uk.lproj/win-1.png"; sourceTree = "<group>"; };
 		FA94D0201DD4C83400F055F7 /* uk */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = uk; path = "uk.lproj/win-2.png"; sourceTree = "<group>"; };
@@ -620,12 +592,8 @@
 		FAAA72911A8F9FC900D02C61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FAAA72931A8F9FC900D02C61 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FAAA72961A8F9FC900D02C61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		FAB0E0A41B4AD23700E2F2BD /* VKSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VKSdk.framework; path = "../EXKit/vk-ios-sdk-master/VKSdk.framework"; sourceTree = "<group>"; };
-		FAB0E0A61B4AD25A00E2F2BD /* VKSdkResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = VKSdkResources.bundle; path = "../EXKit/vk-ios-sdk-master/VKSdkResources.bundle"; sourceTree = "<group>"; };
 		FAB5C66C1BC67DF4007093F1 /* ServerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServerController.h; path = Ringo/ServerController.h; sourceTree = SOURCE_ROOT; };
 		FAB5C66D1BC67DF4007093F1 /* ServerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServerController.m; path = Ringo/ServerController.m; sourceTree = SOURCE_ROOT; };
-		FAB7EA161BD66BEA005BBA4A /* VKHelperInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VKHelperInternal.h; path = VK/VKHelperInternal.h; sourceTree = "<group>"; };
-		FAB7EA171BD66BEA005BBA4A /* VKHelperInternal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VKHelperInternal.m; path = VK/VKHelperInternal.m; sourceTree = "<group>"; };
 		FAB98C8E1B187E6B001FEAFA /* ff15@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ff15@2x.png"; sourceTree = "<group>"; };
 		FAB98C8F1B187E6B001FEAFA /* rw15@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rw15@2x.png"; sourceTree = "<group>"; };
 		FABA82A31C9F17B2002C7133 /* vk-gray-64@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vk-gray-64@2x.png"; sourceTree = "<group>"; };
@@ -635,16 +603,12 @@
 		FABDA7651BC5611D00A00BAD /* thumb-highlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thumb-highlighted@2x.png"; sourceTree = "<group>"; };
 		FAC56C551B907CE30019CA28 /* cloud-upload@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cloud-upload@2x.png"; sourceTree = "<group>"; };
 		FAC56C571B9085540019CA28 /* FB-30@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FB-30@2x.png"; sourceTree = "<group>"; };
-		FAC56C5D1B90897F0019CA28 /* UIViewController+VK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+VK.h"; path = "VK/UIViewController+VK.h"; sourceTree = "<group>"; };
-		FAC56C5E1B90897F0019CA28 /* UIViewController+VK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+VK.m"; path = "VK/UIViewController+VK.m"; sourceTree = "<group>"; };
 		FAC8B6831B42895700083099 /* OnlineController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OnlineController.h; path = Ringo/OnlineController.h; sourceTree = SOURCE_ROOT; };
 		FAC8B6841B42895700083099 /* OnlineController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OnlineController.m; path = Ringo/OnlineController.m; sourceTree = SOURCE_ROOT; };
 		FAC9106A1CA83DB600767A04 /* UIViewController+Answers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Answers.h"; sourceTree = "<group>"; };
 		FAC9106B1CA83DB600767A04 /* UIViewController+Answers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Answers.m"; sourceTree = "<group>"; };
 		FACD1EE11B9B12D700D363E9 /* AudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioPlayer.h; path = Ringo/AudioPlayer.h; sourceTree = SOURCE_ROOT; };
 		FACD1EE21B9B12D700D363E9 /* AudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AudioPlayer.m; path = Ringo/AudioPlayer.m; sourceTree = SOURCE_ROOT; };
-		FAD5F8281CDA120A00BB8FDC /* VKGroupController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VKGroupController.h; path = Ringo/VKGroupController.h; sourceTree = SOURCE_ROOT; };
-		FAD5F8291CDA120A00BB8FDC /* VKGroupController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VKGroupController.m; path = Ringo/VKGroupController.m; sourceTree = SOURCE_ROOT; };
 		FAD660141CF37CA20097C6E6 /* UIRateController+Answers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIRateController+Answers.h"; sourceTree = "<group>"; };
 		FAD660151CF37CA20097C6E6 /* UIRateController+Answers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIRateController+Answers.m"; sourceTree = "<group>"; };
 		FAD844571B2B64E600C48694 /* UIFont+Modification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIFont+Modification.h"; path = "UI/UIFont+Modification.h"; sourceTree = "<group>"; };
@@ -653,10 +617,6 @@
 		FAD9BAD31D78AE77006706C6 /* ringo-128@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ringo-128@2x.png"; path = "../../EXKit/ImagesEx/ringo-128@2x.png"; sourceTree = "<group>"; };
 		FADA86E91E0009B400DAE932 /* UINavigationController+Convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Convenience.h"; sourceTree = "<group>"; };
 		FADA86EA1E0009B400DAE932 /* UINavigationController+Convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Convenience.m"; sourceTree = "<group>"; };
-		FADE9B8F1B9239630002FFCB /* VKHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VKHelper.h; path = VK/VKHelper.h; sourceTree = "<group>"; };
-		FADE9B901B9239630002FFCB /* VKHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VKHelper.m; path = VK/VKHelper.m; sourceTree = "<group>"; };
-		FAE1605A1B4BFE7E00C1B91E /* VKController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VKController.h; path = Ringo/VKController.h; sourceTree = SOURCE_ROOT; };
-		FAE1605B1B4BFE7E00C1B91E /* VKController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VKController.m; path = Ringo/VKController.m; sourceTree = SOURCE_ROOT; };
 		FAE160601B4C0B7600C1B91E /* AudioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioController.h; path = Ringo/AudioController.h; sourceTree = SOURCE_ROOT; };
 		FAE160611B4C0B7600C1B91E /* AudioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AudioController.m; path = Ringo/AudioController.m; sourceTree = SOURCE_ROOT; };
 		FAE385EC1BA02D3700170A9E /* ImportController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImportController.h; path = Ringo/ImportController.h; sourceTree = SOURCE_ROOT; };
@@ -709,7 +669,6 @@
 				FA1D9CD91B57A00D00016FAF /* FBSDKCoreKit.framework in Frameworks */,
 				FA1D9CDA1B57A00D00016FAF /* FBSDKLoginKit.framework in Frameworks */,
 				FA1D9CDB1B57A00D00016FAF /* FBSDKShareKit.framework in Frameworks */,
-				FAB0E0A51B4AD23700E2F2BD /* VKSdk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -733,17 +692,6 @@
 				CD1CC0111EC31A0200256A74 /* AVPlayer+Convenience.m */,
 			);
 			name = AVFoundation;
-			sourceTree = "<group>";
-		};
-		CD67775F1EE068B600AC85DD /* VK */ = {
-			isa = PBXGroup;
-			children = (
-				CD788BCF1EDB44640009F0BA /* VKAPI.h */,
-				CD788BD01EDB44640009F0BA /* VKAPI.m */,
-				CD67775C1EE068AB00AC85DD /* VKItem.h */,
-				CD67775D1EE068AB00AC85DD /* VKItem.m */,
-			);
-			name = VK;
 			sourceTree = "<group>";
 		};
 		CD75B4ED1F191F5100BAB7DC /* 3rd Party */ = {
@@ -814,7 +762,6 @@
 				FAA8FF0E1DDB526900F9B99A /* Foundation */,
 				FAA8FF101DDB52B500F9B99A /* StoreKit */,
 				FAA8FF0F1DDB528A00F9B99A /* UIKit */,
-				CD67775F1EE068B600AC85DD /* VK */,
 				CD7E9D9C1EF57D9000A0D778 /* Accelerate+Convenience.h */,
 				CD7E9D9D1EF57D9000A0D778 /* Accelerate+Convenience.m */,
 				FA4BA5E61DD9F7FF008161D4 /* Affiliates+Convenience.h */,
@@ -861,8 +808,6 @@
 				FA1D9CD61B57A00D00016FAF /* FBSDKCoreKit.framework */,
 				FA1D9CD71B57A00D00016FAF /* FBSDKLoginKit.framework */,
 				FA1D9CD81B57A00D00016FAF /* FBSDKShareKit.framework */,
-				FAB0E0A41B4AD23700E2F2BD /* VKSdk.framework */,
-				FAB0E0A61B4AD25A00E2F2BD /* VKSdkResources.bundle */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1020,7 +965,6 @@
 				FA8504B61D339DCD00264A88 /* AppKit */,
 				FA912B8F1AACC80C0035213F /* NS */,
 				FAE39B9B1AB738A30014F27E /* UI */,
-				FAC56C5C1B9089510019CA28 /* VK */,
 			);
 			name = EXKit;
 			path = ../EXKit;
@@ -1119,6 +1063,8 @@
 				CDE3A8E01DE09BC500AEB8BB /* UISlider+Convenience.m */,
 				CDF544101DE4AABC00F41149 /* UITableView+Convenience.h */,
 				CDF544111DE4AABC00F41149 /* UITableView+Convenience.m */,
+				CDDA70582094EC2000BAA17C /* UITableViewCell+Convenience.h */,
+				CDDA70592094EC2000BAA17C /* UITableViewCell+Convenience.m */,
 				FA4BA6251DDA1927008161D4 /* UIView+Convenience.h */,
 				FA4BA6261DDA1927008161D4 /* UIView+Convenience.m */,
 				CD2935831DD8B436002A9FAF /* UIViewController+Convenience.h */,
@@ -1215,20 +1161,6 @@
 				FA0C209D1BB2FC71006A84F3 /* TextView.m */,
 				FA25BF931B81173900C4463D /* SettingsController.h */,
 				FA25BF941B81173900C4463D /* SettingsController.m */,
-				FAE1605A1B4BFE7E00C1B91E /* VKController.h */,
-				FAE1605B1B4BFE7E00C1B91E /* VKController.m */,
-				FA933B731BA6E9DB00C913AA /* VKWallController.h */,
-				FA933B741BA6E9DB00C913AA /* VKWallController.m */,
-				FA933B761BA6EB6D00C913AA /* VKSearchController.h */,
-				FA933B771BA6EB6D00C913AA /* VKSearchController.m */,
-				FA0CF8911BD92D31006B3FE2 /* VKFeaturedController.h */,
-				FA0CF8921BD92D31006B3FE2 /* VKFeaturedController.m */,
-				FA4ADD3B1CD8D23500187982 /* VKShareController.h */,
-				FA4ADD3C1CD8D23500187982 /* VKShareController.m */,
-				FAD5F8281CDA120A00BB8FDC /* VKGroupController.h */,
-				FAD5F8291CDA120A00BB8FDC /* VKGroupController.m */,
-				CDE17BB21ECED3740068D89D /* VKLoginController.h */,
-				CDE17BB31ECED3740068D89D /* VKLoginController.m */,
 				FA8FD6231BC05FE7000DF04F /* WaveformController.h */,
 				FA8FD6241BC05FE7000DF04F /* WaveformController.m */,
 				FA436C7D1BC14A7D00626DDE /* PlayerController.h */,
@@ -1251,8 +1183,6 @@
 				FA7DA8221D524A0100096B72 /* ProfileCell.m */,
 				FA66C42B1D50E7AC0026489A /* UIViewController+Stereo.h */,
 				FA66C42C1D50E7AC0026489A /* UIViewController+Stereo.m */,
-				CD85865C1DF48D3C001D7DB2 /* UIViewController+VKLog.h */,
-				CD85865D1DF48D3C001D7DB2 /* UIViewController+VKLog.m */,
 				FAF6984C1DD5CABA00219B00 /* NotificationService.h */,
 				FAF6984D1DD5CABA00219B00 /* NotificationService.m */,
 				CDE3A8B81DE0835E00AEB8BB /* CGWaveform.h */,
@@ -1272,19 +1202,6 @@
 				FAAA72881A8F9FC900D02C61 /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		FAC56C5C1B9089510019CA28 /* VK */ = {
-			isa = PBXGroup;
-			children = (
-				FADE9B8F1B9239630002FFCB /* VKHelper.h */,
-				FADE9B901B9239630002FFCB /* VKHelper.m */,
-				FAB7EA161BD66BEA005BBA4A /* VKHelperInternal.h */,
-				FAB7EA171BD66BEA005BBA4A /* VKHelperInternal.m */,
-				FAC56C5D1B90897F0019CA28 /* UIViewController+VK.h */,
-				FAC56C5E1B90897F0019CA28 /* UIViewController+VK.m */,
-			);
-			name = VK;
 			sourceTree = "<group>";
 		};
 		FAE39B9B1AB738A30014F27E /* UI */ = {
@@ -1440,7 +1357,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAB0E0A71B4AD25A00E2F2BD /* VKSdkResources.bundle in Resources */,
 				FAEBB6B31D89656E00D235CC /* InfoPlist.strings in Resources */,
 				CDE33B6F20499D1B00F89AD8 /* iCloud-76.png in Resources */,
 				FA4154D81BF9E0840038779F /* help-4.png in Resources */,
@@ -1576,7 +1492,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAB7EA181BD66BEA005BBA4A /* VKHelperInternal.m in Sources */,
 				FA3A748C1B9DDB0000E579FC /* AudioSegment+Export.m in Sources */,
 				FA8856BA1DDCA78B001B869F /* UIAlertController+Convenience.m in Sources */,
 				FAF6984E1DD5CABA00219B00 /* NotificationService.m in Sources */,
@@ -1587,7 +1502,6 @@
 				CD2935851DD8B436002A9FAF /* UIViewController+Convenience.m in Sources */,
 				CDF5FA571DB3C45100208F7E /* NSFormatter+Convenience.m in Sources */,
 				CDE3A8F91DE0EA8700AEB8BB /* CKObjectBase.m in Sources */,
-				FA933B751BA6E9DB00C913AA /* VKWallController.m in Sources */,
 				FA4BA6151DDA0DB7008161D4 /* NSString+Convenience.m in Sources */,
 				FA1F66BA1D09BE3A009F8F15 /* Push.m in Sources */,
 				CDF5FA551DB3C45100208F7E /* Dispatch+Convenience.m in Sources */,
@@ -1599,7 +1513,6 @@
 				CDE3A8DB1DE09AB000AEB8BB /* NSDictionary+Convenience.m in Sources */,
 				CDA248C81E9A68EA00075DE0 /* FBAudienceNetwork+Convenience.m in Sources */,
 				CDE3A8F81DE0EA8700AEB8BB /* CKDatabase+Convenience.m in Sources */,
-				CDE17BB41ECED3740068D89D /* VKLoginController.m in Sources */,
 				FA436C7F1BC14A7D00626DDE /* PlayerController.m in Sources */,
 				CD04593A2049E966006D48D0 /* UIPageViewController+Convenience.m in Sources */,
 				FA25BF951B81173900C4463D /* SettingsController.m in Sources */,
@@ -1610,13 +1523,11 @@
 				CD81EFFB1F1E605300F64C5A /* Answers+Convenience.m in Sources */,
 				FA38A0B81DDDFF2E004B963A /* UIGestureRecognizer+Convenience.m in Sources */,
 				FA4BA6181DDA0E40008161D4 /* CommonCrypto+Convenience.m in Sources */,
-				CD67775E1EE068AB00AC85DD /* VKItem.m in Sources */,
 				FAE385EE1BA02D3700170A9E /* ImportController.m in Sources */,
 				FA7547A11B4DBA1B00E06C3D /* AudioItem.m in Sources */,
 				FAD844591B2B64E600C48694 /* UIFont+Modification.m in Sources */,
 				CD75B4F81F191FD700BAB7DC /* GSTouchesShowingWindow.m in Sources */,
 				FA0C209E1BB2FC71006A84F3 /* TextView.m in Sources */,
-				FAC56C5F1B90897F0019CA28 /* UIViewController+VK.m in Sources */,
 				FA4BA5F11DD9FED8008161D4 /* UIDocumentPickerViewController+Convenience.m in Sources */,
 				CDA840311DDB87790042D2CC /* UIImage+Convenience.m in Sources */,
 				FA9EC8311D82F67800E7FA9C /* UIRateController.m in Sources */,
@@ -1642,14 +1553,11 @@
 				CD75B4F51F191F8500BAB7DC /* RMAppReceipt.m in Sources */,
 				CDE3A8B71DE0835100AEB8BB /* UIWaveformView.m in Sources */,
 				FA4105C01DE893D500E76154 /* UIColor+Convenience.m in Sources */,
-				FADE9B911B9239630002FFCB /* VKHelper.m in Sources */,
-				FAD5F82A1CDA120A00BB8FDC /* VKGroupController.m in Sources */,
 				FA4BA60F1DDA0A50008161D4 /* NSFileManager+Convenience.m in Sources */,
 				FA0C209B1BB2F56E006A84F3 /* HelpView.m in Sources */,
 				CDA840281DDB7C870042D2CC /* CoreSpotlight+Convenience.m in Sources */,
 				FAEF05AF1D86C22F0062EA95 /* UIBarButtonItem+Convenience.m in Sources */,
 				FABDA7631BC555E000A00BAD /* RegionView.m in Sources */,
-				FA4ADD3D1CD8D23500187982 /* VKShareController.m in Sources */,
 				FA436C821BC14E5200626DDE /* RegionController.m in Sources */,
 				FA38A0AD1DDDF9D7004B963A /* NSURL+Convenience.m in Sources */,
 				FAC8B6851B42895700083099 /* OnlineController.m in Sources */,
@@ -1668,19 +1576,17 @@
 				FA3A74891B9DB8BE00E579FC /* UIDetailTableViewCell.m in Sources */,
 				FA1F66B71D09BE01009F8F15 /* Ad.m in Sources */,
 				FA098B6D1C91B7FE00D83FDF /* UIAccessoryView.m in Sources */,
-				CD788BD11EDB44640009F0BA /* VKAPI.m in Sources */,
 				CDE3A8DE1DE09B6D00AEB8BB /* UILabel+Convenience.m in Sources */,
 				FAAA728C1A8F9FC900D02C61 /* AppDelegate.m in Sources */,
-				FA933B781BA6EB6D00C913AA /* VKSearchController.m in Sources */,
 				FA16DF451BE650430062FE90 /* ChartController.m in Sources */,
 				CDDA70572094B63500BAA17C /* UIButton+Convenience.m in Sources */,
 				FA1823AF1B14BEDD00E93023 /* Global.m in Sources */,
 				FA2EFC441DDF21C000E24C1E /* UIInteractiveTransition.m in Sources */,
 				FAE385F91BA05B7F00170A9E /* Localized.m in Sources */,
 				CD3065071F1813BA00F8AA92 /* StoreKit+Convenience.m in Sources */,
-				FAE1605C1B4BFE7E00C1B91E /* VKController.m in Sources */,
 				CDE3A8E51DE0AEE500AEB8BB /* NSData+Convenience.m in Sources */,
 				FA4BA5EB1DD9FA33008161D4 /* UIActivityViewController+Convenience.m in Sources */,
+				CDDA705A2094EC2100BAA17C /* UITableViewCell+Convenience.m in Sources */,
 				FAE385F61BA0599700170A9E /* ExportController.m in Sources */,
 				FAE385FF1BA06E2A00170A9E /* RatingController.m in Sources */,
 				CDD1E4071EB693E200AE0C49 /* NSAttributedString+Convenience.m in Sources */,
@@ -1697,13 +1603,11 @@
 				CD0459302049A625006D48D0 /* UIScrollView+Convenience.m in Sources */,
 				CD30650A1F18152F00F8AA92 /* SKInAppPurchase.m in Sources */,
 				CDF5FA591DB3C45100208F7E /* UserNotifications+Convenience.m in Sources */,
-				FA0CF8931BD92D31006B3FE2 /* VKFeaturedController.m in Sources */,
 				FA933B721BA6BB8100C913AA /* TabBarController.m in Sources */,
 				FA9DC1491B10B72500B65686 /* TonesController.m in Sources */,
 				FA4BA6301DDA1DD0008161D4 /* NSLayoutConstraint+Convenience.m in Sources */,
 				FAAA72891A8F9FC900D02C61 /* main.m in Sources */,
 				FA7DA8231D524A0100096B72 /* ProfileCell.m in Sources */,
-				CD85865E1DF48D3C001D7DB2 /* UIViewController+VKLog.m in Sources */,
 				CD643DCE1EDC79DC0027C995 /* TwitterKit+Convenience.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

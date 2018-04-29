@@ -18,11 +18,11 @@
 
 - (BOOL)lookupInMediaLibrary;
 
-- (void)lookupInVK:(void (^)(VKAudioItem *vkAudioItem))handler;
+//- (void)lookupInVK:(void (^)(VKAudioItem *vkAudioItem))handler;
 
 - (void)cacheArtwork:(void(^)(UIImage *artwork))handler;
 
-+ (instancetype)createWithWallItem:(VKWallItem *)item;
+//+ (instancetype)createWithWallItem:(VKWallItem *)item;
 
 + (instancetype)createWithTone:(Tone *)tone;
 
