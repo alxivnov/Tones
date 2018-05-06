@@ -31,10 +31,10 @@
 "TPM-bu-2md.title" = "Профіль";
 
 /* Class = "UINavigationItem"; title = "ДОПОМОГА"; ObjectID = "C9s-2U-oka"; */
-"C9s-2U-oka.title" = "ДОПОМОГА";
+"C9s-2U-oka.title" = "Допомога";
 
 /* Class = "UINavigationItem"; title = "НАЛАШТУВАННЯ"; ObjectID = "84f-Gr-uXG"; */
-"84f-Gr-uXG.title" = "НАЛАШТУВАННЯ";
+"84f-Gr-uXG.title" = "Налаштування";
 
 /* Class = "UITableViewSection"; headerTitle = "ПРО ПРОГРАМУ"; ObjectID = "29N-U2-x1w"; */
 "29N-U2-x1w.headerTitle" = "ПРО ПРОГРАМУ";

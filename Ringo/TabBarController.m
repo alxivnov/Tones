@@ -34,8 +34,8 @@ __synthesize(UIPanTransition *, transition, [UIPanTransition gestureTransition:N
 
 
 //	self.tabBar.tintColor = [UIColor whiteColor];
-	idx(self.tabBar.items, 0).selectedImage = [UIImage templateImage:IMG_USER_FULL];
-	idx(self.tabBar.items, 1).selectedImage = [UIImage templateImage:IMG_SEARCH_FULL];
+//	idx(self.tabBar.items, 0).selectedImage = [UIImage templateImage:IMG_USER_FULL];
+//	idx(self.tabBar.items, 1).selectedImage = [UIImage templateImage:IMG_SEARCH_FULL];
 /*
 	if (self.viewControllers.count == 2) {
 		cls(UINavigationController, self.viewControllers[0]).navigationBar.barTintColor = self.tabBar.barTintColor;
@@ -45,7 +45,7 @@ __synthesize(UIPanTransition *, transition, [UIPanTransition gestureTransition:N
 */
 
 
-	self.tabBar.items.lastObject.badgeValue = [UIApplication sharedApplication].applicationIconBadgeNumber ? [@([UIApplication sharedApplication].applicationIconBadgeNumber) description] : Nil;
+	idx(self.tabBar.items, 1).badgeValue = [UIApplication sharedApplication].applicationIconBadgeNumber ? [@([UIApplication sharedApplication].applicationIconBadgeNumber) description] : Nil;
 //	idx(self.tabBar.items, 1).badgeValue = [VKFeaturedController newPosts] ? [@([VKFeaturedController newPosts]) description] : Nil;
 
 

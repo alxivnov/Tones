@@ -38,6 +38,9 @@
 		CD9BC07E1E6C464A003BD7DE /* MobileCoreServices+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9BC07D1E6C464A003BD7DE /* MobileCoreServices+Convenience.m */; };
 		CDA248C81E9A68EA00075DE0 /* FBAudienceNetwork+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA248C51E9A68EA00075DE0 /* FBAudienceNetwork+Convenience.m */; };
 		CDA248C91E9A68EA00075DE0 /* FBSDKShareKit+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA248C71E9A68EA00075DE0 /* FBSDKShareKit+Convenience.m */; };
+		CDA60379209F2F63009C3758 /* config-fill@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CDA60378209F2F63009C3758 /* config-fill@2x.png */; };
+		CDA6037C209F314E009C3758 /* help-fill@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CDA6037A209F314C009C3758 /* help-fill@3x.png */; };
+		CDA6037D209F314E009C3758 /* help-line@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CDA6037B209F314D009C3758 /* help-line@3x.png */; };
 		CDA75EBF1F02C230009EBDBA /* VK-44@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CDA75EBE1F02C230009EBDBA /* VK-44@2x.png */; };
 		CDA75EC11F02C8C5009EBDBA /* FB-44@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CDA75EC01F02C8C5009EBDBA /* FB-44@2x.png */; };
 		CDA840251DDB7B240042D2CC /* MediaPlayer+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA840241DDB7B240042D2CC /* MediaPlayer+Convenience.m */; };
@@ -313,6 +316,9 @@
 		CDA248C51E9A68EA00075DE0 /* FBAudienceNetwork+Convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FBAudienceNetwork+Convenience.m"; sourceTree = "<group>"; };
 		CDA248C61E9A68EA00075DE0 /* FBSDKShareKit+Convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FBSDKShareKit+Convenience.h"; sourceTree = "<group>"; };
 		CDA248C71E9A68EA00075DE0 /* FBSDKShareKit+Convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FBSDKShareKit+Convenience.m"; sourceTree = "<group>"; };
+		CDA60378209F2F63009C3758 /* config-fill@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "config-fill@2x.png"; path = "../../Frameworks/Images/config-fill@2x.png"; sourceTree = "<group>"; };
+		CDA6037A209F314C009C3758 /* help-fill@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "help-fill@3x.png"; path = "../../Frameworks/Images/help-fill@3x.png"; sourceTree = "<group>"; };
+		CDA6037B209F314D009C3758 /* help-line@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "help-line@3x.png"; path = "../../Frameworks/Images/help-line@3x.png"; sourceTree = "<group>"; };
 		CDA75EBE1F02C230009EBDBA /* VK-44@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VK-44@2x.png"; sourceTree = "<group>"; };
 		CDA75EC01F02C8C5009EBDBA /* FB-44@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FB-44@2x.png"; sourceTree = "<group>"; };
 		CDA840231DDB7B240042D2CC /* MediaPlayer+Convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MediaPlayer+Convenience.h"; sourceTree = "<group>"; };
@@ -902,7 +908,10 @@
 				FA5DE3F21BA19856006F335B /* vk-plus-30@2x.png */,
 				FABA82A31C9F17B2002C7133 /* vk-gray-64@2x.png */,
 				FA25BF831B80A4C700C4463D /* config-line@2x.png */,
+				CDA60378209F2F63009C3758 /* config-fill@2x.png */,
 				FAE718F11B164A77000ED8D1 /* help-line@2x.png */,
+				CDA6037A209F314C009C3758 /* help-fill@3x.png */,
+				CDA6037B209F314D009C3758 /* help-line@3x.png */,
 				FAC56C551B907CE30019CA28 /* cloud-upload@2x.png */,
 				FAC56C571B9085540019CA28 /* FB-30@2x.png */,
 				CD3FC41B1E400FD900EC69A9 /* TW-30@2x.png */,
@@ -1358,6 +1367,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAEBB6B31D89656E00D235CC /* InfoPlist.strings in Resources */,
+				CDA6037C209F314E009C3758 /* help-fill@3x.png in Resources */,
 				CDE33B6F20499D1B00F89AD8 /* iCloud-76.png in Resources */,
 				FA4154D81BF9E0840038779F /* help-4.png in Resources */,
 				CDE33B6720499D1B00F89AD8 /* Facebook-76@2x.png in Resources */,
@@ -1394,6 +1404,7 @@
 				FAAA72921A8F9FC900D02C61 /* Main.storyboard in Resources */,
 				FA77667D1B4AC2CD0004356B /* Localizable.strings in Resources */,
 				FA534EFD1CAAADFB006F3143 /* win-2.png in Resources */,
+				CDA6037D209F314E009C3758 /* help-line@3x.png in Resources */,
 				CD75B4F41F191F8500BAB7DC /* AppleIncRootCertificate.cer in Resources */,
 				FA4154D01BF9E0730038779F /* help-2.png in Resources */,
 				CDE33B7A20499D1B00F89AD8 /* Google+-76@2x.png in Resources */,
@@ -1438,6 +1449,7 @@
 				FA4154D41BF9E07C0038779F /* help-3.png in Resources */,
 				FA16EFFD1C7B2FC4006D1721 /* chat-full-30@2x.png in Resources */,
 				CDE33B6620499D1B00F89AD8 /* VK-76.png in Resources */,
+				CDA60379209F2F63009C3758 /* config-fill@2x.png in Resources */,
 				FA191E421B401F530086488E /* music-line-256@2x.png in Resources */,
 				CDE33B6B20499D1B00F89AD8 /* Facebook-60.png in Resources */,
 				CD90E1431FA4A09500D123CD /* GSTouchImageBlue.png in Resources */,

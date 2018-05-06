@@ -6,8 +6,9 @@
 "9zm-sY-v4Q.title" = "Популярные";
 "Ttv-e6-RrH.title" = "Новые";
 
-"K2O-LR-ZYc.segmentTitles[0]" = "Новые";
-"K2O-LR-ZYc.segmentTitles[1]" = "Популярные";
+"t2M-vI-Wsu.segmentTitles[0]" = "Популярные";
+"t2M-vI-Wsu.segmentTitles[1]" = "Последние";
+"t2M-vI-Wsu.segmentTitles[2]" = "Профиль";
 
 /* Class = "UINavigationItem"; title = "ПОДБОРКА"; ObjectID = "qwy-uz-ANN"; */
 "qwy-uz-ANN.title" = "ПОДБОРКА";
@@ -31,10 +32,10 @@
 "TPM-bu-2md.title" = "Профиль";
 
 /* Class = "UINavigationItem"; title = "ПОМОЩЬ"; ObjectID = "C9s-2U-oka"; */
-"C9s-2U-oka.title" = "ПОМОЩЬ";
+"C9s-2U-oka.title" = "Помощь";
 
 /* Class = "UINavigationItem"; title = "НАСТРОЙКИ"; ObjectID = "84f-Gr-uXG"; */
-"84f-Gr-uXG.title" = "НАСТРОЙКИ";
+"84f-Gr-uXG.title" = "Настройки";
 
 /* Class = "UITableViewSection"; headerTitle = "О ПРОГРАММЕ"; ObjectID = "29N-U2-x1w"; */
 "29N-U2-x1w.headerTitle" = "О ПРОГРАММЕ";
@@ -109,3 +110,9 @@
 "wFu-PB-9nm.text" = "Пригласить через Messenger";
 
 "OJr-8e-7Gk.text" = "Найди нас на Facebook";
+
+"n0a-L3-D6C.title" = "Полная инструкция";
+
+"gI2-sE-hji.title" = "Звуки";
+"ehO-VQ-ksP.title" = "Помощь";
+"E9m-c0-Twy.title" = "Настройки";

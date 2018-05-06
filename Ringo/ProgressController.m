@@ -56,8 +56,8 @@
 	[self startLogging];
 
 	if (!self.selectedItem.assetURL || [self.navigationItem.title isEqualToString:[self.selectedItem description]]) {
-		if (!self.selectedItem.assetURL)
-			[self setToolbar:@[ [[UIBarButtonItem alloc] initWithImage:[UIImage templateImage:IMG_HELP_LINE] style:UIBarButtonItemStylePlain target:self action:@selector(helpBarButtonItemAction:)], [[UIBarButtonItem alloc] initWithTitle:[Localized fullGuide] style:UIBarButtonItemStylePlain target:self action:@selector(helpBarButtonItemAction:)] ]];
+//		if (!self.selectedItem.assetURL)
+//			[self setToolbar:@[ [[UIBarButtonItem alloc] initWithImage:[UIImage templateImage:IMG_HELP_LINE] style:UIBarButtonItemStylePlain target:self action:@selector(helpBarButtonItemAction:)], [[UIBarButtonItem alloc] initWithTitle:[Localized fullGuide] style:UIBarButtonItemStylePlain target:self action:@selector(helpBarButtonItemAction:)] ]];
 
 		return;
 	}

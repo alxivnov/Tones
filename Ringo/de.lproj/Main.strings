@@ -31,10 +31,10 @@
 "TPM-bu-2md.title" = "Profil";
 
 /* Class = "UINavigationItem"; title = "HILFE"; ObjectID = "C9s-2U-oka"; */
-"C9s-2U-oka.title" = "HILFE";
+"C9s-2U-oka.title" = "Hilfe";
 
 /* Class = "UINavigationItem"; title = "Enstellungen"; ObjectID = "84f-Gr-uXG"; */
-"84f-Gr-uXG.title" = "EINSTELLUNGEN";
+"84f-Gr-uXG.title" = "Einstellungen";
 
 /* Class = "UITableViewSection"; headerTitle = "Unternehmen"; ObjectID = "29N-U2-x1w"; */
 "29N-U2-x1w.headerTitle" = "UNTERNEHMEN";

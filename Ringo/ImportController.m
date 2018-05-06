@@ -155,7 +155,8 @@ __synthesize(MPMediaPickerController *, mediaPicker, ({ MPMediaPicker *x = [[MPM
 					MPMediaItem *mediaItem = cls(MPMusicPlayerController, notification.object).nowPlayingItem;
 
 					if (mediaItem == Nil) {
-						[self setToolbar:[NSRateController instance].action ? Nil : @[ [[UIBarButtonItem alloc] initWithImage:[UIImage templateImage:IMG_HELP_LINE] style:UIBarButtonItemStylePlain target:self action:@selector(helpBarButtonItemAction:)], [[UIBarButtonItem alloc] initWithTitle:[Localized howToInstallToneToPhone] style:UIBarButtonItemStylePlain target:self action:@selector(helpBarButtonItemAction:)] ]];
+//						[self setToolbar:[NSRateController instance].action ? Nil : @[ [[UIBarButtonItem alloc] initWithImage:[UIImage templateImage:IMG_HELP_LINE] style:UIBarButtonItemStylePlain target:self action:@selector(helpBarButtonItemAction:)], [[UIBarButtonItem alloc] initWithTitle:[Localized howToInstallToneToPhone] style:UIBarButtonItemStylePlain target:self action:@selector(helpBarButtonItemAction:)] ]];
+						[self setToolbar:Nil];
 
 						[self.toolbarItems.firstObject.buttonView animate:CGAffineTransformMakeScale(0.0, 0.0) duration:1.0 damping:0.5 velocity:ANIMATION_VELOCITY options:ANIMATION_OPTIONS completion:Nil];
 					} else if (self.nowPlayingItem.mediaItem != mediaItem)
@@ -237,7 +238,8 @@ __synthesize(MPMediaPickerController *, mediaPicker, ({ MPMediaPicker *x = [[MPM
 }
 
 - (IBAction)helpBarButtonItemAction:(UIBarButtonItem *)sender {
-	[self performSegueWithIdentifier:GUI_HELP sender:sender];
+//	[self performSegueWithIdentifier:GUI_HELP sender:sender];
+	self.tabBarController.selectedIndex = TAB_HELP;
 }
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {

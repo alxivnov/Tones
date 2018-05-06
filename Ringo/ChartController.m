@@ -27,11 +27,24 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 
-	self.segment.selectedSegmentIndex = [[NSUserDefaults standardUserDefaults] integerForKey:KEY_SELECTED_SEGMENT_INDEX];
+//	self.segment.selectedSegmentIndex = [[NSUserDefaults standardUserDefaults] integerForKey:KEY_SELECTED_SEGMENT_INDEX];
+
+	self.navigationItem.title = [self.segment titleForSegmentAtIndex:self.segment.selectedSegmentIndex];
+
+	if ([UIApplication sharedApplication].applicationIconBadgeNumber || self.navigationController.tabBarItem.badgeValue.length)
+		[[CKContainer defaultContainer] modifyBadge:0 completionHandler:^(BOOL success) {
+			if (success)
+				[GCD main:^{
+					[UIApplication sharedApplication].applicationIconBadgeNumber = 0;
+					self.navigationController.tabBarItem.badgeValue = Nil;
+				}];
+		}];
 }
 
 - (IBAction)segmentValueChange:(UISegmentedControl *)sender {
 	[self.player stopItem:Nil];
+
+	self.navigationItem.title = [sender titleForSegmentAtIndex:sender.selectedSegmentIndex];
 
 	[self setItems:[NSArray new] animated:NO];
 
@@ -67,20 +80,29 @@
 	}];
 }
 
+#warning Waveform
+#warning Scrolling
+#warning Profile scrolling
+
 - (void)loadItems:(void (^)(NSArray<Tone *> *, NSArray<User *> */*, NSArray<VKUser *> **/, NSTimeInterval))handler {
-	if (self.segment.selectedSegmentIndex)
+	if (self.segment.selectedSegmentIndex == 0)
 		[self loadFeatured:GLOBAL.tonesCount handler:^(NSArray<__kindof Tone *> *results) {
 			[self loadUsers:results handler:^(NSArray<User *> *users/*, NSArray<VKUser *> *vkUsers*/) {
 				if (handler)
 					handler(results, users/*, vkUsers*/, TIME_WEEK);
 			}];
 		}];
-	else
+	else if (self.segment.selectedSegmentIndex == 1)
 		[self loadRecent:GLOBAL.tonesCount handler:^(NSArray<__kindof Tone *> *results) {
 			[self loadUsers:results handler:^(NSArray<User *> *users/*, NSArray<VKUser *> *vkUsers*/) {
 				if (handler)
 					handler(results, users/*, vkUsers*/, TIME_DAY);
 			}];
+		}];
+	else
+		[Tone loadProfile:^(NSArray<__kindof Tone *> *results) {
+			if (handler)
+				handler(results, Nil/*, Nil*/, 0.0);
 		}];
 }
 

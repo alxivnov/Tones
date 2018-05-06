@@ -25,6 +25,7 @@
 //#define GUI_VK_CHARTS @"vk-charts"
 //#define GUI_VK_IMPORT @"vk-import"
 //#define GUI_VK_SHARE @"vk-share"
+#define TAB_HELP 2
 
 #define IMG_PLAY @"play"
 #define IMG_STOP @"stop"
