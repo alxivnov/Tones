@@ -65,6 +65,7 @@
 	if (!_regionView) {
 		_regionView = [[RegionView alloc] initWithFrame:[self regionViewFrame]];
 //		_regionView.backgroundColor = WA(255, 20);
+		_regionView.tintColor = [UIColor whiteColor];
 		_regionView.userInteractionEnabled = NO;
 		
 		[self.view addSubview:_regionView];

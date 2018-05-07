@@ -55,7 +55,7 @@
 
 - (UIColor *)tintColor {
 	if (!_tintColor)
-		_tintColor = self.navigationController.navigationBar.barTintColor ? self.navigationController.navigationBar.barTintColor : GLOBAL.globalTintColor;
+		_tintColor = /*self.navigationController.navigationBar.barTintColor ? self.navigationController.navigationBar.barTintColor :*/ GLOBAL.globalTintColor;
 
 	return _tintColor;
 }
@@ -129,8 +129,8 @@
 
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
-	
-	self.tabBarController.tabBar.barTintColor = self.navigationController.navigationBar.barTintColor;
+
+//	self.tabBarController.tabBar.barTintColor = self.navigationController.navigationBar.barTintColor;
 
 	self.navigationController.navigationBar.progressView.tintColor = [UIColor color:HEX_IOS_LIGHT_GRAY];
 }
@@ -156,7 +156,7 @@
 }
 
 - (UIImage *)stopImage:(AudioItem *)item {
-	return [UIImage imageWithImages:arr__(self.tempImage, [[UIImage templateImage:IMG_STOP] imageWithTintColor:self.navigationController.navigationBar.barTintColor])];	// [UIImage templateImage:IMG_STOP];
+	return [UIImage imageWithImages:arr__(self.tempImage, [[UIImage templateImage:IMG_STOP] imageWithTintColor:GLOBAL.globalTintColor])];	// [UIImage templateImage:IMG_STOP];
 }
 
 - (IBAction)accessoryButtonTapped:(UIControl *)sender {
@@ -264,8 +264,9 @@
 				
 				[cell layoutSubviews];
 
-				float progress = [self progress:item time:currentTime];
-				BOOL animated = [self.player isPlayingItem:item segment:Nil] && progress > self.navigationController.navigationBar.progress;
+				BOOL isPlaying = [self.player isPlayingItem:item segment:Nil];
+				float progress = isPlaying ? [self progress:item time:currentTime] : 0.0;
+				BOOL animated = isPlaying && progress > self.navigationController.navigationBar.progress;
 				[self.navigationController.navigationBar setProgress:progress animated:animated];
 			}];
 		}];
@@ -277,8 +278,8 @@
 	[tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
-__synthesize(UIImage *, tempImage, [[[[UIImage imageNamed:IMG_RINGO_128] imageWithBackground:[UIColor whiteColor]] imageByApplyingExtraLightEffect] imageWithSize:AudioItemArtworkSize mode:UIImageScaleAspectFit]);
-__synthesize(UIImage *, songImage, [UIImage imageWithImages:arr__(self.tempImage, [[UIImage templateImage:IMG_MUSIC_LINE] imageWithTintColor:[UIColor whiteColor]])])
-__synthesize(UIImage *, toneImage, [UIImage imageWithImages:arr__(self.tempImage, [[UIImage templateImage:IMG_BELL_LINE] imageWithTintColor:[UIColor whiteColor]])])
+__synthesize(UIImage *, tempImage, [[[[UIImage imageNamed:IMG_RINGO_128] imageWithBackground:[UIColor blackColor]] imageByApplyingDarkEffect] imageWithSize:AudioItemArtworkSize mode:UIImageScaleAspectFit]);
+__synthesize(UIImage *, songImage, [UIImage imageWithImages:arr__(self.tempImage, [[UIImage templateImage:IMG_MUSIC_LINE] imageWithTintColor:[UIColor lightGrayColor]])])
+__synthesize(UIImage *, toneImage, [UIImage imageWithImages:arr__(self.tempImage, [[UIImage templateImage:IMG_BELL_LINE] imageWithTintColor:[UIColor lightGrayColor]])])
 
 @end

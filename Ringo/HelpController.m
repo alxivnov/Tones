@@ -9,6 +9,7 @@
 #import "HelpController.h"
 #import "HelpView.h"
 #import "Localized.h"
+#import "Global.h"
 
 #import "UIImage+View.h"
 #import "UIViewController+Answers.h"
@@ -66,7 +67,7 @@
 
 	self.automaticallyAdjustsScrollViewInsets = NO;
 	
-	[UIPageControl appearance].currentPageIndicatorTintColor = self.navigationController.navigationBar.barTintColor;
+	[UIPageControl appearance].currentPageIndicatorTintColor = /*self.navigationController.navigationBar.barTintColor*/GLOBAL.globalTintColor;
 	[UIPageControl appearance].pageIndicatorTintColor = [UIColor color:HEX_IOS_GRAY];
 
 	[self setup:[NSFileManager isUbiquityAvailable] ? STR_WIN : STR_MAC];

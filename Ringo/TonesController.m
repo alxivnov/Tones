@@ -120,7 +120,7 @@ __synthesize(UIImageView *, image, ({ UIImageView *x = [[UIImageView alloc] init
 
 - (UIImage *)stopImage:(AudioItem *)item {
 	return item.image
-		? [UIImage imageWithImages:[NSArray arrayWithObject:[[item.image imageWithSize:AudioItemArtworkSize mode:UIImageScaleAspectFit] imageByApplyingExtraLightEffect] withObject:[UIImage originalImage:IMG_STOP]]]
+		? [UIImage imageWithImages:[NSArray arrayWithObject:[[item.image imageWithSize:AudioItemArtworkSize mode:UIImageScaleAspectFit] imageByApplyingDarkEffect] withObject:[UIImage originalImage:IMG_STOP]]]
 		: [super stopImage:item];
 }
 
