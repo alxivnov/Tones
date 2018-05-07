@@ -78,7 +78,7 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="TONES" id="znw-MX-ptm">
-                        <barButtonItem key="leftBarButtonItem" image="music-line.png" id="Afi-83-zJy">
+                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="Afi-83-zJy">
                             <connections>
                                 <action selector="musicBarButtonItemAction:" destination="gru-PN-1YM" id="eMD-Ae-d59"/>
                             </connections>
@@ -322,7 +322,7 @@
                                 <rect key="frame" x="0.0" y="116" width="375" height="507"/>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.050980392159999999" green="0.050980392159999999" blue="0.050980392159999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="KnV-JN-BNx" secondAttribute="trailing" id="Agj-it-4Dv"/>
                             <constraint firstItem="kc8-Z9-fMU" firstAttribute="leading" secondItem="I2i-kZ-h9j" secondAttribute="leading" id="DHJ-oL-kse"/>
@@ -930,7 +930,6 @@
         <image name="moneybox-line-30.png" width="30" height="30"/>
         <image name="music-full-256.png" width="200" height="200"/>
         <image name="music-line-256.png" width="200" height="200"/>
-        <image name="music-line.png" width="30" height="30"/>
         <image name="play.png" width="30" height="30"/>
         <image name="ringo-30.png" width="30" height="30"/>
         <image name="rw15.png" width="30" height="30"/>

@@ -109,7 +109,7 @@
 			self.bestAttemptContent.body = push.tone.description;
 
 			if (push.tone.description.length)
-				[AFMediaItem search:push.tone.description handler:^(NSArray<AFMediaItem *> *results) {
+				[AFMediaItem searchForSong:push.tone.description handler:^(NSArray<AFMediaItem *> *results) {
 					[results.firstObject.artworkUrl100 cache:^(NSURL *url) {
 						self.bestAttemptContent.attachments = arr_([UNNotificationAttachment attachmentWithURL:url]);
 

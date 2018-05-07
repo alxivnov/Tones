@@ -73,7 +73,7 @@
 	self.navigationItem.rightBarButtonItem.enabled = NO;
 	AVAssetWriter *writer = [self.selectedItem exportAudio:^(double progress, NSURL *url) {
 		[GCD main:^{
-			self.navigationController.navigationBar.progress = progress;
+			self.navigationController.navigationBar.progress = url ? 0.0 : progress;
 
 			if (!url)
 				return;
@@ -185,14 +185,14 @@
 - (IBAction)rightBarButtonAction:(id)sender {
 	[self performSegueWithIdentifier:GUI_IMPORT sender:sender];
 }
-
+/*
 - (void)updateProgress:(AVAssetExportSession *)session {
 	[self.navigationController.navigationBar setProgress:session.progress animated:YES];
 
 	if (session.progress < 1.0)
 		[self performSelector:@selector(updateProgress:) withObject:session afterDelay:0.1];
 }
-
+*/
 - (IBAction)reviewBarButtonItemAction:(UIBarButtonItem *)sender {
 	[UIApplication openURL:[NSURL URLForMobileAppWithIdentifier:APP_ID_RINGO affiliateInfo:GLOBAL.affiliateInfo] options:Nil completionHandler:^(BOOL success) {
 		if (success) {

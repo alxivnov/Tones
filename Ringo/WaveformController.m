@@ -8,6 +8,7 @@
 
 #import "WaveformController.h"
 #import "Localized.h"
+#import "Global.h"
 
 #import "UIImage+Convenience.h"
 #import "UIWaveformView.h"
@@ -50,7 +51,7 @@
 	self.navigationItem.title = [self.selectedItem description];
 	
 //	UIImage *artwork = [self.selectedItem.image imageWithSize:self.artworkImage.bounds.size];
-	self.artworkImage.image = [self.selectedItem.image imageByApplyingLightEffect];
+	self.artworkImage.image = [self.selectedItem.image imageByApplyingDarkEffect];
 	
 //	self.waveformView.alpha = 0.667;
 	self.waveformView.contentInset = UIEdgeInsetsMake(0.0, GUI_MARGIN_REGULAR, 0.0, GUI_MARGIN_REGULAR);
@@ -68,7 +69,7 @@
 
 	void (^loadImage)(CGWaveform *) = ^void(CGWaveform *waveform) {
 //		UIImage *image = [waveform imageWithColor:self.navigationController.navigationBar.barTintColor];
-		CALayer *layer = [waveform layerWithColor:self.navigationController.navigationBar.barTintColor];
+		CALayer *layer = [waveform layerWithColor:GLOBAL.globalTintColor];
 
 		[GCD main:^{
 			[self stopActivityIndication];

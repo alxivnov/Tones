@@ -215,7 +215,7 @@
 
 - (void)updateTone:(NSArray *)tones completion:(void(^)(Tone *, BOOL))completion {
 	if ([self.segment segmentDuration] > 0.0 && [self.segment segmentDuration] < AUDIO_SEGMENT_LENGTH && self.artist.length && self.title.length) {
-		[AFMediaItem search:[@[ self.artist, self.title ] componentsJoinedByString:STR_SPACE] handler:^(NSArray<AFMediaItem *> *results) {
+		[AFMediaItem searchForSong:[@[ self.artist, self.title ] componentsJoinedByString:STR_SPACE] handler:^(NSArray<AFMediaItem *> *results) {
 			if (results.count) {
 				Tone *tone = [Tone createWithArtist:self.artist title:self.title startTime:self.segment.startTime endTime:self.segment.endTime];
 				tone.album = self.album;

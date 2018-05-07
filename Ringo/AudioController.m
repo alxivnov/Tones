@@ -263,8 +263,10 @@
 				label.textColor = textColor;
 				
 				[cell layoutSubviews];
-				
-				[self.navigationController.navigationBar setProgress:[self progress:item time:currentTime] animated:YES];
+
+				float progress = [self progress:item time:currentTime];
+				BOOL animated = [self.player isPlayingItem:item segment:Nil] && progress > self.navigationController.navigationBar.progress;
+				[self.navigationController.navigationBar setProgress:progress animated:animated];
 			}];
 		}];
 	} else {

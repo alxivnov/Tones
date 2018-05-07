@@ -80,10 +80,6 @@
 	}];
 }
 
-#warning Waveform
-#warning Scrolling
-#warning Profile scrolling
-
 - (void)loadItems:(void (^)(NSArray<Tone *> *, NSArray<User *> */*, NSArray<VKUser *> **/, NSTimeInterval))handler {
 	if (self.segment.selectedSegmentIndex == 0)
 		[self loadFeatured:GLOBAL.tonesCount handler:^(NSArray<__kindof Tone *> *results) {
