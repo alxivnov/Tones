@@ -14,14 +14,14 @@
         <scene sceneID="Bta-qf-cgn">
             <objects>
                 <tableViewController id="gru-PN-1YM" customClass="RatingController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="56" sectionHeaderHeight="28" sectionFooterHeight="28" id="Dro-Kt-Xuw">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="56" sectionHeaderHeight="18" sectionFooterHeight="18" id="Dro-Kt-Xuw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.050980392159999999" green="0.050980392159999999" blue="0.050980392159999999" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="separatorColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="Fbg-98-QJa" detailTextLabel="1gU-Nt-AnP" style="IBUITableViewCellStyleSubtitle" id="Qeq-PZ-2k2">
-                                <rect key="frame" x="0.0" y="28" width="375" height="56"/>
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="56"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Qeq-PZ-2k2" id="cYb-xh-3L6">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="55.5"/>
@@ -48,7 +48,7 @@
                                 <color key="backgroundColor" red="0.090196078430000007" green="0.090196078430000007" blue="0.090196078430000007" alpha="1" colorSpace="calibratedRGB"/>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="fb" textLabel="OJr-8e-7Gk" imageView="QFI-4e-Xqi" style="IBUITableViewCellStyleDefault" id="rvf-Vj-YuB">
-                                <rect key="frame" x="0.0" y="84" width="375" height="56"/>
+                                <rect key="frame" x="0.0" y="111.5" width="375" height="56"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rvf-Vj-YuB" id="ngk-Qf-TNZ">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="55.5"/>
@@ -69,6 +69,7 @@
                                     </subviews>
                                     <color key="backgroundColor" red="0.23137254901960785" green="0.34901960784313724" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -394,14 +395,14 @@
         <scene sceneID="hV5-6T-67c">
             <objects>
                 <tableViewController id="0ad-8k-E9R" customClass="OnlineController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="56" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ukq-LP-aKp">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="56" sectionHeaderHeight="18" sectionFooterHeight="18" id="Ukq-LP-aKp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.050980392159999999" green="0.050980392159999999" blue="0.050980392159999999" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="separatorColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="qL3-yt-hFE" detailTextLabel="wwK-NZ-ddH" style="IBUITableViewCellStyleSubtitle" id="XS4-TN-c97">
-                                <rect key="frame" x="0.0" y="28" width="375" height="56"/>
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="56"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XS4-TN-c97" id="4mN-Sm-u5q">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="55.5"/>
@@ -839,7 +840,7 @@
         <!--Navigation Controller (Trim)-->
         <scene sceneID="LU3-N3-q7h">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="2sT-sV-Kf7" userLabel="Navigation Controller (Trim)" customClass="NavigationController" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="2sT-sV-Kf7" userLabel="Navigation Controller (Trim)" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" largeTitles="YES" id="Ifi-YX-aGj">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
@@ -861,7 +862,7 @@
         <!--Navigation Controller (Online)-->
         <scene sceneID="uV5-54-QR4">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ELF-nl-pPp" userLabel="Navigation Controller (Online)" customClass="NavigationController" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ELF-nl-pPp" userLabel="Navigation Controller (Online)" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" largeTitles="YES" id="FBf-w4-q3n">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
