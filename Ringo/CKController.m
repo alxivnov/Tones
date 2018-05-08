@@ -29,10 +29,14 @@
 #import "UIAlertController+Convenience.h"
 #import "UIColor+Convenience.h"
 
+@import StoreKit;
+
 @interface CKController ()
 @property (strong, nonatomic) NSArray<Tone *> *tones;
 @property (strong, nonatomic) NSArray<User *> *users;
 //@property (strong, nonatomic) NSArray<VKUser *> *vkUsers;
+
+@property (assign, nonatomic) SKCloudServiceCapability capabilities;
 @end
 
 @implementation CKController
@@ -83,6 +87,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+
+	[[[SKCloudServiceController alloc] init] requestCapabilitiesWithCompletionHandler:^(SKCloudServiceCapability capabilities, NSError * _Nullable error) {
+		self.capabilities = capabilities;
+
+		[error log:@"requestCapabilitiesWithCompletionHandler:"];
+	}];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -217,7 +227,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	AudioItem *item = [self itemAtIndex:indexPath.row];
-	if (item.assetURL || item.mediaItem /*|| (!GLOBAL.vkEnabled && [[MPMusicPlayerController class] instancesRespondToSelector:@selector(setQueueWithStoreIDs:)])*/)
+	if (item.assetURL || item.mediaItem /*|| (!GLOBAL.vkEnabled && [[MPMusicPlayerController class] instancesRespondToSelector:@selector(setQueueWithStoreIDs:)])*/ || (self.capabilities | SKCloudServiceCapabilityMusicCatalogPlayback) > 0)
 		[super tableView:tableView didSelectRowAtIndexPath:indexPath];
 /*	else if (GLOBAL.vkEnabled)
 		[item lookupInVK:^(VKAudioItem *vkAudioItem) {

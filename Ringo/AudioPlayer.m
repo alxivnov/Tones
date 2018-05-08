@@ -135,32 +135,41 @@
 		[self playSomething:[item mediaItem] segment:segment numberOfLoops:numberOfLoops handler:handler];
 	else
 		[item lookup:^(AFMediaItem *mediaItem) {
-			[self playSomething:[mediaItem.trackId description] segment:segment numberOfLoops:numberOfLoops handler:handler];
+			[self playSomething:mediaItem segment:segment numberOfLoops:numberOfLoops handler:handler];
 		}];
 }
 
 - (void)playSomething:(NSObject *)something segment:(AudioSegment *)segment numberOfLoops:(NSInteger)numberOfLoops handler:(void (^)(NSTimeInterval))handler {
+	void (^completionHandler)(NSString *, NSString *) = ^void(NSString *artist, NSString *title) {
+		[GCD main:^{
+			if (handler)
+				[[[NSTimerBlock alloc] initWithBlock:^BOOL(MPMusicPlayerController *player) {
+					NSTimeInterval time = player.currentPlaybackTime;
+
+					if (!isfinite(time) || time > segment.endTime)
+						[player stop];
+
+					handler(player.isPlaying && (([player.nowPlayingItem.artist.lowercaseString isEqualToString:artist.lowercaseString] && [player.nowPlayingItem.title.lowercaseString isEqualToString:title.lowercaseString]) || (artist == Nil && title == Nil)) ? time : NSTimeIntervalSince1970);
+
+					return (!isfinite(time) || time == 0.0 || time - segment.startTime > 0.1) && !player.isPlaying;
+				}] scheduledTimerWithTimeInterval:0.1 userInfo:self.musicPlayer repeats:YES];
+		}];
+	};
+
 	[self stop];
 
-	self.musicPlayer = [MPMusicPlayerController applicationMusicPlayer];
-	if ([something isKindOfClass:[MPMediaItem class]])
-		[self.musicPlayer play:cls(MPMediaItem, something) startTime:segment.startTime];
-	else if ([something isKindOfClass:[NSString class]])
-		something = [self.musicPlayer playStoreID:cls(NSString, something) startTime:segment.startTime];
-
-	[GCD main:^{
-		if (handler)
-			[[[NSTimerBlock alloc] initWithBlock:^BOOL(MPMusicPlayerController *player) {
-				NSTimeInterval time = player.currentPlaybackTime;
-
-				if (!isfinite(time) || time > segment.endTime)
-					[player stop];
-
-				handler(player.isPlaying && (player.nowPlayingItem == something || something == Nil) ? time : NSTimeIntervalSince1970);
-
-				return (!isfinite(time) || time == 0.0 || time - segment.startTime > 0.1) && !player.isPlaying;
-			}] scheduledTimerWithTimeInterval:0.1 userInfo:self.musicPlayer repeats:YES];
-	}];
+	self.musicPlayer = [MPMusicPlayerController applicationQueuePlayer];
+	if ([something isKindOfClass:[MPMediaItem class]]) {
+		MPMediaItem *mpItem = cls(MPMediaItem, something);
+		[self.musicPlayer playItem:mpItem startTime:segment.startTime endTime:segment.endTime completionHandler:^(BOOL success) {
+			completionHandler(success ? mpItem.artist : Nil, success ? mpItem.title : Nil);
+		}];
+	} else if ([something isKindOfClass:[AFMediaItem class]]) {
+		AFMediaItem *afItem = cls(AFMediaItem, something);
+		[self.musicPlayer playStoreID:[afItem.trackId description] startTime:segment.startTime endTime:segment.endTime completionHandler:^(MPMediaItem *item) {
+			completionHandler(afItem.artistName, afItem.trackName);
+		}];
+	}
 
 	self.startTime = @(segment.startTime);
 	self.endTime = @(segment.endTime);

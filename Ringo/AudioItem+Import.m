@@ -82,7 +82,8 @@
 			return [@(fabs(obj1.playbackDuration - duration)) compare:@(fabs(obj2.playbackDuration - duration))];
 		}];
 
-	[[AudioItem createWithMediaItem:items.firstObject] copyTo:self];
+	MPMediaItem *item = items.firstObject;
+	[[AudioItem createWithMediaItem:item] copyTo:self];
 	
 	return YES;
 }
