@@ -158,7 +158,10 @@
 
 	[self stop];
 
-	self.musicPlayer = [MPMusicPlayerController applicationQueuePlayer];
+	if (@available(iOS 10.3, *))
+		self.musicPlayer = [MPMusicPlayerController applicationQueuePlayer];
+	else
+		self.musicPlayer = [MPMusicPlayerController applicationMusicPlayer];
 	if ([something isKindOfClass:[MPMediaItem class]]) {
 		MPMediaItem *mpItem = cls(MPMediaItem, something);
 		[self.musicPlayer playItem:mpItem startTime:segment.startTime endTime:segment.endTime completionHandler:^(BOOL success) {

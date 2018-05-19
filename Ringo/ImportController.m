@@ -49,6 +49,8 @@
 
 @property (strong, nonatomic) AudioItem *nowPlayingItem;
 
+@property (assign, nonatomic) BOOL playbackNotifications;
+
 @property (assign, nonatomic) BOOL badge;
 @end
 
@@ -60,6 +62,21 @@ __synthesize(MPMediaPickerController *, mediaPicker, ({ MPMediaPicker *x = [[MPM
 
 - (MPMusicPlayerController *)musicPlayer {
 	return [SKCloudServiceController authorizationStatus] != SKCloudServiceAuthorizationStatusAuthorized ? Nil : [MPMusicPlayerController systemMusicPlayer];
+}
+
+- (void)setPlaybackNotifications:(BOOL)playbackNotifications {
+	if (!self.musicPlayer)
+		return;
+
+	if (playbackNotifications && !_playbackNotifications) {
+		[self.musicPlayer beginGeneratingPlaybackNotificationsForObserver:self selector:@selector(nowPlayingItemDidChange:)];
+
+		_playbackNotifications = playbackNotifications;
+	} else if (_playbackNotifications && !playbackNotifications) {
+		[self.musicPlayer endGeneratingPlaybackNotificationsForObserver:self];
+
+		_playbackNotifications = playbackNotifications;
+	}
 }
 
 - (void)setBadge:(BOOL)badge {
@@ -130,13 +147,13 @@ __synthesize(MPMediaPickerController *, mediaPicker, ({ MPMediaPicker *x = [[MPM
 	[super viewDidAppear:animated];
 
 	[self nowPlayingItemDidChange:[NSNotification notificationWithName:STR_EMPTY object:self.musicPlayer]];
-	[self.musicPlayer beginGeneratingPlaybackNotificationsForObserver:self selector:@selector(nowPlayingItemDidChange:)];
+	self.playbackNotifications = YES;
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
 	[super viewWillDisappear:animated];
 
-	[self.musicPlayer endGeneratingPlaybackNotificationsForObserver:self];
+	self.playbackNotifications = NO;
 	self.nowPlayingItem = Nil;
 	[self setToolbar:Nil];
 }

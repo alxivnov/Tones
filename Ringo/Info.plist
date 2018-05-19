@@ -34,7 +34,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.0</string>
+	<string>2.0.1</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleURLTypes</key>
@@ -82,7 +82,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>18.5.7.1180</string>
+	<string>18.5.19.1192</string>
 	<key>Fabric</key>
 	<dict>
 		<key>APIKey</key>
@@ -171,6 +171,8 @@
 	</dict>
 	<key>NSAppleMusicUsageDescription</key>
 	<string>Ringtonic creates tones from songs in your Media Library.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Ringtonic does not use your location.</string>
 	<key>NSUbiquitousContainers</key>
 	<dict>
 		<key>iCloud.com.alexivanov.ringo</key>
