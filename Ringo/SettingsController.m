@@ -40,7 +40,7 @@
 #import <Crashlytics/Answers.h>
 
 #define URL_FB_APP_LINK @"http://apptag.me/tones/"//@"https://fb.me/1834277420229702"
-#define URL_FB_PREVIEW_IMAGE @"http://ringtonic.net/ringtonic.jpg"
+#define URL_FB_PREVIEW_IMAGE @"http://apptag.me/tones/ringtonic.jpg"
 
 #define IDX_APPS 5
 #define DEV_ID 734258593
@@ -209,10 +209,10 @@
 		NSArray *titles = [app.trackName componentsSeparatedByString:@" - "];
 		cell.textLabel.text = titles.count > 1 ? titles.firstObject : app.trackName;
 		cell.detailTextLabel.text = titles.count > 1 ? titles.lastObject : [app.dictionary[@"genres"] firstObject];
-		if (URL_CACHE(app.artworkUrl100).isExistingFile)
+/*		if (URL_CACHE(app.artworkUrl100).isExistingFile)
 			cell.imageView.image = [[UIImage image:URL_CACHE(app.artworkUrl100)] imageWithSize:CGSizeMake(30.0, 30.0) mode:UIImageScaleAspectFit];
 		else
-			[app.artworkUrl100 cache:^(NSURL *url) {
+*/			[app.artworkUrl100 cache:^(NSURL *url) {
 				[GCD main:^{
 					cell.imageView.image = [[UIImage image:url] imageWithSize:CGSizeMake(30.0, 30.0) mode:UIImageScaleAspectFit];
 				}];
@@ -288,7 +288,7 @@
 			}
 		}];
 	else if (indexPath.section == IDX_APPS)
-		[self presentProductWithIdentifier:[self.apps[indexPath.row].trackId integerValue] parameters:Nil];
+		[self presentProductWithIdentifier:[self.apps[indexPath.row].trackId integerValue] parameters:GLOBAL.affiliateInfo];
 
 	[tableView deselectRowAtIndexPath:indexPath animated:YES];
 }

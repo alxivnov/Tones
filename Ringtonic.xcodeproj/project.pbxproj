@@ -100,7 +100,6 @@
 		CDF5FA561DB3C45100208F7E /* NSArray+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF5FA4D1DB3C45100208F7E /* NSArray+Convenience.m */; };
 		CDF5FA571DB3C45100208F7E /* NSFormatter+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF5FA4F1DB3C45100208F7E /* NSFormatter+Convenience.m */; };
 		CDF5FA591DB3C45100208F7E /* UserNotifications+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF5FA531DB3C45100208F7E /* UserNotifications+Convenience.m */; };
-		CDFDD6A11F0F6F4B00030626 /* Answers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDFDD6A01F0F6F4B00030626 /* Answers.framework */; };
 		FA03FB7A1DF1A22600071B26 /* ringtonic-32@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA03FB791DF1A22600071B26 /* ringtonic-32@2x.png */; };
 		FA098B6D1C91B7FE00D83FDF /* UIAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA098B6C1C91B7FE00D83FDF /* UIAccessoryView.m */; };
 		FA0BFD8E1B3D479A00F67FDF /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA0BFD8D1B3D479A00F67FDF /* CloudKit.framework */; };
@@ -403,7 +402,6 @@
 		CDF5FA4F1DB3C45100208F7E /* NSFormatter+Convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFormatter+Convenience.m"; sourceTree = "<group>"; };
 		CDF5FA521DB3C45100208F7E /* UserNotifications+Convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UserNotifications+Convenience.h"; sourceTree = "<group>"; };
 		CDF5FA531DB3C45100208F7E /* UserNotifications+Convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UserNotifications+Convenience.m"; sourceTree = "<group>"; };
-		CDFDD6A01F0F6F4B00030626 /* Answers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Answers.framework; path = ../Frameworks/Fabric/Answers.framework; sourceTree = "<group>"; };
 		FA03FB791DF1A22600071B26 /* ringtonic-32@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ringtonic-32@2x.png"; sourceTree = "<group>"; };
 		FA098B6B1C91B7FE00D83FDF /* UIAccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIAccessoryView.h; path = UI/UIAccessoryView.h; sourceTree = "<group>"; };
 		FA098B6C1C91B7FE00D83FDF /* UIAccessoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIAccessoryView.m; path = UI/UIAccessoryView.m; sourceTree = "<group>"; };
@@ -664,7 +662,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDFDD6A11F0F6F4B00030626 /* Answers.framework in Frameworks */,
 				FA8E8EBF1D4F86CD008455D4 /* libcrypto.a in Frameworks */,
 				CD3FC4181E40099700EC69A9 /* TwitterKit.framework in Frameworks */,
 				FA0BFD8E1B3D479A00F67FDF /* CloudKit.framework in Frameworks */,
@@ -804,7 +801,6 @@
 			children = (
 				FA8E8EBE1D4F86CD008455D4 /* libcrypto.a */,
 				FA0BFD8D1B3D479A00F67FDF /* CloudKit.framework */,
-				CDFDD6A01F0F6F4B00030626 /* Answers.framework */,
 				FA96A64E1B7A2C0100F2266F /* Crashlytics.framework */,
 				FA96A64F1B7A2C0100F2266F /* Fabric.framework */,
 				CD3FC4151E40099700EC69A9 /* TwitterKit.framework */,

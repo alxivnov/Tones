@@ -63,11 +63,11 @@
 
 //#define URL_SCHEME @"ringo"
 //#define URL_SHARE @"ringo://tone"
-#define URL_WEB @"https://ringtonic.net"
-#define URL_OLD @"https://ringoapp.net/share.php"
-#define URL_PHP @"https://ringtonic.net/share.php"
-#define URL_PHP_FB @"https://ringtonic.net/fb.php"
-#define URL_APP @"https://ringtonic.net/app"
+#define URL_WEB @"https://apptag.me/tones/"
+#define URL_OLD @"https://ringtonic.net/share.php"
+#define URL_PHP @"https://apptag.me/tones/share.php"
+#define URL_PHP_FB @"https://apptag.me/tones/fb.php"
+#define URL_APP @"https://apptag.me/tones/app"
 #define URL_HASHTAG @"#ringtonic"
 
 #define IAP_IDS @[ @"com.alexivanov.ringo.stereo.9", @"com.alexivanov.ringo.stereo.7", @"com.alexivanov.ringo.stereo.5", @"com.alexivanov.ringo.stereo.3", @"com.alexivanov.ringo.stereo.1", @"com.alexivanov.ringo.stereo" ]

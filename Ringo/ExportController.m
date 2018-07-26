@@ -31,8 +31,6 @@
 #define IMG_TW_30 @"TW-30"
 //#define IMG_VK_30 @"VK-30"
 
-#define URL_JPG @"http://ringtonic.net/ringo.jpg"
-
 #define KEY_FACEBOOK @"Facebook"
 #define KEY_TWITTER @"Twitter"
 //#define KEY_VK @"VK"

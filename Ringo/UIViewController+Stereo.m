@@ -33,18 +33,18 @@
 
 //				[GLOBAL setPurchaseSuccess:success];
 
-				[Answers logPurchaseWithPrice:product.price currency:product.priceLocale.currencyCode success:@(success) itemName:product.localizedTitle itemType:Nil itemId:product.productIdentifier customAttributes:dic_/*_*/(@"error", transactions.lastObject.error.shortDescription/*, @"VK", [[VKHelper instance] wakeUpSession].userId*/)];
+				[Answers logPurchaseWithPrice:[product.price decimalNumber] currency:product.priceLocale.currencyCode success:@(success) itemName:product.localizedTitle itemType:Nil itemId:product.productIdentifier customAttributes:dic_/*_*/(@"error", transactions.lastObject.error.shortDescription/*, @"VK", [[VKHelper instance] wakeUpSession].userId*/)];
 
 				for (SKPaymentTransaction *transaction in transactions)
 					[Answers logError:transaction.error];
 			}];
 
-			[Answers logStartCheckoutWithPrice:product.price currency:product.priceLocale.currencyCode itemCount:@(payment.quantity) customAttributes:dic_/*_*/(@"error", error.shortDescription/*, @"VK", [[VKHelper instance] wakeUpSession].userId*/)];
+			[Answers logStartCheckoutWithPrice:[product.price decimalNumber] currency:product.priceLocale.currencyCode itemCount:@(payment.quantity) customAttributes:dic_/*_*/(@"error", error.shortDescription/*, @"VK", [[VKHelper instance] wakeUpSession].userId*/)];
 
 			[Answers logError:error];
 		}];
 
-	[Answers logAddToCartWithPrice:purchase.price currency:purchase.currencyCode itemName:purchase.localizedTitle itemType:Nil itemId:purchase.productIdentifier customAttributes:/*dic_(@"VK", [[VKHelper instance] wakeUpSession].userId)*/Nil];
+	[Answers logAddToCartWithPrice:[purchase.price decimalNumber] currency:purchase.currencyCode itemName:purchase.localizedTitle itemType:Nil itemId:purchase.productIdentifier customAttributes:/*dic_(@"VK", [[VKHelper instance] wakeUpSession].userId)*/Nil];
 }
 
 - (void)presentSheetWithTitle:(NSString *)title from:(id)sender completion:(void(^)(BOOL success))completion {
