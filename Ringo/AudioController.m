@@ -10,14 +10,15 @@
 #import "AudioItem+Import.h"
 #import "Global.h"
 
-#import "UIAccessoryView.h"
 #import "UIImage+Convenience.h"
 
 #import "Dispatch+Convenience.h"
 #import "NSFormatter+Convenience.h"
 #import "UIColor+Convenience.h"
+#import "UILabel+Convenience.h"
 #import "UINavigationController+Convenience.h"
 #import "UITableView+Convenience.h"
+#import "UITableViewCell+Convenience.h"
 
 @interface AudioController ()
 @property (strong, nonatomic) MPMusicPlayerController *musicPlayer;
@@ -206,8 +207,9 @@
 	}
 	
 	NSArray *accessoryImages = [self accessoryImages:item];
+/*
 	UIAccessoryView *view = cls(UIAccessoryView, cell.accessoryView);
-	if (!view/* || cls(UIAccessoryView, cell.accessoryView).views.count != accessoryImages.count + 1*/) {
+	if (!view/~* || cls(UIAccessoryView, cell.accessoryView).views.count != accessoryImages.count + 1*~/) {
 		view = [[UIAccessoryView alloc] initWithFrame:cell.bounds];
 		[view addTarget:self action:@selector(accessoryButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
 		cell.accessoryView = view;
@@ -218,6 +220,16 @@
 	UILabel *label = cls(UILabel, idx(cls(UIAccessoryView, cell.accessoryView).views, 0));
 	label.text = text;
 	label.textColor = textColor;
+*/
+	__weak id __self = self;
+	cell.accessoryViews = [@[ [[text attributedString:@{ NSForegroundColorAttributeName : textColor }] labelWithSize:CGSizeMake(48.0, 0.0)] ] arrayByAddingObjectsFromArray:[accessoryImages map:^id(UIImage *obj) {
+		UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, obj.size.width, obj.size.height)];
+		[button setImage:obj forState:UIControlStateNormal];
+		[button addTarget:__self action:@selector(accessoryButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+		button.tag = 0;
+		return button;
+//		return [obj imageView:UIViewContentModeCenter];
+	}]];
 
 	return cell;
 }
@@ -258,7 +270,7 @@
 					cell.imageView.tintColor = [UIColor color:HEX_IOS_DARK_GRAY];
 				}
 				
-				UILabel *label = cls(UILabel, idx(cls(UIAccessoryView, cell.accessoryView).views, 0));
+				UILabel *label = cls(UILabel, idx(cls(UIStackView, cell.accessoryView).subviews, 0));
 				label.text = text;
 				label.textColor = textColor;
 				

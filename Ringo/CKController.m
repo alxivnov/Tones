@@ -15,7 +15,6 @@
 #import "Push.h"
 
 //#import "VKHelper.h"
-#import "UIAccessoryView.h"
 #import "UIImage+Convenience.h"
 #import "UIViewController+Stereo.h"
 
@@ -178,15 +177,15 @@
 	AudioItem *item = [self itemAtIndex:indexPath.row];
 
 	UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
-	UIAccessoryView *view = cls(UIAccessoryView, cell.accessoryView);
-	if (view.views.count == 3 && index == 1) {
+	UIStackView *view = cls(UIStackView, cell.accessoryView);
+	if (view.subviews.count == 3 && index == 1) {
 //		VKUser *vkUser = [self getVKUser:item];
 
 //		[self presentSafariWithURL:vkUser.url];
 	} else {
 		if (item.assetURL)
 			[self cacheAudioItem:item completion:^(NSURL *url) {
-				[self presentSheet:item from:cls(UIAccessoryView, [self.tableView cellForRowAtIndexPath:indexPath].accessoryView).views.lastObject completion:^(BOOL success) {
+				[self presentSheet:item from:cls(UIStackView, [self.tableView cellForRowAtIndexPath:indexPath].accessoryView).subviews.lastObject completion:^(BOOL success) {
 					[self performSegueWithIdentifier:GUI_SELECT sender:item];
 				}];
 			}];

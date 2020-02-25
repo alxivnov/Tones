@@ -11,7 +11,6 @@
 #import "Localized.h"
 #import "Global.h"
 
-#import "UIImage+View.h"
 #import "UIViewController+Answers.h"
 
 #import "NSArray+Convenience.h"

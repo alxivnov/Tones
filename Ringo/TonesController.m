@@ -10,7 +10,6 @@
 #import "Global.h"
 #import "Localized.h"
 
-#import "UIFont+Modification.h"
 #import "UIImage+Convenience.h"
 //#import "VKHelper.h"
 
@@ -130,7 +129,7 @@ __synthesize(UIImageView *, image, ({ UIImageView *x = [[UIImageView alloc] init
 
 	NSString *mono = [NSString stringWithFormat:@" %@ ", [[Localized mono] lowercaseString]];
 	NSMutableAttributedString *title = [NSMutableAttributedString attributedStringWithString:[[self title:item] stringByAppendingFormat:@" %@", mono] attributes:Nil];
-	[title setAttributes:@{ NSFontAttributeName : [font bold], NSBackgroundColorAttributeName : [GLOBAL globalTintColor], NSForegroundColorAttributeName : [UIColor whiteColor] } range:NSMakeRange(title.length - mono.length, mono.length)];
+	[title setAttributes:@{ NSFontAttributeName : [UIFont boldSystemFontOfSize:font.pointSize], NSBackgroundColorAttributeName : [GLOBAL globalTintColor], NSForegroundColorAttributeName : [UIColor whiteColor] } range:NSMakeRange(title.length - mono.length, mono.length)];
 	[title appendAttributedString:[[NSAttributedString alloc] initWithString:STR_DOT attributes:@{ NSForegroundColorAttributeName : [UIColor clearColor] }]];
 	return title;
 }

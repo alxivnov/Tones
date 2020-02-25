@@ -101,7 +101,6 @@
 		CDF5FA571DB3C45100208F7E /* NSFormatter+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF5FA4F1DB3C45100208F7E /* NSFormatter+Convenience.m */; };
 		CDF5FA591DB3C45100208F7E /* UserNotifications+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF5FA531DB3C45100208F7E /* UserNotifications+Convenience.m */; };
 		FA03FB7A1DF1A22600071B26 /* ringtonic-32@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA03FB791DF1A22600071B26 /* ringtonic-32@2x.png */; };
-		FA098B6D1C91B7FE00D83FDF /* UIAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA098B6C1C91B7FE00D83FDF /* UIAccessoryView.m */; };
 		FA0BFD8E1B3D479A00F67FDF /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA0BFD8D1B3D479A00F67FDF /* CloudKit.framework */; };
 		FA0C209B1BB2F56E006A84F3 /* HelpView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0C209A1BB2F56E006A84F3 /* HelpView.m */; };
 		FA0C209E1BB2FC71006A84F3 /* TextView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0C209D1BB2FC71006A84F3 /* TextView.m */; };
@@ -236,7 +235,6 @@
 		FAC9106C1CA83DB600767A04 /* UIViewController+Answers.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC9106B1CA83DB600767A04 /* UIViewController+Answers.m */; };
 		FACD1EE31B9B12D700D363E9 /* AudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = FACD1EE21B9B12D700D363E9 /* AudioPlayer.m */; };
 		FAD660161CF37CA20097C6E6 /* UIRateController+Answers.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD660151CF37CA20097C6E6 /* UIRateController+Answers.m */; };
-		FAD844591B2B64E600C48694 /* UIFont+Modification.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD844581B2B64E600C48694 /* UIFont+Modification.m */; };
 		FAD9BAD41D78AE77006706C6 /* ringo-30@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAD9BAD21D78AE77006706C6 /* ringo-30@2x.png */; };
 		FAD9BAD51D78AE77006706C6 /* ringo-128@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAD9BAD31D78AE77006706C6 /* ringo-128@2x.png */; };
 		FADA86EB1E0009B400DAE932 /* UINavigationController+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = FADA86EA1E0009B400DAE932 /* UINavigationController+Convenience.m */; };
@@ -245,7 +243,6 @@
 		FAE385F61BA0599700170A9E /* ExportController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE385F41BA055D500170A9E /* ExportController.m */; };
 		FAE385F91BA05B7F00170A9E /* Localized.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE385F81BA05B7F00170A9E /* Localized.m */; };
 		FAE385FF1BA06E2A00170A9E /* RatingController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE385FE1BA06E2A00170A9E /* RatingController.m */; };
-		FAE529DD1B94851F00CB2FC5 /* UIImage+View.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE529DC1B94851F00CB2FC5 /* UIImage+View.m */; };
 		FAE718F21B164A77000ED8D1 /* help-line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAE718F11B164A77000ED8D1 /* help-line@2x.png */; };
 		FAEBB6B31D89656E00D235CC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FAEBB6B51D89656E00D235CC /* InfoPlist.strings */; };
 		FAEC3C7C1DF5B99700AD42D5 /* volume-30@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAEC3C7B1DF5B99700AD42D5 /* volume-30@2x.png */; };
@@ -403,8 +400,6 @@
 		CDF5FA521DB3C45100208F7E /* UserNotifications+Convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UserNotifications+Convenience.h"; sourceTree = "<group>"; };
 		CDF5FA531DB3C45100208F7E /* UserNotifications+Convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UserNotifications+Convenience.m"; sourceTree = "<group>"; };
 		FA03FB791DF1A22600071B26 /* ringtonic-32@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ringtonic-32@2x.png"; sourceTree = "<group>"; };
-		FA098B6B1C91B7FE00D83FDF /* UIAccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIAccessoryView.h; path = UI/UIAccessoryView.h; sourceTree = "<group>"; };
-		FA098B6C1C91B7FE00D83FDF /* UIAccessoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIAccessoryView.m; path = UI/UIAccessoryView.m; sourceTree = "<group>"; };
 		FA0BFD8D1B3D479A00F67FDF /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		FA0C20991BB2F56E006A84F3 /* HelpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HelpView.h; path = Ringo/HelpView.h; sourceTree = SOURCE_ROOT; };
 		FA0C209A1BB2F56E006A84F3 /* HelpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HelpView.m; path = Ringo/HelpView.m; sourceTree = SOURCE_ROOT; };
@@ -615,8 +610,6 @@
 		FACD1EE21B9B12D700D363E9 /* AudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AudioPlayer.m; path = Ringo/AudioPlayer.m; sourceTree = SOURCE_ROOT; };
 		FAD660141CF37CA20097C6E6 /* UIRateController+Answers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIRateController+Answers.h"; sourceTree = "<group>"; };
 		FAD660151CF37CA20097C6E6 /* UIRateController+Answers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIRateController+Answers.m"; sourceTree = "<group>"; };
-		FAD844571B2B64E600C48694 /* UIFont+Modification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIFont+Modification.h"; path = "UI/UIFont+Modification.h"; sourceTree = "<group>"; };
-		FAD844581B2B64E600C48694 /* UIFont+Modification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIFont+Modification.m"; path = "UI/UIFont+Modification.m"; sourceTree = "<group>"; };
 		FAD9BAD21D78AE77006706C6 /* ringo-30@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ringo-30@2x.png"; path = "../../EXKit/ImagesEx/ringo-30@2x.png"; sourceTree = "<group>"; };
 		FAD9BAD31D78AE77006706C6 /* ringo-128@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ringo-128@2x.png"; path = "../../EXKit/ImagesEx/ringo-128@2x.png"; sourceTree = "<group>"; };
 		FADA86E91E0009B400DAE932 /* UINavigationController+Convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Convenience.h"; sourceTree = "<group>"; };
@@ -631,8 +624,6 @@
 		FAE385F81BA05B7F00170A9E /* Localized.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Localized.m; sourceTree = "<group>"; };
 		FAE385FD1BA06E2A00170A9E /* RatingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RatingController.h; path = Ringo/RatingController.h; sourceTree = SOURCE_ROOT; };
 		FAE385FE1BA06E2A00170A9E /* RatingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RatingController.m; path = Ringo/RatingController.m; sourceTree = SOURCE_ROOT; };
-		FAE529DB1B94851F00CB2FC5 /* UIImage+View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+View.h"; path = "UI/UIImage+View.h"; sourceTree = "<group>"; };
-		FAE529DC1B94851F00CB2FC5 /* UIImage+View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+View.m"; path = "UI/UIImage+View.m"; sourceTree = "<group>"; };
 		FAE718F11B164A77000ED8D1 /* help-line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "help-line@2x.png"; sourceTree = "<group>"; };
 		FAEBB6B41D89656E00D235CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FAEBB6B61D89657300D235CC /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -793,7 +784,7 @@
 				CDF5FA531DB3C45100208F7E /* UserNotifications+Convenience.m */,
 			);
 			name = "Objective Sea";
-			path = "../Objective Sea";
+			path = "../Objective-Sea";
 			sourceTree = "<group>";
 		};
 		FA52B7B71DD1EAC900638FAC /* Frameworks */ = {
@@ -1212,16 +1203,10 @@
 		FAE39B9B1AB738A30014F27E /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				FA098B6B1C91B7FE00D83FDF /* UIAccessoryView.h */,
-				FA098B6C1C91B7FE00D83FDF /* UIAccessoryView.m */,
 				FAEF05AD1D86C22F0062EA95 /* UIBarButtonItem+Convenience.h */,
 				FAEF05AE1D86C22F0062EA95 /* UIBarButtonItem+Convenience.m */,
 				FA3A74871B9DB8BE00E579FC /* UIDetailTableViewCell.h */,
 				FA3A74881B9DB8BE00E579FC /* UIDetailTableViewCell.m */,
-				FAD844571B2B64E600C48694 /* UIFont+Modification.h */,
-				FAD844581B2B64E600C48694 /* UIFont+Modification.m */,
-				FAE529DB1B94851F00CB2FC5 /* UIImage+View.h */,
-				FAE529DC1B94851F00CB2FC5 /* UIImage+View.m */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -1297,7 +1282,7 @@
 		FAAA727B1A8F9FC900D02C61 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Alexander Ivanov";
 				TargetAttributes = {
 					FAAA72821A8F9FC900D02C61 = {
@@ -1337,7 +1322,7 @@
 			};
 			buildConfigurationList = FAAA727E1A8F9FC900D02C61 /* Build configuration list for PBXProject "Ringtonic" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -1533,7 +1518,6 @@
 				FA4BA6181DDA0E40008161D4 /* CommonCrypto+Convenience.m in Sources */,
 				FAE385EE1BA02D3700170A9E /* ImportController.m in Sources */,
 				FA7547A11B4DBA1B00E06C3D /* AudioItem.m in Sources */,
-				FAD844591B2B64E600C48694 /* UIFont+Modification.m in Sources */,
 				CD75B4F81F191FD700BAB7DC /* GSTouchesShowingWindow.m in Sources */,
 				FA0C209E1BB2FC71006A84F3 /* TextView.m in Sources */,
 				FA4BA5F11DD9FED8008161D4 /* UIDocumentPickerViewController+Convenience.m in Sources */,
@@ -1544,7 +1528,6 @@
 				FADA86EB1E0009B400DAE932 /* UINavigationController+Convenience.m in Sources */,
 				FAE160621B4C0B7600C1B91E /* AudioController.m in Sources */,
 				FAA7C7791B5D1FF1003CAD33 /* AudioSegment.m in Sources */,
-				FAE529DD1B94851F00CB2FC5 /* UIImage+View.m in Sources */,
 				FAD660161CF37CA20097C6E6 /* UIRateController+Answers.m in Sources */,
 				FA7D52C91BEA5E1700F29A8C /* AudioController+Export.m in Sources */,
 				FA8504C91D33CA5900264A88 /* NSUUID+Guid.m in Sources */,
@@ -1583,7 +1566,6 @@
 				FA18A5051CEC6F6100132372 /* CKController.m in Sources */,
 				FA3A74891B9DB8BE00E579FC /* UIDetailTableViewCell.m in Sources */,
 				FA1F66B71D09BE01009F8F15 /* Ad.m in Sources */,
-				FA098B6D1C91B7FE00D83FDF /* UIAccessoryView.m in Sources */,
 				CDE3A8DE1DE09B6D00AEB8BB /* UILabel+Convenience.m in Sources */,
 				FAAA728C1A8F9FC900D02C61 /* AppDelegate.m in Sources */,
 				FA16DF451BE650430062FE90 /* ChartController.m in Sources */,
@@ -1882,6 +1864,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
+				CURRENT_PROJECT_VERSION = 20.2.25.1859;
 				DEVELOPMENT_TEAM = VRBB8HL9RV;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1898,6 +1881,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = ../Frameworks/OpenSSL/iOS/lib;
+				MARKETING_VERSION = 2.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexivanov.ringo;
 				PRODUCT_NAME = Ringtonic;
 				PROVISIONING_PROFILE = "";
@@ -1924,6 +1908,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
+				CURRENT_PROJECT_VERSION = 20.2.25.1859;
 				DEVELOPMENT_TEAM = VRBB8HL9RV;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1941,6 +1926,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = ../Frameworks/OpenSSL/iOS/lib;
 				LLVM_LTO = YES_THIN;
+				MARKETING_VERSION = 2.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexivanov.ringo;
 				PRODUCT_NAME = Ringtonic;
 				PROVISIONING_PROFILE = "";
@@ -1964,6 +1950,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Ringo OS X/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -1985,6 +1972,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Ringo OS X/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";

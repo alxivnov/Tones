@@ -9,8 +9,6 @@
 #import "RegionController.h"
 #import "RegionView.h"
 
-#import "UIFont+Modification.h"
-
 #import "NSFormatter+Convenience.h"
 #import "UIColor+Convenience.h"
 #import "UISlider+Convenience.h"

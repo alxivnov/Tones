@@ -49,7 +49,7 @@
 	
 	[self startLogging];
 
-	if (!self.selectedItem.tones)
+	if (!self.selectedItem.tones || self.navigationItem.rightBarButtonItems.count < 2)
 		[self.selectedItem fetchTones:^(NSArray *tones) {
 			[GCD main:^{
 				self.navigationItem.rightBarButtonItems = tones.count ? [self.navigationItem.rightBarButtonItems arrayByAddingObject:[[UIBarButtonItem alloc] initWithTitle:[Localized tones:tones.count] style:UIBarButtonItemStylePlain target:self action:@selector(tonesBarButtonItemAction:)]] : @[ self.navigationItem.rightBarButtonItem ];
@@ -78,6 +78,8 @@
 	AudioItem *item = [segue.sourceViewController forwardSelector:@selector(selectedItem) nextTarget:UIViewControllerNextTarget(YES)];
 	if (item.segment)
 		self.selectedItem.segment = item.segment;
+	
+	[self viewDidAppear:false];
 }
 
 - (IBAction)unwind:(UIStoryboardSegue *)segue {

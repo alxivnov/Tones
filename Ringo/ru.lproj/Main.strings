@@ -6,8 +6,8 @@
 "9zm-sY-v4Q.title" = "Популярные";
 "Ttv-e6-RrH.title" = "Новые";
 
-"t2M-vI-Wsu.segmentTitles[0]" = "Популярные";
-"t2M-vI-Wsu.segmentTitles[1]" = "Последние";
+"t2M-vI-Wsu.segmentTitles[0]" = "Последние";
+"t2M-vI-Wsu.segmentTitles[1]" = "Популярные";
 "t2M-vI-Wsu.segmentTitles[2]" = "Профиль";
 
 /* Class = "UINavigationItem"; title = "ПОДБОРКА"; ObjectID = "qwy-uz-ANN"; */

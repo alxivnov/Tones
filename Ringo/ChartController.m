@@ -81,14 +81,14 @@
 }
 
 - (void)loadItems:(void (^)(NSArray<Tone *> *, NSArray<User *> */*, NSArray<VKUser *> **/, NSTimeInterval))handler {
-	if (self.segment.selectedSegmentIndex == 0)
+	if (self.segment.selectedSegmentIndex == 1/*0*/)
 		[self loadFeatured:GLOBAL.tonesCount handler:^(NSArray<__kindof Tone *> *results) {
 			[self loadUsers:results handler:^(NSArray<User *> *users/*, NSArray<VKUser *> *vkUsers*/) {
 				if (handler)
 					handler(results, users/*, vkUsers*/, TIME_WEEK);
 			}];
 		}];
-	else if (self.segment.selectedSegmentIndex == 1)
+	else if (self.segment.selectedSegmentIndex == 0/*1*/)
 		[self loadRecent:GLOBAL.tonesCount handler:^(NSArray<__kindof Tone *> *results) {
 			[self loadUsers:results handler:^(NSArray<User *> *users/*, NSArray<VKUser *> *vkUsers*/) {
 				if (handler)

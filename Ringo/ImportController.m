@@ -378,7 +378,7 @@ __synthesize(MPMediaPickerController *, mediaPicker, ({ MPMediaPicker *x = [[MPM
 }
 
 - (IBAction)select:(UIStoryboardSegue *)segue {
-	[self performSelector:@selector(vkCreateTone:) withObject:ret(segue.sourceViewController, selectedItem) afterDelay:0.1];
+	[self performSelector:@selector(vkCreateTone:) withObject:sel(segue.sourceViewController, selectedItem) afterDelay:0.1];
 }
 
 - (IBAction)unwind:(UIStoryboardSegue *)segue {
@@ -386,7 +386,7 @@ __synthesize(MPMediaPickerController *, mediaPicker, ({ MPMediaPicker *x = [[MPM
 }
 
 - (IBAction)import:(UIStoryboardSegue *)segue {
-	AudioItem *item = ret(segue.sourceViewController, selectedItem);
+	AudioItem *item = sel(segue.sourceViewController, selectedItem);
 	if (!item)
 		return;
 

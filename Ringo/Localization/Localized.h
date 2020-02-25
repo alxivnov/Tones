@@ -17,6 +17,10 @@
 + (NSString *)export;
 + (NSString *)feature;
 
++ (NSString *)actions;
++ (NSString *)share;
++ (NSString *)rename;
+
 + (NSString *)logIn;
 + (NSString *)logOut;
 
