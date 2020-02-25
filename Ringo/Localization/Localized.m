@@ -36,6 +36,10 @@
     return NSLocalizedString(@"Feature", Nil);
 }
 
++ (NSString *)actions {
+    return NSLocalizedString(@"Actions", Nil);
+}
+
 + (NSString *)share {
 	return NSLocalizedString(@"Share", Nil);
 }
