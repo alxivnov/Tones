@@ -1864,7 +1864,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
-				CURRENT_PROJECT_VERSION = 20.2.25.1859;
+				CURRENT_PROJECT_VERSION = 20.3.14.1877;
 				DEVELOPMENT_TEAM = VRBB8HL9RV;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1881,7 +1881,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = ../Frameworks/OpenSSL/iOS/lib;
-				MARKETING_VERSION = 2.1.0;
+				MARKETING_VERSION = 2.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexivanov.ringo;
 				PRODUCT_NAME = Ringtonic;
 				PROVISIONING_PROFILE = "";
@@ -1908,7 +1908,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
-				CURRENT_PROJECT_VERSION = 20.2.25.1859;
+				CURRENT_PROJECT_VERSION = 20.3.14.1877;
 				DEVELOPMENT_TEAM = VRBB8HL9RV;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1926,7 +1926,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = ../Frameworks/OpenSSL/iOS/lib;
 				LLVM_LTO = YES_THIN;
-				MARKETING_VERSION = 2.1.0;
+				MARKETING_VERSION = 2.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexivanov.ringo;
 				PRODUCT_NAME = Ringtonic;
 				PROVISIONING_PROFILE = "";
