@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 
-#import "AVAsset+Export.h"
+#import "AVAsset+Convenience.h"
 #import "CGWaveform.h"
 #import "NSImage+Ex.h"
 #import "NSView+Ex.h"
@@ -31,8 +31,9 @@
 	_asset = asset;
 
 	self.view.window.toolbar.items.lastObject.enabled = NO;
-	[asset readWithSettings:[AVAsset settingsLinearPCMMono] handler:^(NSData *data) {
-		NSImage *image = [[CGWaveform waveformFromData:data frame:self.view.frame flag:YES] imageWithColor:[NSColor redColor]];
+	CGRect frame = self.view.frame;
+	[asset readWithSettings:AVAudioSettingsLinearPCMMono handler:^(NSData *data) {
+		NSImage *image = [[CGWaveform waveformFromData:data frame:frame flag:YES] imageWithColor:[NSColor redColor]];
 		[GCD main:^{
 			self.waveformView.documentView = [image imageView];
 			[self.waveformView.documentView scrollPoint:NSMakePoint(0.0 - self.waveformView.contentInsets.left, 0.0)];
@@ -104,7 +105,7 @@
 
 	self.draggingTitle = self.view.window.title;
 
-	self.view.window.title = [[AVURLAsset assetWithURL:urls.firstObject] metadataDescription];
+	self.view.window.title = [[AVURLAsset assetWithURL:urls.firstObject] metadataDescription] ?: [urls.firstObject.lastPathComponent stringByDeletingPathExtension];
 }
 
 - (void)urlDraggingExited:(NSArray<NSURL *> *)urls {
@@ -118,7 +119,7 @@
 - (void)performURLDragOperation:(NSArray<NSURL *> *)urls {
 	self.asset = [AVURLAsset assetWithURL:urls.firstObject];
 
-	self.view.window.title = [self.asset metadataDescription];
+	self.view.window.title = [self.asset metadataDescription] ?: [urls.firstObject.lastPathComponent stringByDeletingPathExtension];
 }
 
 @end

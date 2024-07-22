@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="23086.1" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14109"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="23086.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -652,21 +652,21 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" customClass="WindowController" sceneMemberID="viewController">
-                    <window key="window" title="Ringtonic" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                    <window key="window" title="Ringtonic" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+                        <rect key="contentRect" x="196" y="240" width="632" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
-                        <toolbar key="toolbar" implicitIdentifier="FB3C2410-00B0-4AB4-9751-195CF7B44364" autosavesConfiguration="NO" allowsUserCustomization="NO" showsBaselineSeparator="NO" displayMode="iconOnly" sizeMode="small" id="KBb-he-WQu">
+                        <toolbar key="toolbar" implicitIdentifier="FB3C2410-00B0-4AB4-9751-195CF7B44364" autosavesConfiguration="NO" allowsUserCustomization="NO" showsBaselineSeparator="NO" displayMode="iconOnly" sizeMode="regular" id="KBb-he-WQu">
                             <allowedToolbarItems>
-                                <toolbarItem implicitItemIdentifier="E165ADBF-41BD-435C-BE2B-B5EF0E19F3E6" label="Custom View" paletteLabel="Custom View" id="zJW-vQ-1Nq">
+                                <toolbarItem implicitItemIdentifier="E165ADBF-41BD-435C-BE2B-B5EF0E19F3E6" label="Custom View" paletteLabel="Custom View" title="Play" id="zJW-vQ-1Nq">
                                     <nil key="toolTip"/>
                                     <size key="minSize" width="127" height="25"/>
                                     <size key="maxSize" width="127" height="25"/>
                                     <button key="view" verticalHuggingPriority="750" id="v3d-ah-3G8">
                                         <rect key="frame" x="0.0" y="14" width="127" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <buttonCell key="cell" type="roundTextured" title="Play" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="zUe-a8-IE3">
+                                        <buttonCell key="cell" type="roundTextured" title="Play" bezelStyle="texturedRounded" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="zUe-a8-IE3">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                             <connections>
@@ -675,14 +675,14 @@
                                         </buttonCell>
                                     </button>
                                 </toolbarItem>
-                                <toolbarItem implicitItemIdentifier="F25D1F9D-772A-494F-B34A-93E66995C2D0" label="Custom View" paletteLabel="Custom View" id="Vsa-d2-vuL">
+                                <toolbarItem implicitItemIdentifier="F25D1F9D-772A-494F-B34A-93E66995C2D0" label="Custom View" paletteLabel="Custom View" title="Export" id="Vsa-d2-vuL">
                                     <nil key="toolTip"/>
                                     <size key="minSize" width="127" height="25"/>
                                     <size key="maxSize" width="127" height="25"/>
                                     <button key="view" verticalHuggingPriority="750" id="KIZ-3k-Iu8">
                                         <rect key="frame" x="0.0" y="14" width="127" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <buttonCell key="cell" type="roundTextured" title="Export" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="dfl-VN-OAy">
+                                        <buttonCell key="cell" type="roundTextured" title="Export" bezelStyle="texturedRounded" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="dfl-VN-OAy">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                             <connections>
@@ -706,12 +706,12 @@
                     </window>
                     <connections>
                         <outlet property="playButton" destination="zUe-a8-IE3" id="LNf-TU-3VO"/>
-                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
+                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="nvB-xg-BTk"/>
                     </connections>
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="250"/>
+            <point key="canvasLocation" x="151" y="250"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
@@ -734,24 +734,24 @@
                                     </subviews>
                                 </clipView>
                                 <edgeInsets key="contentInsets" left="28" right="28" top="0.0" bottom="0.0"/>
-                                <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="WX2-QR-eEK">
+                                <scroller key="horizontalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="WX2-QR-eEK">
                                     <rect key="frame" x="28" y="434" width="744" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
-                                <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="738-l9-nJd">
+                                <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="738-l9-nJd">
                                     <rect key="frame" x="756" y="0.0" width="16" height="450"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
                             <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="42V-5a-sx3">
-                                <rect key="frame" x="18" y="18" width="764" height="24"/>
+                                <rect key="frame" x="18" y="14" width="764" height="28"/>
                                 <sliderCell key="cell" state="on" alignment="left" maxValue="40" tickMarkPosition="above" numberOfTickMarks="41" sliderType="linear" id="bz4-HQ-Qm1"/>
                                 <connections>
                                     <action selector="sliderAction:" target="XfG-lQ-9wD" id="MO4-1Y-plJ"/>
                                 </connections>
                             </slider>
                             <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ba8-6P-NHy" customClass="NSPassthroughSlider">
-                                <rect key="frame" x="18" y="18" width="764" height="24"/>
+                                <rect key="frame" x="18" y="14" width="764" height="28"/>
                                 <sliderCell key="cell" state="on" alignment="left" maxValue="40" doubleValue="40" tickMarkPosition="above" numberOfTickMarks="41" sliderType="linear" id="cn0-4q-jT2"/>
                                 <connections>
                                     <action selector="sliderAction:" target="XfG-lQ-9wD" id="dLS-cS-T1F"/>

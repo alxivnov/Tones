@@ -11,13 +11,14 @@
 #import "Localized.h"
 //#import "UIViewController+VKLog.h"
 
-#import "UIRateController+Answers.h"
-#import "UIViewController+Answers.h"
+//#import "UIRateController+Answers.h"
+//#import "UIViewController+Answers.h"
 #import "UIViewController+Stereo.h"
 
 #import "Affiliates+Convenience.h"
 #import "Dispatch+Convenience.h"
 #import "MessageUI+Convenience.h"
+#import "QuartzCore+Convenience.h"
 #import "SafariServices+Convenience.h"
 #import "StoreKit+Convenience.h"
 #import "NSBundle+Convenience.h"
@@ -27,7 +28,7 @@
 #import "UINavigationController+Convenience.h"
 #import "UITableView+Convenience.h"
 #import "UITableViewCell+Convenience.h"
-#import "FBSDKShareKit+Convenience.h"
+//#import "FBSDKShareKit+Convenience.h"
 #import "UIView+Convenience.h"
 
 //#import "VKHelper.h"
@@ -37,7 +38,7 @@
 #import "Tone.h"
 #import "User.h"
 
-#import <Crashlytics/Answers.h>
+//#import <Crashlytics/Answers.h>
 
 #define URL_FB_APP_LINK @"http://apptag.me/tones/"//@"https://fb.me/1834277420229702"
 #define URL_FB_PREVIEW_IMAGE @"http://apptag.me/tones/ringtonic.jpg"
@@ -105,7 +106,7 @@
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
 	
-	[self startLogging];
+//	[self startLogging];
 
 	UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:NSIndexPathMake(0, 0)];
 	cell.detailTextLabel.text = [NSBundle bundleShortVersionString];
@@ -179,7 +180,7 @@
 - (void)viewDidDisappear:(BOOL)animated {
 	[super viewDidDisappear:animated];
 	
-	[self endLogging];
+//	[self endLogging];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -260,7 +261,7 @@
 //		[self setup:Nil];
 	} else if ([indexPath isEqualToSection:0 row:2])
 		[self presentSafariWithURL:[NSURL URLWithString:VK_GROUP_URL] entersReaderIfAvailable:NO animated:YES completion:^{
-			[Answers logCustomEventWithName:@"Group" customAttributes:@{ @"opened" : @"VK" }];
+//			[Answers logCustomEventWithName:@"Group" customAttributes:@{ @"opened" : @"VK" }];
 		}];
 	else if ([indexPath isEqualToSection:1 row:0])
 		[self presentPurchase:^(BOOL success) {
@@ -275,16 +276,16 @@
 		[self presentMailComposeWithRecipients:arr_(STR_EMAIL) subject:[NSBundle bundleDisplayNameAndShortVersion] body:Nil attachments:dic_(@"screenshot.jpg", [[self.navigationController.lowerViewController.view snapshotImageAfterScreenUpdates:YES] jpegRepresentation]) completionHandler:Nil];
 	else if ([indexPath isEqualToSection:3 row:0])
 		[self presentWebActivityWithActivityItems:@[ [NSBundle bundleDisplayName], [NSURL URLForMobileAppWithIdentifier:APP_ID_RINGO affiliateInfo:GLOBAL.affiliateInfo] ] excludedTypes:Nil completionHandler:^(UIActivityType  _Nullable activityType, BOOL completed, NSArray * _Nullable returnedItems, NSError * _Nullable activityError) {
-			[Answers logInviteWithMethod:activityType customAttributes:@{ @"version" : [NSBundle bundleVersion], @"success" : completed ? @"YES" : @"NO", @"error" : activityError.localizedDescription ?: STR_EMPTY }];
+//			[Answers logInviteWithMethod:activityType customAttributes:@{ @"version" : [NSBundle bundleVersion], @"success" : completed ? @"YES" : @"NO", @"error" : activityError.localizedDescription ?: STR_EMPTY }];
 		} sourceView:[tableView cellForRowAtIndexPath:indexPath]];
 	else if ([indexPath isEqualToSection:4 row:0])
 		[UIApplication openURL:[NSURL URLForMobileAppWithIdentifier:APP_ID_RINGO affiliateInfo:GLOBAL.affiliateInfo] options:Nil completionHandler:^(BOOL success) {
 			if (success) {
 				GLOBAL.openReviewCount++;
 
-				[UIRateController logRateWithMethod:@"SettingsController" success:YES];
+//				[UIRateController logRateWithMethod:@"SettingsController" success:YES];
 			} else {
-				[UIRateController logRateWithMethod:@"SettingsController" success:NO];
+//				[UIRateController logRateWithMethod:@"SettingsController" success:NO];
 			}
 		}];
 	else if (indexPath.section == IDX_APPS)

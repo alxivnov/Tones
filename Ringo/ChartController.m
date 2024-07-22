@@ -31,14 +31,14 @@
 
 	self.navigationItem.title = [self.segment titleForSegmentAtIndex:self.segment.selectedSegmentIndex];
 
-	if ([UIApplication sharedApplication].applicationIconBadgeNumber || self.navigationController.tabBarItem.badgeValue.length)
-		[[CKContainer defaultContainer] modifyBadge:0 completionHandler:^(BOOL success) {
-			if (success)
-				[GCD main:^{
-					[UIApplication sharedApplication].applicationIconBadgeNumber = 0;
-					self.navigationController.tabBarItem.badgeValue = Nil;
-				}];
-		}];
+//	if ([UIApplication sharedApplication].applicationIconBadgeNumber || self.navigationController.tabBarItem.badgeValue.length)
+//		[[CKContainer defaultContainer] modifyBadge:0 completionHandler:^(BOOL success) {
+//			if (success)
+//				[GCD main:^{
+//					[UIApplication sharedApplication].applicationIconBadgeNumber = 0;
+//					self.navigationController.tabBarItem.badgeValue = Nil;
+//				}];
+//		}];
 }
 
 - (IBAction)segmentValueChange:(UISegmentedControl *)sender {

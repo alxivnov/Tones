@@ -14,7 +14,7 @@
 #import "Tone.h"
 
 #import "NSCharacterSet+Convenience.h"
-#import "NSRateController.h"
+//#import "NSRateController.h"
 //#import "VKHelper.h"
 
 #import "Affiliates+Convenience.h"
@@ -27,7 +27,7 @@
 
 #import "CoreMedia+Convenience.h"
 
-#import <Crashlytics/Answers.h>
+//#import <Crashlytics/Answers.h>
 
 #define STR_REG_EX @"((\\(|\\[|\\{|\\<)(.*)(\\.com|\\.net|\\.org|\\.ru|\\.su|\\.kz|\\.ua|\\.uz)(.*)(\\)|\\]|\\}|\\>))|(([ ]*-[ ]*)(.*)(\\.com|\\.net|\\.org|\\.ru|\\.su|\\.kz|\\.ua|\\.uz))|((.*)(\\.com|\\.net|\\.org|\\.ru|\\.su|\\.kz|\\.ua|\\.uz)([ ]*-[ ]*))|(([^ ]*)(\\.com|\\.net|\\.org|\\.ru|\\.su|\\.kz|\\.ua|\\.uz)([^ ]*))"
 
@@ -263,7 +263,7 @@
 	[self updateTone:tones completion:^(Tone *t, BOOL n) {
 		NSLog(@"export: %@, import: %@", t ? @(t.exportCount) : Nil, t ? @(t.importCount) : Nil);
 //		if (t)
-			[Answers logRating:@((t.exportCount + 1) * (t.importCount + 1)) contentName:[t description] contentType:/*self.audioItem.assetURL ? @"audio" :*/ self.mediaItem.assetURL ? @"media" : self.URLAsset ? @"asset" : Nil contentId:[t recordName] customAttributes:@{ @"export" : @(t.exportCount), @"import" : @(t.importCount), @"action" : @([NSRateController instance].action) }];
+//			[Answers logRating:@((t.exportCount + 1) * (t.importCount + 1)) contentName:[t description] contentType:/*self.audioItem.assetURL ? @"audio" :*/ self.mediaItem.assetURL ? @"media" : self.URLAsset ? @"asset" : Nil contentId:[t recordName] customAttributes:@{ @"export" : @(t.exportCount), @"import" : @(t.importCount), @"action" : @([NSRateController instance].action) }];
 //		else
 //			[Answers logContentViewWithName:[self description] contentType:self.audioItem.assetURL ? @"audio" : self.mediaItem.assetURL ? @"media" : self.URLAsset ? @"asset" : Nil contentId:Nil customAttributes:Nil];
 

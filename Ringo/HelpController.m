@@ -11,7 +11,7 @@
 #import "Localized.h"
 #import "Global.h"
 
-#import "UIViewController+Answers.h"
+//#import "UIViewController+Answers.h"
 
 #import "NSArray+Convenience.h"
 #import "NSFileManager+iCloud.h"

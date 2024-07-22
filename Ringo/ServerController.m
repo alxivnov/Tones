@@ -11,7 +11,7 @@
 #import "Localized.h"
 #import "Tone.h"
 
-#import "UIViewController+Answers.h"
+//#import "UIViewController+Answers.h"
 #import "UIViewController+Stereo.h"
 
 #import "Dispatch+Convenience.h"
@@ -47,7 +47,7 @@
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
 	
-	[self startLogging];
+//	[self startLogging];
 
 	if (!self.selectedItem.tones || self.navigationItem.rightBarButtonItems.count < 2)
 		[self.selectedItem fetchTones:^(NSArray *tones) {
@@ -60,7 +60,7 @@
 - (void)viewDidDisappear:(BOOL)animated {
 	[super viewDidDisappear:animated];
 	
-	[self endLogging];
+//	[self endLogging];
 }
 
 - (IBAction)tonesBarButtonItemAction:(id)sender {

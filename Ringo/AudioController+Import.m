@@ -17,7 +17,7 @@
 #import "UIApplication+Convenience.h"
 #import "UIColor+Convenience.h"
 
-#import <Crashlytics/Answers.h>
+//#import <Crashlytics/Answers.h>
 
 @implementation AudioController (Import)
 
@@ -33,8 +33,8 @@
 				if (index != NSNotFound)
 					[UIApplication openURL:[mediaItem.viewUrl URLByAppendingQueryDictionary:GLOBAL.affiliateInfo] inApp:kAppITunes];
 
-				if (mediaItem)
-					[Answers logCustomEventWithName:@"Affiliate Program" customAttributes:@{ @"Success" : index != NSNotFound ? @"YES" : @"NO", @"Preferred Localizations" : [[NSBundle mainBundle].preferredLocalizations componentsJoinedByString:STR_COMMA], @"Name" : [mediaItem description] }];
+//				if (mediaItem)
+//					[Answers logCustomEventWithName:@"Affiliate Program" customAttributes:@{ @"Success" : index != NSNotFound ? @"YES" : @"NO", @"Preferred Localizations" : [[NSBundle mainBundle].preferredLocalizations componentsJoinedByString:STR_COMMA], @"Name" : [mediaItem description] }];
 			}];
 		}];
 	}];

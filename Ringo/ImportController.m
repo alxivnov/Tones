@@ -16,7 +16,7 @@
 #import "TabBarController.h"
 //#import "VKFeaturedController.h"
 
-#import "NSRateController.h"
+//#import "NSRateController.h"
 #import "NSURL+Convenience.h"
 #import "UIBarButtonItem+Convenience.h"
 //#import "VKHelper.h"
@@ -39,7 +39,7 @@
 
 @import StoreKit;
 
-#import <Crashlytics/Answers.h>
+//#import <Crashlytics/Answers.h>
 
 @interface ImportController ()
 @property (strong, nonatomic) IBOutlet UIView *importView;
@@ -126,7 +126,7 @@ __synthesize(MPMediaPickerController *, mediaPicker, ({ MPMediaPicker *x = [[MPM
 				for (NSString *subscriptionID in deletedSubscriptionIDs)
 					[defaults setObject:Nil forKey:subscriptionID];
 
-				[Answers logCustomEventWithName:@"Modify Subscriptions" customAttributes:dic__(@"+", [savedSubscriptionIDs componentsJoinedByString:STR_COMMA], @"-", [deletedSubscriptionIDs componentsJoinedByString:STR_COMMA])];
+//				[Answers logCustomEventWithName:@"Modify Subscriptions" customAttributes:dic__(@"+", [savedSubscriptionIDs componentsJoinedByString:STR_COMMA], @"-", [deletedSubscriptionIDs componentsJoinedByString:STR_COMMA])];
 			}];
 	}];
 /*
@@ -166,7 +166,7 @@ __synthesize(MPMediaPickerController *, mediaPicker, ({ MPMediaPicker *x = [[MPM
 			[self.toolbarItems.firstObject.buttonView animate:CGAffineTransformMakeRotation(DEG_360 / 10) duration:1.0 damping:0.2 velocity:ANIMATION_VELOCITY options:ANIMATION_OPTIONS completion:Nil];
 		}
 	} else {
-		[UNUserNotificationCenter getNotificationSettings:^(UNNotificationSettings *settings) {
+		[UNUserNotificationCenter getCurrentNotificationSettings:^(UNNotificationSettings *settings) {
 			[GCD main:^{
 				if (settings.authorization.boolValue) {
 					MPMediaItem *mediaItem = cls(MPMusicPlayerController, notification.object).nowPlayingItem;
@@ -216,7 +216,7 @@ __synthesize(MPMediaPickerController *, mediaPicker, ({ MPMediaPicker *x = [[MPM
 				}];
 			}];
 	} else {
-		[UNUserNotificationCenter getNotificationSettings:^(UNNotificationSettings *settings) {
+		[UNUserNotificationCenter getCurrentNotificationSettings:^(UNNotificationSettings *settings) {
 			[GCD main:^{
 				if (settings.authorization.boolValue) {
 					NSTimeInterval duration = self.musicPlayer.nowPlayingItem.playbackDuration;
@@ -246,7 +246,7 @@ __synthesize(MPMediaPickerController *, mediaPicker, ({ MPMediaPicker *x = [[MPM
 							[self nowPlayingItemDidChange:[NSNotification notificationWithName:STR_EMPTY object:self.musicPlayer]];
 						}];
 
-						[Answers logCustomEventWithName:@"User Prompt" customAttributes:@{ @"Remote Notifications" : granted ? @"YES" : @"NO" }];
+//						[Answers logCustomEventWithName:@"User Prompt" customAttributes:@{ @"Remote Notifications" : granted ? @"YES" : @"NO" }];
 					}];
 				}
 			}];
@@ -286,7 +286,7 @@ __synthesize(MPMediaPickerController *, mediaPicker, ({ MPMediaPicker *x = [[MPM
 				[self presentViewController:self.mediaPicker animated:YES completion:^{
 				}];
 
-			[Answers logCustomEventWithName:@"User Prompt" customAttributes:@ { @"Media Library" : status == SKCloudServiceAuthorizationStatusAuthorized ? @"YES" : @"NO" }];
+//			[Answers logCustomEventWithName:@"User Prompt" customAttributes:@ { @"Media Library" : status == SKCloudServiceAuthorizationStatusAuthorized ? @"YES" : @"NO" }];
 		}];
 	else
 		[self presentAlertWithTitle:[Localized allowMediaLibrary] message:[Localized allowPlayMediaLibrary] cancelActionTitle:[Localized allow] destructiveActionTitle:Nil otherActionTitles:Nil configuration:^(UIAlertController *instance) {
@@ -369,8 +369,8 @@ __synthesize(MPMediaPickerController *, mediaPicker, ({ MPMediaPicker *x = [[MPM
 				}];
 			}];
 
-		if (!response.notification.request.content.title)
-			[Answers logCustomEventWithName:@"Remote Notification" customAttributes:@{ query.subscriptionID : query.alertLocalizationArgs ? [query.alertLocalizationArgs componentsJoinedByString:@" - "] : query.alertBody, @"databaseScope" : @(query.databaseScope), @"content-available" : @"NO" }];
+//		if (!response.notification.request.content.title)
+//			[Answers logCustomEventWithName:@"Remote Notification" customAttributes:@{ query.subscriptionID : query.alertLocalizationArgs ? [query.alertLocalizationArgs componentsJoinedByString:@" - "] : query.alertBody, @"databaseScope" : @(query.databaseScope), @"content-available" : @"NO" }];
 	}
 
 	if (completionHandler)

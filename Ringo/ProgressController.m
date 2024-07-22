@@ -15,14 +15,15 @@
 //#import "VKHelper.h"
 
 #import "UIBarButtonItem+Convenience.h"
-#import "UIRateController+Answers.h"
-#import "UIViewController+Answers.h"
+//#import "UIRateController+Answers.h"
+//#import "UIViewController+Answers.h"
 //#import "UIViewController+VK.h"
 
 #import "MessageUI+Convenience.h"
 #import "SafariServices+Convenience.h"
 #import "NSArray+Convenience.h"
 #import "NSBundle+Convenience.h"
+#import "NSCalendar+Convenience.h"
 #import "NSFileManager+iCloud.h"
 #import "NSObject+Convenience.h"
 #import "UIActivityIndicatorView+Convenience.h"
@@ -30,7 +31,7 @@
 #import "UIColor+Convenience.h"
 #import "UINavigationController+Convenience.h"
 
-#import <Crashlytics/Answers.h>
+//#import <Crashlytics/Answers.h>
 
 #define IMG_ENVELOPE_LINE_30 @"envelope-line-30"
 
@@ -53,7 +54,7 @@
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
 	
-	[self startLogging];
+//	[self startLogging];
 
 	if (!self.selectedItem.assetURL || [self.navigationItem.title isEqualToString:[self.selectedItem description]]) {
 //		if (!self.selectedItem.assetURL)
@@ -67,7 +68,7 @@
 	self.currentPage = 1;
 
 //	self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:[UIActivityIndicatorView create:UIActivityIndicatorViewStyleWhite]];
-	self.navigationItem.rightBarButtonItem = [NSRateController instance].action ? [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(rightBarButtonAction:)] : [[UIBarButtonItem alloc] initWithTitle:[Localized next] style:UIBarButtonItemStylePlain target:self action:@selector(nextBarButtonAction:)];
+//	self.navigationItem.rightBarButtonItem = [NSRateController instance].action ? [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(rightBarButtonAction:)] : [[UIBarButtonItem alloc] initWithTitle:[Localized next] style:UIBarButtonItemStylePlain target:self action:@selector(nextBarButtonAction:)];
 	self.navigationItem.title = [self.selectedItem description];//[[Localized processing] uppercaseString];
 
 	self.navigationItem.rightBarButtonItem.enabled = NO;
@@ -86,9 +87,9 @@
 
 			if (__screenshot)
 				return;
-
+/*
 			NSUInteger action = [[NSRateController instance] incrementAction] % 10;
-/*			if (action == 3)
+			if (action == 3)
 //				if (GLOBAL.vkEnabled)
 				[self presentAlertForGroupWithID:VK_GROUP_ID title:[Localized followTitle] message:[Localized followMessage] cancelButtonTitle:[Localized cancel] joinButtonTitle:[Localized follow] configuration:^(UIAlertController *instance) {
 					[instance.actions.firstObject setActionImage:[UIImage templateImage:IMG_USERS_LINE]];
@@ -98,7 +99,7 @@
 				} completion:^(BOOL success) {
 					[Answers logCustomEventWithName:@"Group" customAttributes:@{ @"joined" : success ? @"YES" : @"NO" }];
 				}];
-			else*/ if (action == 5)
+			else if (action == 5)
 				[self presentAlertWithTitle:[Localized feedbackTitle] message:[Localized feedbackMessage] cancelActionTitle:[Localized cancel] destructiveActionTitle:Nil otherActionTitles:@[ [Localized feedback] ] configuration:^(UIAlertController *instance) {
 					[instance.actions.firstObject setActionImage:[UIImage templateImage:IMG_ENVELOPE_LINE_30]];
 					[instance.actions.firstObject setActionColor:[UIColor color:HEX_NCS_GREEN]];
@@ -108,7 +109,7 @@
 					if (index != NSNotFound)
 						[self presentMailComposeWithRecipient:STR_EMAIL subject:[NSBundle bundleDisplayNameAndShortVersion]];
 				}];
-
+*/
 			[self.selectedItem updateTone:^(BOOL tone) {
 				if (!tone)
 					return;
@@ -165,7 +166,7 @@
 - (void)viewDidDisappear:(BOOL)animated {
 	[super viewDidDisappear:animated];
 	
-	[self endLogging];
+//	[self endLogging];
 }
 
 - (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray<UIViewController *> *)previousViewControllers transitionCompleted:(BOOL)completed {
@@ -198,9 +199,9 @@
 		if (success) {
 			GLOBAL.openReviewCount++;
 
-			[UIRateController logRateWithMethod:@"ProgressController" success:YES];
+//			[UIRateController logRateWithMethod:@"ProgressController" success:YES];
 		} else {
-			[UIRateController logRateWithMethod:@"ProgressController" success:NO];
+//			[UIRateController logRateWithMethod:@"ProgressController" success:NO];
 		}
 	}];
 }

@@ -12,20 +12,20 @@
 #import "Global.h"
 #import "Localized.h"
 
-#import "UIViewController+Answers.h"
+//#import "UIViewController+Answers.h"
 //#import "UIViewController+VK.h"
 
 #import "Dispatch+Convenience.h"
-#import "TwitterKit+Convenience.h"
-#import "FBSDKShareKit+Convenience.h"
+//#import "TwitterKit+Convenience.h"
+//#import "FBSDKShareKit+Convenience.h"
 #import "NSObject+Convenience.h"
 #import "UIActivityViewController+Convenience.h"
 #import "UIAlertController+Convenience.h"
 #import "UIDocumentPickerViewController+Convenience.h"
 #import "UIViewController+Convenience.h"
 
-#import <Crashlytics/Answers.h>
-#import <TwitterKit/TwitterKit.h>
+//#import <Crashlytics/Answers.h>
+//#import <TwitterKit/TwitterKit.h>
 
 #define IMG_CLOUD_UPLOAD @"cloud-upload"
 #define IMG_FB_30 @"FB-30"
@@ -47,7 +47,7 @@
 
 #warning Reload accessory image!!!
 #warning Test Twitter link on iPad!
-
+/*
 - (void)accessoryImageWithIndex:(NSUInteger)index tappedForRowWithIndexPath:(NSIndexPath *)indexPath {
 //	UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
 	
@@ -66,15 +66,15 @@
 		}];
 //	else if (index == 3) {
 	else if (index == 2) {
-/*		if (GLOBAL.vkEnabled) {
-			if ([VKSdk wakeUpSession:VK_PERMISSIONS])
-				[self performSegueWithIdentifier:GUI_VK_SHARE sender:item];
-			else
-				[self presentShareDialogWithURL:item.vkShareURL title:[item shareDescription] uploadImages:arr_(item.image) completion:^(VKShareDialogControllerResult result) {
-					[Answers logShareWithMethod:KEY_VK contentName:[item description] contentType:KEY_TONE contentId:[item identifier] customAttributes:@{ KEY_SUCCESS : result == VKShareDialogControllerResultDone ? @"YES" : @"NO", KEY_METHOD : @"presentShareDialogWithURL:" }];
-				}];
-		} else {
-*/			TWComposer *composer = [[TWComposer alloc] init];
+//		if (GLOBAL.vkEnabled) {
+//			if ([VKSdk wakeUpSession:VK_PERMISSIONS])
+//				[self performSegueWithIdentifier:GUI_VK_SHARE sender:item];
+//			else
+//				[self presentShareDialogWithURL:item.vkShareURL title:[item shareDescription] uploadImages:arr_(item.image) completion:^(VKShareDialogControllerResult result) {
+//					[Answers logShareWithMethod:KEY_VK contentName:[item description] contentType:KEY_TONE contentId:[item identifier] customAttributes:@{ KEY_SUCCESS : result == VKShareDialogControllerResultDone ? @"YES" : @"NO", KEY_METHOD : @"presentShareDialogWithURL:" }];
+//				}];
+//		} else {
+			TWComposer *composer = [[TWComposer alloc] init];
 			[composer setText:[item shareDescription]];
 			[composer setImage:item.image];
 			[composer setURL:item.shareURL];
@@ -84,7 +84,7 @@
 //		}
 	}
 }
-
+*/
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
 /*	if ([segue.identifier isEqualToString:GUI_VK_SHARE])
 		[segue.destinationViewController forwardSelector:@selector(setSelectedItem:) withObject:sender nextTarget:UIViewControllerNextTarget(YES)];
@@ -143,7 +143,7 @@
 - (NSDictionary<NSString *,id> *)loggingCustomAttributes {
 	return @{ @"VK enabled" : GLOBAL.vkEnabled ? @"YES" : @"NO", @"VK logged in" : [VKSdk isLoggedIn] ? @"YES" : @"NO"  };
 };
-*/
+
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
 	
@@ -155,5 +155,5 @@
 	
 	[self endLogging];
 }
-
+*/
 @end

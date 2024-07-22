@@ -18,7 +18,7 @@
 
 @property (assign, nonatomic, readonly) NSTimeInterval startTime;
 @property (assign, nonatomic, readonly) NSTimeInterval endTime;
-@property (copy, nonatomic) void(^timeChange)();
+@property (copy, nonatomic) void(^timeChange)(void);
 
 @end
 

@@ -19,7 +19,7 @@
 #import "Affiliates+Convenience.h"
 #import "UserNotifications+Convenience.h"
 
-#import <Crashlytics/Answers.h>
+//#import <Crashlytics/Answers.h>
 
 #define SEPARATOR @" - "
 
@@ -65,8 +65,8 @@
 	}];
 
 	CKQueryNotification *query = [CKQueryNotification notificationFromRemoteNotificationDictionary:userInfo];
-	if (query)
-		[Answers logCustomEventWithName:@"Remote Notification" customAttributes:@{ query.subscriptionID : query.alertLocalizationArgs ? [query.alertLocalizationArgs componentsJoinedByString:@" - "] : query.alertBody, @"databaseScope" : @(query.databaseScope), @"applicationState" : @([UIApplication sharedApplication].applicationState), @"content-available" : @"YES" }];
+//	if (query)
+//		[Answers logCustomEventWithName:@"Remote Notification" customAttributes:@{ query.subscriptionID : query.alertLocalizationArgs ? [query.alertLocalizationArgs componentsJoinedByString:@" - "] : query.alertBody, @"databaseScope" : @(query.databaseScope), @"applicationState" : @([UIApplication sharedApplication].applicationState), @"content-available" : @"YES" }];
 }
 
 - (void)process:(NSDictionary *)userInfo completionHandler:(void (^)(void))completionHandler {

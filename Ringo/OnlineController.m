@@ -11,7 +11,7 @@
 #import "Localized.h"
 #import "Tone.h"
 
-#import "UIViewController+Answers.h"
+//#import "UIViewController+Answers.h"
 //#import "VKHelper.h"
 
 #import "Dispatch+Convenience.h"
@@ -45,7 +45,7 @@
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
 	
-	[self startLogging];
+//	[self startLogging];
 	
 	self.navigationItem.title = [self.selectedItem description];
 }
@@ -53,7 +53,7 @@
 - (void)viewDidDisappear:(BOOL)animated {
 	[super viewDidDisappear:animated];
 	
-	[self endLogging];
+//	[self endLogging];
 }
 
 - (NSString *)subtitle:(AudioItem *)item {

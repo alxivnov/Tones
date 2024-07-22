@@ -10,7 +10,7 @@
 #import "Global.h"
 //#import "VKFeaturedController.h"
 
-#import "UIViewController+Answers.h"
+//#import "UIViewController+Answers.h"
 
 #import "UIGestureTransition.h"
 
@@ -77,7 +77,7 @@ __synthesize(UIPanTransition *, transition, [UIPanTransition gestureTransition:N
 - (NSString *)loggingName {
 	return @"Featured";
 }
-
+/*
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
 	
@@ -89,5 +89,5 @@ __synthesize(UIPanTransition *, transition, [UIPanTransition gestureTransition:N
 	
 	[self endLogging];
 }
-
+*/
 @end

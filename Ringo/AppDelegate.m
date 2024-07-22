@@ -6,11 +6,11 @@
 //  Copyright (c) 2015 Alexander Ivanov. All rights reserved.
 //
 
-#import <Fabric/Fabric.h>
-#import <Crashlytics/Crashlytics.h>
+//#import <Fabric/Fabric.h>
+//#import <Crashlytics/Crashlytics.h>
 
-#import <FBSDKCoreKit/FBSDKCoreKit.h>
-#import <TwitterKit/TwitterKit.h>
+//#import <FBSDKCoreKit/FBSDKCoreKit.h>
+//#import <TwitterKit/TwitterKit.h>
 //#import <VKSdk/VKSdk.h>
 
 #import "AppDelegate.h"
@@ -18,7 +18,7 @@
 
 #import "NotificationService.h"
 
-#import "UIViewController+Answers.h"
+//#import "UIViewController+Answers.h"
 //#import "VKHelper.h"
 
 #import "NSFileManager+iCloud.h"
@@ -56,11 +56,11 @@
 	NSString *sourceApplication = options[UIApplicationLaunchOptionsSourceApplicationKey];
 	id annotation = options[UIApplicationLaunchOptionsAnnotationKey];
 
-	if ([[FBSDKApplicationDelegate sharedInstance] application:app openURL:url sourceApplication:sourceApplication annotation:annotation])
-		return YES;
+//	if ([[FBSDKApplicationDelegate sharedInstance] application:app openURL:url sourceApplication:sourceApplication annotation:annotation])
+//		return YES;
 
-	if ([[Twitter sharedInstance] application:app openURL:url options:options])
-		return YES;
+//	if ([[Twitter sharedInstance] application:app openURL:url options:options])
+//		return YES;
 
 /*	if ([VKSdk processOpenURL:url fromApplication:sourceApplication])
 		return YES;
@@ -73,25 +73,25 @@
 
 //	[[CSSearchableIndex defaultSearchableIndex] deleteAllSearchableItems];
 
-	[GLOBAL fetchVKEnabled:^(BOOL reload) {
-		if (!reload)
-			return;
+//	[GLOBAL fetchVKEnabled:^(BOOL reload) {
+//		if (!reload)
+//			return;
 		
 		UIViewController *vc = application.rootViewController.lastViewController;
 		UITableView *tableView = cls(UITableViewController, vc).tableView;
-		if (!tableView)
-			return;
+//		if (!tableView)
+//			return;
 		
 		[GCD main:^{
 			[tableView reloadData];
 		}];
-	}];
+//	}];
 
-	[Fabric with:@[ [Crashlytics class] ]];
+//	[Fabric with:@[ [Crashlytics class] ]];
 	
-	[[FBSDKApplicationDelegate sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
-
-	[[Twitter sharedInstance] startWithConsumerKey:@"auVb4jBeyTcvYOdJieWWe9l5x" consumerSecret:@"NhWbMXQEX1SJjR2vnBAcpTMfv03p9kqzWkxxr7GPLDGhoyT9r2"];
+//	[[FBSDKApplicationDelegate sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
+//
+//	[[Twitter sharedInstance] startWithConsumerKey:@"auVb4jBeyTcvYOdJieWWe9l5x" consumerSecret:@"NhWbMXQEX1SJjR2vnBAcpTMfv03p9kqzWkxxr7GPLDGhoyT9r2"];
 
 //	[VKHelper initializeWithAppId:GLOBAL.vkEnabled ? GLOBAL.vkAppId : VK_APP_ID apiVersion:GLOBAL.vkVersion permissions:VK_PERMISSIONS];
 
@@ -142,9 +142,9 @@
 	[error log:@"didFailToContinueUserActivityWithType:"];
 }
 
-- (void)applicationDidReceiveMemoryWarning:(UIApplication *)application {
-	[Answers logCustomEventWithName:@"Memory Warning" customAttributes:@{ @"VC" : [[application.rootViewController.lastViewController class] description], @"model" : [UIDevice currentDevice].model, @"version" : [UIDevice currentDevice].systemVersion }];
-}
+//- (void)applicationDidReceiveMemoryWarning:(UIApplication *)application {
+//	[Answers logCustomEventWithName:@"Memory Warning" customAttributes:@{ @"VC" : [[application.rootViewController.lastViewController class] description], @"model" : [UIDevice currentDevice].model, @"version" : [UIDevice currentDevice].systemVersion }];
+//}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
 	// Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -167,7 +167,7 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application {
 	// Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 	
-	[FBSDKAppEvents activateApp];
+//	[FBSDKAppEvents activateApp];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {

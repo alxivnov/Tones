@@ -9,8 +9,8 @@
 #import "WindowController.h"
 #import "ViewController.h"
 
-#import "AVAsset+Export.h"
-#import "AVAudioSegmentPlayer.h"
+#import "AVAsset+Convenience.h"
+#import "AVPlayer+Convenience.h"
 #import "NSWorkspace+Ex.h"
 
 #import "CoreMedia+Convenience.h"
@@ -57,7 +57,7 @@
 
 	__weak WindowController *__self = self;
 	[self.player setStatusChange:^(AVAudioSegmentPlayer *sender) {
-		__self.playButton.title = sender.isPlaying ? @"Stop" : @"Play";
+		__self.playButton.title = loc(sender.isPlaying ? @"Stop" : @"Play");
 	}];
 	[self.player setTimeChange:^(AVAudioSegmentPlayer *sender) {
 
@@ -84,7 +84,7 @@
 	if (!asset)
 		return;
 
-	NSString *description = [asset metadataDescription];
+	NSString *description = [asset metadataDescription] ?: self.window.title;
 	description = [description stringByApplyingTransform:NSStringTransformToLatin];
 	description = [description stringByApplyingTransform:NSStringTransformStripCombiningMarks];
 	NSURL *url = [[[NSFileManager URLForDirectory:NSMusicDirectory] URLByAppendingPathComponent:[NSString stringWithFormat:@"%@ (%@ - %@)", description, [[NSDateComponentsFormatter mmssAbbreviatedFormatter] stringFromTimeInterval:self.vc.startTime], [[NSDateComponentsFormatter mmssAbbreviatedFormatter] stringFromTimeInterval:self.vc.endTime]]] URLByAppendingPathExtension:@"m4r"];
@@ -93,7 +93,7 @@
 
 	self.window.toolbar.items.lastObject.enabled = NO;
 #warning Write metadata!
-	[asset exportAudioWithSettings:[AVAsset settingsMPEG4AACStereo] timeRange:CMTimeRangeFromTimeIntervalToTimeInterval(self.vc.startTime, self.vc.endTime) metadata:asset.metadata to:url handler:^(double progress) {
+	[asset exportAudioWithSettings:AVAudioSettingsMPEG4AACStereo timeRange:CMTimeRangeFromTimeIntervalToTimeInterval(self.vc.startTime, self.vc.endTime) metadata:asset.metadata to:url handler:^(double progress) {
 		if (progress == 1.0)
 			[GCD main:^{
 				self.window.toolbar.items.lastObject.enabled = YES;

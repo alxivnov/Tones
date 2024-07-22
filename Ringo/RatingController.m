@@ -11,11 +11,12 @@
 #import "Localized.h"
 //#import "UIViewController+VKLog.h"
 
-#import "UIRateController+Answers.h"
+//#import "UIRateController+Answers.h"
 
 #import "SafariServices+Convenience.h"
-#import "FBAudienceNetwork+Convenience.h"
+//#import "FBAudienceNetwork+Convenience.h"
 #import "NSArray+Convenience.h"
+#import "NSCalendar+Convenience.h"
 #import "NSFileManager+Convenience.h"
 #import "NSLayoutConstraint+Convenience.h"
 #import "SKInAppPurchase.h"
@@ -24,10 +25,10 @@
 #import "UIViewController+Convenience.h"
 //#import "VKHelper.h"
 
-#import <Crashlytics/Answers.h>
+//#import <Crashlytics/Answers.h>
 
 @interface RatingController ()
-@property (strong, nonatomic, readonly) FBAdViewDelegate *adView;
+//@property (strong, nonatomic, readonly) FBAdViewDelegate *adView;
 @property (assign, nonatomic, readonly) NSTimeInterval sec;
 @property (assign, nonatomic, readonly) BOOL purchased;
 @end
@@ -36,7 +37,7 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-
+/*
 	[NSRateController instance].appIdentifier = APP_ID_RINGO;
 	[NSRateController instance].affiliateInfo = GLOBAL.affiliateInfo;
 	[NSRateController instance].recipient = STR_EMAIL;
@@ -53,9 +54,10 @@
 		else
 			[self.tableView reloadSection:0];
 	}];
+*/
 }
 
-__synthesize(FBAdViewDelegate *, adView, [FBAdViewDelegate new])
+//__synthesize(FBAdViewDelegate *, adView, [FBAdViewDelegate new])
 __synthesize(NSTimeInterval, sec, [[NSDate date] timeIntervalSinceDate:[[NSFileManager URLForDirectory:NSDocumentDirectory] fileCreationDate]])
 
 - (BOOL)purchased {
@@ -66,12 +68,12 @@ __synthesize(NSTimeInterval, sec, [[NSDate date] timeIntervalSinceDate:[[NSFileM
 
 - (IBAction)fbAction:(UIButton *)sender {
 	[self presentSafariWithURL:[NSURL URLWithString:FB_GROUP_URL] entersReaderIfAvailable:NO animated:YES completion:^{
-		[Answers logCustomEventWithName:@"Group" customAttributes:@{ @"opened" : @"FB" }];
+//		[Answers logCustomEventWithName:@"Group" customAttributes:@{ @"opened" : @"FB" }];
 	}];
 }
 
 - (BOOL)topSection:(NSUInteger)section {
-	return self.items.count && !section && ([UIRateController instance].view || (self.sec > TIME_WEEK && !self.purchased)) && !__screenshot;
+	return self.items.count && !section && (/*[UIRateController instance].view ||*/ (self.sec > TIME_WEEK && !self.purchased)) && !__screenshot;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -96,7 +98,7 @@ __synthesize(NSTimeInterval, sec, [[NSDate date] timeIntervalSinceDate:[[NSFileM
 
 //		if (logIn)
 //			cell.textLabel.text = [Localized logInToVK];
-
+/*
 		if ([UIRateController instance].view) {
 			[cell.contentView addSubview:[UIRateController instance].view];
 			[cell.contentView equalSize:[UIRateController instance].view];
@@ -111,7 +113,7 @@ __synthesize(NSTimeInterval, sec, [[NSDate date] timeIntervalSinceDate:[[NSFileM
 					}];
 			}];
 		}
-
+*/
 		return cell;
 	}
 	
@@ -156,11 +158,11 @@ __synthesize(NSTimeInterval, sec, [[NSDate date] timeIntervalSinceDate:[[NSFileM
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 	if (self.items.count && !indexPath.section && !__screenshot) {
-		if ([UIRateController instance].view)
+/*		if ([UIRateController instance].view)
 			return 128.0;
 		else if ((self.sec > TIME_WEEK && !self.purchased))
 			return self.adView.adSize.size.height;
-	}
+*/	}
 
 	return [super tableView:tableView heightForRowAtIndexPath:indexPath];
 }

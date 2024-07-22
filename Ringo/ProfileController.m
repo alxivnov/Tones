@@ -71,14 +71,14 @@
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
 
-	if ([UIApplication sharedApplication].applicationIconBadgeNumber || self.navigationController.tabBarItem.badgeValue.length)
-		[[CKContainer defaultContainer] modifyBadge:0 completionHandler:^(BOOL success) {
-			if (success)
-				[GCD main:^{
-					[UIApplication sharedApplication].applicationIconBadgeNumber = 0;
-					self.navigationController.tabBarItem.badgeValue = Nil;
-				}];
-		}];
+//	if ([UIApplication sharedApplication].applicationIconBadgeNumber || self.navigationController.tabBarItem.badgeValue.length)
+//		[[CKContainer defaultContainer] modifyBadge:0 completionHandler:^(BOOL success) {
+//			if (success)
+//				[GCD main:^{
+//					[UIApplication sharedApplication].applicationIconBadgeNumber = 0;
+//					self.navigationController.tabBarItem.badgeValue = Nil;
+//				}];
+//		}];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -96,7 +96,7 @@
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:GUI_CUSTOM_CELL_ID forIndexPath:indexPath];
 	ProfileCell *profileCell = cls(ProfileCell, cell);
 	profileCell.countOfTones = self.tones.count;
-	profileCell.countOfTimes = lround([self.tones sum:^NSNumber *(Tone *obj) {
+	profileCell.countOfTimes = lround([self.tones vSum:^NSNumber *(Tone *obj) {
 		return @(obj.exportCount);
 	}]);
 	return cell;
